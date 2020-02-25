@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmile version="1.0" xmlns="http://docs.oasis-open.org/xmile/ns/XMILE/v1.0" xmlns:isee="http://iseesystems.com/XMILE">
+	<header>
+		<smile version="1.0" namespace="std, isee" uses_arrays="4" uses_conveyor=""/>
+		<name>prototype map</name>
+		<uuid>1790f240-d4f5-4c1b-9a4f-99cfbf779bc5</uuid>
+		<vendor>isee systems, inc.</vendor>
+		<product version="1.8.2" isee:build_number="1691" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+	</header>
+	<sim_specs isee:simulation_delay="0.115385" isee:restore_on_start="false" method="Euler" time_units="Months" isee:instantaneous_flows="false">
+		<start>1</start>
+		<stop>13</stop>
+		<dt reciprocal="true">4</dt>
+	</sim_specs>
+	<dimensions>
+		<dim name="CaptureStatus">
+			<elem name="NoCapture"/>
+			<elem name="HaveCapture"/>
+		</dim>
+		<dim name="Dimension_1" size="1"/>
+		<dim name="LFSize">
+			<elem name="LFSmall"/>
+			<elem name="LFLarge"/>
+		</dim>
+		<dim name="LFStatus">
+			<elem name="Inactive"/>
+			<elem name="Active"/>
+		</dim>
+		<dim name="WTEConfig">
+			<elem name="NoWTE"/>
+			<elem name="CF"/>
+			<elem name="Elec"/>
+			<elem name="CNG"/>
+			<elem name="PNG"/>
+			<elem name="BCFuel"/>
+			<elem name="TCFUEL"/>
+			<elem name="HTL"/>
+			<elem name="CHP"/>
+		</dim>
+	</dimensions>
+	<isee:prefs show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="map" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" saved_runs="5" keep="false" rifp="true"/>
+	<isee:multiplayer_settings include_chat="true" allow_observers="false" advance_time_increment="1" observer_start_page="home_page" enabled="false"/>
+	<isee:time_formats default_format="Builtin">
+		<isee:time_format name="Builtin" type="adaptive"/>
+	</isee:time_formats>
+	<default_format/>
+	<model_units>
+		<unit name="Dimensionless">
+			<eqn>1</eqn>
+			<alias>dmnl</alias>
+			<alias>unitless</alias>
+			<alias>fraction</alias>
+		</unit>
+		<unit name="Years">
+			<eqn/>
+			<alias>yr</alias>
+			<alias>year</alias>
+		</unit>
+		<unit name="Per Year">
+			<eqn>1/Years</eqn>
+		</unit>
+		<unit name="cubic meters per million gal">
+			<eqn>m^3/(million-gal)</eqn>
+		</unit>
+		<unit name="GJ per million gal">
+			<eqn>GJ/(million-gal)</eqn>
+		</unit>
+		<unit name="million gal per day">
+			<eqn>million-gal/day</eqn>
+		</unit>
+		<unit name="million gal per year">
+			<eqn>million-gal/yr</eqn>
+		</unit>
+		<unit name="per million">
+			<eqn>1/million</eqn>
+		</unit>
+		<unit name="tonne per million gal">
+			<eqn>tonne/(million-gal)</eqn>
+		</unit>
+		<unit name="ton per million gal">
+			<eqn>ton/(million-gal)</eqn>
+		</unit>
+		<unit name="Btu per gallon">
+			<eqn>btu/gallon</eqn>
+		</unit>
+		<unit name="MilesPerVehiclePerYr">
+			<eqn>mi/(vehicles*yr)</eqn>
+		</unit>
+		<unit name="GalPerTerminalPerYr">
+			<eqn>gal/(terminals*yr)</eqn>
+		</unit>
+		<unit name="PerLoadUSDPerMi">
+			<eqn>USD/(mi*Load)</eqn>
+		</unit>
+		<unit name="ProjectGalPerTon">
+			<eqn>Projects*(gal/ton)</eqn>
+		</unit>
+		<unit name="DaysPerYr">
+			<eqn>day/yr</eqn>
+		</unit>
+		<unit name="ProjectUSDPerYr">
+			<eqn>Projects*(USD/yr)</eqn>
+		</unit>
+		<unit name="ProjectTonPerDay">
+			<eqn>Projects*(ton/day)</eqn>
+		</unit>
+		<unit name="MillionBTUPerGal">
+			<eqn>MillionBTU/gal</eqn>
+		</unit>
+		<unit name="GramsPerMJ">
+			<eqn>g/MJ</eqn>
+		</unit>
+		<unit name="MillionBTUperMJ">
+			<eqn>MillionBTU/MJ</eqn>
+		</unit>
+		<unit name="HoursPerProjectPerYr">
+			<eqn>hr/(projects*yr)</eqn>
+		</unit>
+		<unit name="USDPerUnit">
+			<eqn>USD/units</eqn>
+		</unit>
+		<unit name="USDA to nominal">
+			<eqn>units/USDA</eqn>
+		</unit>
+		<unit name="TonsPerUnit">
+			<eqn>ton/units</eqn>
+		</unit>
+		<unit name="UnitsPerAcrePerYrPerYr">
+			<eqn>units/(acre-yr^2)</eqn>
+		</unit>
+		<unit name="acres per square mile">
+			<eqn>acre/mi^2</eqn>
+		</unit>
+		<unit name="barrels per gallon">
+			<eqn>bbl/gal</eqn>
+		</unit>
+		<unit name="billion GPY">
+			<eqn>billions-gal/yr</eqn>
+		</unit>
+		<unit name="BillionMilesPerYear">
+			<eqn>billions-mi/yr</eqn>
+		</unit>
+		<unit name="days per year">
+			<eqn>day/year</eqn>
+		</unit>
+		<unit name="dollars per acre">
+			<eqn>usd/acres</eqn>
+		</unit>
+		<unit name="dollars per acre per yr">
+			<eqn>USD/(acre-yr)</eqn>
+		</unit>
+		<unit name="dollars per load">
+			<eqn>usd/load</eqn>
+		</unit>
+		<unit name="gal per ton">
+			<eqn>gal/ton</eqn>
+		</unit>
+		<unit name="gallons per barrel">
+			<eqn>gal/bbl</eqn>
+		</unit>
+		<unit name="gallons per dollar">
+			<eqn>gal/USD</eqn>
+		</unit>
+		<unit name="gallons per month">
+			<eqn>gal/mo</eqn>
+		</unit>
+		<unit name="gallons per visit">
+			<eqn>gal/Visit</eqn>
+		</unit>
+		<unit name="gallons per year">
+			<eqn>gal/yr</eqn>
+		</unit>
+		<unit name="GPD">
+			<eqn>gal/day</eqn>
+		</unit>
+		<unit name="million tons">
+			<eqn>million-ton</eqn>
+		</unit>
+		<unit name="million units">
+			<eqn>million-units</eqn>
+		</unit>
+		<unit name="million USD">
+			<eqn>USD-million</eqn>
+		</unit>
+		<unit name="million usda">
+			<eqn>million-usda</eqn>
+		</unit>
+		<unit name="months per year">
+			<eqn>mo/yr</eqn>
+		</unit>
+		<unit name="MPG">
+			<eqn>mi/gal</eqn>
+		</unit>
+		<unit name="per billion">
+			<eqn>1/billions</eqn>
+		</unit>
+		<unit name="per thousand">
+			<eqn>1/thousand</eqn>
+		</unit>
+		<unit name="Projects per Year">
+			<eqn>projects/yr</eqn>
+		</unit>
+		<unit name="thousand acres">
+			<eqn>thousand-acres</eqn>
+		</unit>
+		<unit name="thousand ton per yr">
+			<eqn>thousand-ton/yr</eqn>
+		</unit>
+		<unit name="ton per acre per yr">
+			<eqn>ton/(acre-yr)</eqn>
+		</unit>
+		<unit name="ton per day">
+			<eqn>ton/day</eqn>
+		</unit>
+		<unit name="ton per year">
+			<eqn>ton/yr</eqn>
+		</unit>
+		<unit name="tons per load">
+			<eqn>ton/load</eqn>
+		</unit>
+		<unit name="USD per barrel">
+			<eqn>USD/bbl</eqn>
+		</unit>
+		<unit name="USD per gallon">
+			<eqn>USD/gal</eqn>
+		</unit>
+		<unit name="USD per ton">
+			<eqn>USD/ton</eqn>
+		</unit>
+		<unit name="USD per visit">
+			<eqn>USD/Visit</eqn>
+		</unit>
+		<unit name="visits per month">
+			<eqn>Visit/mo</eqn>
+		</unit>
+		<unit name="Visits per year">
+			<eqn>Visit/yr</eqn>
+		</unit>
+		<unit name="VehiclesMPG">
+			<eqn>Vehicles*mi/gal</eqn>
+		</unit>
+		<unit name="TonnePerGram">
+			<eqn>tonne/g</eqn>
+		</unit>
+		<unit name="TonnesPerGram">
+			<eqn>Tonnes/g</eqn>
+		</unit>
+	</model_units>
+	<model>
+		<variables>
+			<stock name="Potential">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<outflow>become_cand</outflow>
+				<non_negative/>
+			</stock>
+			<stock name="NO WTE">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>become_cand</inflow>
+				<inflow>return</inflow>
+				<outflow>begin_dev_25</outflow>
+				<outflow>begin_dev_50</outflow>
+				<outflow>begin_dev_CF</outflow>
+				<outflow>begin_dev_100</outflow>
+				<outflow>NoInvest</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="become cand">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="invest CF">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="CF">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>invest_CF</inflow>
+				<inflow>return_1</inflow>
+				<outflow>add_25_a</outflow>
+				<outflow>add_50_a</outflow>
+				<outflow>add_100</outflow>
+				<outflow>NoInvest_1</outflow>
+				<non_negative/>
+			</stock>
+			<stock name="Coverage 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>invest_50</inflow>
+				<inflow>complete_25_b</inflow>
+				<inflow>complete_50_a</inflow>
+				<inflow>return_3</inflow>
+				<outflow>add_50_c</outflow>
+				<outflow>add_25_c</outflow>
+				<outflow>NoInvest_3</outflow>
+				<non_negative/>
+			</stock>
+			<stock name="Coverage 75">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>complete_25_c</inflow>
+				<inflow>return_4</inflow>
+				<inflow>complete_50_b</inflow>
+				<outflow>add_25_d</outflow>
+				<outflow>NoInvest_4</outflow>
+				<non_negative/>
+			</stock>
+			<stock name="Coverage 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>invest_100</inflow>
+				<inflow>complete_25_d</inflow>
+				<inflow>complete_50_c</inflow>
+				<inflow>complete_100</inflow>
+				<non_negative/>
+			</stock>
+			<flow name="invest 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Coverage 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>invest_25</inflow>
+				<inflow>complete_25_a</inflow>
+				<inflow>return_2</inflow>
+				<outflow>add_25_b</outflow>
+				<outflow>NoInvest_2</outflow>
+				<outflow>add_50_b</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="invest 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="invest 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 25 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 25 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 25 d">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 50 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 50 c">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev CF">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>begin_dev_CF</inflow>
+				<outflow>invest_CF</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<stock name="In Dev 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>begin_dev_25</inflow>
+				<outflow>invest_25</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<stock name="In Dev 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>begin_dev_50</inflow>
+				<outflow>invest_50</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="begin dev 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="begin dev 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="begin dev CF">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>begin_dev_100</inflow>
+				<outflow>invest_100</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="begin dev 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="add on dev 3">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_25_a</inflow>
+				<outflow>complete_25_a</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<stock name="in dev 2">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_50_a</inflow>
+				<outflow>complete_50_a</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 25 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="add 50 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="in dev a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_100</inflow>
+				<outflow>complete_100</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="add on dev 4">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_25_b</inflow>
+				<outflow>complete_25_b</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 25 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 6">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_50_c</inflow>
+				<outflow>complete_50_c</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 50 c">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 7">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_25_d</inflow>
+				<outflow>complete_25_d</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="complete 25 c">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="add on dev 5">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_25_c</inflow>
+				<outflow>complete_25_c</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 25 c">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="add 25 d">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="Not Invest">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>NoInvest</inflow>
+				<outflow>return</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="NoInvest">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="return">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="No Add on 1">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>NoInvest_1</inflow>
+				<outflow>return_1</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="NoInvest 1">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="return 1">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="No Add on 2">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>NoInvest_2</inflow>
+				<outflow>return_2</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="NoInvest 2">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="return 2">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="No Add on 3">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>NoInvest_3</inflow>
+				<outflow>return_3</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="NoInvest 3">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="return 3">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="No Add on 4">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>NoInvest_4</inflow>
+				<outflow>return_4</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="NoInvest 4">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="return 4">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="complete 50 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="in dev 101">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>add_50_b</inflow>
+				<outflow>complete_50_b</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="add 50 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 25 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>start_invest_25</inflow>
+				<outflow>completing_invest_25</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="start invest 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="installations 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>completing_invest_25</inflow>
+				<inflow>completing_add_on_25</inflow>
+				<non_negative/>
+			</stock>
+			<flow name="completing invest 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 50 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>start_invest_50</inflow>
+				<outflow>completing_invest_50</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="start invest 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="installations 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>completing_invest_50</inflow>
+				<inflow>completing_add_on_50_b</inflow>
+				<non_negative/>
+			</stock>
+			<flow name="completing invest 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 100 a">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>start_invest_100</inflow>
+				<outflow>completing_invest_100</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="start invest 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<stock name="Installations 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>completing_invest_100</inflow>
+				<non_negative/>
+			</stock>
+			<flow name="completing invest 100">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 25 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>start_add_on_25</inflow>
+				<outflow>completing_add_on_25</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="start add on 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="completing add on 25">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="In Dev 50 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<inflow>start_add_on_50</inflow>
+				<outflow>completing_add_on_50_b</outflow>
+				<conveyor>
+					<len>1</len>
+				</conveyor>
+			</stock>
+			<flow name="start add on 50">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<non_negative/>
+			</flow>
+			<flow name="completing add on 50 b">
+				<dimensions>
+					<dim name="Dimension_1"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<non_negative/>
+			</flow>
+			<aux name="AddOnLogic 25" flow_concept="true">
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>addon_batch_outflux</eqn>
+				<units>units/yr</units>
+			</aux>
+			<aux name="Relative Attr">
+				<dimensions>
+					<dim name="CaptureStatus"/>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>IF tot_attr[CaptureStatus, LFStatus, LFSize] &gt; 0 THEN nominal_attr/tot_attr[CaptureStatus, LFStatus,LFSize]
+ELSE 0</eqn>
+				<units>Unitless</units>
+			</aux>
+			<stock name="AddOn Batchifier 25">
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<inflow>addon_influx_25</inflow>
+				<outflow>addon_batch_outflux</outflow>
+				<non_negative/>
+				<units>units</units>
+			</stock>
+			<aux name="addon quantity">
+				<doc>DEFINITION: Net Present Value of &quot;next&quot; commercial-scale project, discounted to &quot;now&quot; in simulation
+
+UNITS:  US Dollars
+
+TYPE: Calculation; Sector Interface
+
+SOURCE: N/A
+
+COMMENT: Sums the input NPV calculations to provide overall NPV for the project.
+</doc>
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>IF AddOn_Batchifier_25 &gt;= Threshold_Investment_Quantity THEN Threshold_Investment_Quantity ELSE 0</eqn>
+				<units>units</units>
+			</aux>
+			<flow name="addon batch outflux">
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>PULSE(addon_quantity)</eqn>
+				<non_negative/>
+				<units>units/yr</units>
+			</flow>
+			<flow name="addon influx 25">
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>AddOn_Consideration[LFStatus, LFSize] * Relative_Attr[HaveCapture, LFStatus, LFSize, WTEConfig]</eqn>
+				<non_negative/>
+				<units>units/yr</units>
+			</flow>
+			<aux name="Threshold Investment Quantity">
+				<doc>Notes on Data:
+
+These are referred to in EPA speak as publicly owned treatment works (POTW)
+
+These data are for POTWs that are 1 to &gt; 200 MGD
+
+According to the EPA CWNS (2012) there are 14,581 POTWs in the US
+
+&lt; 1 MGD 11,784
+1 to 10 MGD 2,754
+10 to 100 MGD 502
+&gt; 100 MGD 39
+
+
+No WTE - corresponds to total WWTPs without AD - (CWNS, 2008)
+
+CF - corresponds to facilities that have AD but don&apos;t have CHP = 1351 (Murray, 2014)
+
+Elec - corresponds to facilities that have AD and CHP = 104 (Murray 2014)</doc>
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<element subscript="Inactive, LFSmall, NoWTE">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, CF">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, Elec">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, CNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, PNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, BCFuel">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, TCFUEL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, HTL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFSmall, CHP">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, NoWTE">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, CF">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, Elec">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, CNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, PNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, BCFuel">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, TCFUEL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, HTL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Inactive, LFLarge, CHP">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, NoWTE">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, CF">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, Elec">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, CNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, PNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, BCFuel">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, TCFUEL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, HTL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFSmall, CHP">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, NoWTE">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, CF">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, Elec">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, CNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, PNG">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, BCFuel">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, TCFUEL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, HTL">
+					<eqn>1</eqn>
+				</element>
+				<element subscript="Active, LFLarge, CHP">
+					<eqn>1</eqn>
+				</element>
+				<units>units</units>
+			</aux>
+			<aux name="Frac Consider AddOn">
+				<eqn>0.5</eqn>
+				<units>Per Year</units>
+			</aux>
+			<aux name="AddOn 25 Consideration">
+				<dimensions>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+				</dimensions>
+				<eqn>CaptureFlare * Frac_Consider_AddOn</eqn>
+				<units>units/yr</units>
+			</aux>
+			<aux name="active pathways">
+				<dimensions>
+					<dim name="CaptureStatus"/>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>IF tot_attr[CaptureStatus, LFStatus, LFSize] &gt; 0 THEN nominal_attr/tot_attr[CaptureStatus, LFStatus,LFSize]
+ELSE 0</eqn>
+				<units>Unitless</units>
+			</aux>
+			<aux name="NPV input">
+				<dimensions>
+					<dim name="CaptureStatus"/>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>IF tot_attr[CaptureStatus, LFStatus, LFSize] &gt; 0 THEN nominal_attr/tot_attr[CaptureStatus, LFStatus,LFSize]
+ELSE 0</eqn>
+				<units>Unitless</units>
+			</aux>
+			<aux name="relevant scale options">
+				<dimensions>
+					<dim name="CaptureStatus"/>
+					<dim name="LFStatus"/>
+					<dim name="LFSize"/>
+					<dim name="WTEConfig"/>
+				</dimensions>
+				<eqn>IF tot_attr[CaptureStatus, LFStatus, LFSize] &gt; 0 THEN nominal_attr/tot_attr[CaptureStatus, LFStatus,LFSize]
+ELSE 0</eqn>
+				<units>Unitless</units>
+			</aux>
+		</variables>
+		<views>
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<numeric_display color="blue" background="white" font_size="9pt" isee:transparent="false"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				<button color="black" background="#E0E0E0" font_size="12pt" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
+				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_background_color="#FFFECF"/>
+				<slider color="black" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:sim_speed_slider color="black" background="white"/>
+				<isee:time_slider color="#E95F74" background="silver"/>
+				<isee:pie_input color="black" background="white" font_size="12pt" legend_position="bottom" isee:transparent="false"/>
+				<knob color="#66CC66" background="#E0E0E0" font_size="12pt" label_side="bottom" wrap_title="true"/>
+				<numeric_input color="black" background="#E0E0E0" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<switch color="black" background="#E0E0E0" font_size="12pt" label_side="top" wrap_title="true" isee:appearance="switch" isee:on_color="green"/>
+				<options color="black" background="white" appearance="radio-buttons" arrangement="vertical"/>
+				<graphical_input color="black" background="#E0E0E0" font_size="12pt" isee:show_hover_tip="true"/>
+				<group_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<lamp color="black" background="white" font_size="9pt"/>
+				<gauge color="black" background="white" font_size="9pt" needle_color="#F09F72" bar_color="#EEEEEE" bar_progress_color="black" appearance="radial" num_major_ticks="11" num_minor_ticks="11" show_numeric_value="true"/>
+				<isee:spatial_map color="black" background="white" font_size="12pt"/>
+				<isee:animation_object color="black" background="white" font_size="12pt"/>
+				<isee:navigation_widget color="black" background="white" item_spacing="6" appearance="tabs" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD"/>
+				<isee:shape color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid" opacity="1" transparent_background="true"/>
+				<isee:selector color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+			</style>
+			<view isee:show_pages="false" page_width="853" page_height="653" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="1023" isee:scroll_y="300" isee:popup_graphs_are_comparative="true" type="stock_flow">
+				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
+						<shape type="rectangle" width="45" height="35"/>
+					</stock>
+					<flow color="blue" background="white" font_color="blue" font_size="9pt" label_side="bottom"/>
+					<isee:placeholder color="#228B22" background="white" font_color="#228B22" font_size="9pt" label_side="bottom"/>
+					<module color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
+						<shape type="rectangle" width="55" height="45"/>
+					</module>
+					<aux color="blue" background="white" font_color="blue" font_size="9pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</aux>
+					<group color="red" background="white" font_color="red" font_size="9pt"/>
+					<connector color="#818181" background="white" font_color="#818181" font_size="9pt" isee:thickness="1"/>
+					<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<numeric_display color="blue" background="white" font_size="9pt" isee:transparent="false"/>
+					<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+						<isee:series_styles>
+							<isee:series_style color="blue" thickness="1"/>
+							<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#FF7F00" thickness="1"/>
+							<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#FF007F" thickness="1"/>
+							<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#C8C8C8" thickness="1"/>
+						</isee:series_styles>
+					</graph>
+					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				</style>
+				<stock x="98" y="722" name="Potential"/>
+				<stock label_side="bottom" x="313" y="712" name="NO WTE"/>
+				<flow x="199.5" y="715" name="become cand">
+					<pts>
+						<pt x="120.5" y="715"/>
+						<pt x="290.5" y="715"/>
+					</pts>
+				</flow>
+				<flow color="red" font_color="red" label_side="top" x="470" y="55.5313" name="invest CF">
+					<pts>
+						<pt x="410" y="55.5313"/>
+						<pt x="542" y="55.5313"/>
+					</pts>
+				</flow>
+				<stock color="red" font_color="red" label_side="center" x="564.5" y="61.2813" name="CF"/>
+				<stock color="#AA0000" font_color="#AA0000" label_side="bottom" x="991.5" y="409" name="Coverage 50"/>
+				<stock color="#550000" font_color="#550000" label_side="center" x="1178" y="551" name="Coverage 75"/>
+				<stock color="black" font_color="black" label_side="bottom" x="1462.5" y="722" name="Coverage 100"/>
+				<flow color="black" font_color="black" x="1054" y="715" name="invest 100">
+					<pts>
+						<pt x="680" y="715"/>
+						<pt x="1440" y="715"/>
+					</pts>
+				</flow>
+				<stock color="#005500" font_color="#005500" label_side="bottom" x="697.5" y="273" name="Coverage 25"/>
+				<flow color="#005500" font_color="#005500" x="548" y="260.491" name="invest 25">
+					<pts>
+						<pt x="433" y="260.491"/>
+						<pt x="675" y="260.491"/>
+					</pts>
+				</flow>
+				<flow color="#AA0000" font_color="#AA0000" x="781.625" y="404.625" name="invest 50">
+					<pts>
+						<pt x="606.25" y="404.625"/>
+						<pt x="969" y="404.625"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="1" color="#005500" font_color="#005500" label_side="right" x="701" y="193.25" name="complete 25 a">
+					<pts>
+						<pt x="661.25" y="143"/>
+						<pt x="701" y="143"/>
+						<pt x="701" y="255.5"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="1" color="#005500" font_color="#005500" label_side="left" label_angle="225" x="971.25" y="354.75" name="complete 25 b">
+					<pts>
+						<pt x="886" y="330"/>
+						<pt x="971.25" y="330"/>
+						<pt x="971.25" y="391.5"/>
+					</pts>
+				</flow>
+				<flow color="#005500" font_color="#005500" label_side="top" x="1392.08" y="556" name="complete 25 d">
+					<pts>
+						<pt x="1341.16" y="556"/>
+						<pt x="1443" y="556"/>
+						<pt x="1443" y="704.5"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="0" color="#AA0000" font_color="#AA0000" label_side="bottom" x="930.688" y="121.281" name="complete 50 a">
+					<pts>
+						<pt x="849.625" y="121.281"/>
+						<pt x="1011.75" y="121.281"/>
+						<pt x="1011.75" y="391.5"/>
+					</pts>
+				</flow>
+				<flow color="#AA0000" font_color="#AA0000" label_side="top" x="1360.25" y="412" name="complete 50 c">
+					<pts>
+						<pt x="1257.5" y="412"/>
+						<pt x="1463" y="412"/>
+						<pt x="1463" y="704.5"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="0" color="black" font_color="black" x="1230.19" y="56" name="complete 100">
+					<pts>
+						<pt x="977.625" y="56"/>
+						<pt x="1482.75" y="56"/>
+						<pt x="1482.75" y="704.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="top" x="380" y="45.5313" width="30" height="20" name="In Dev CF"/>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="403" y="250.491" width="30" height="20" name="In Dev 25"/>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="576.25" y="394.625" width="30" height="20" name="In Dev 50"/>
+				<flow x="351" y="264.496" name="begin dev 25">
+					<pts>
+						<pt x="311" y="694.5"/>
+						<pt x="311" y="264.496"/>
+						<pt x="403" y="264.496"/>
+					</pts>
+				</flow>
+				<flow x="440.125" y="408.75" name="begin dev 50">
+					<pts>
+						<pt x="316" y="694.5"/>
+						<pt x="316" y="408.75"/>
+						<pt x="576.25" y="408.75"/>
+					</pts>
+				</flow>
+				<flow x="337.5" y="60.4688" name="begin dev CF">
+					<pts>
+						<pt x="307" y="694.5"/>
+						<pt x="307" y="60.4688"/>
+						<pt x="380" y="60.4688"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="650" y="705" width="30" height="20" name="In Dev 100"/>
+				<flow x="486.75" y="718.375" name="begin dev 100">
+					<pts>
+						<pt x="335.5" y="718.375"/>
+						<pt x="650" y="718.375"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="top" x="631.25" y="130.281" width="30" height="20" name="add on dev 3"/>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="819.625" y="111.281" width="30" height="20" name="in dev 2"/>
+				<flow color="#005500" font_color="#005500" x="591.25" y="140.281" name="add 25 a">
+					<pts>
+						<pt x="563.25" y="78.7813"/>
+						<pt x="563.25" y="140.281"/>
+						<pt x="631.25" y="140.281"/>
+					</pts>
+				</flow>
+				<flow color="#AA0000" font_color="#AA0000" x="712" y="76.5313" name="add 50 a">
+					<pts>
+						<pt x="587" y="76.5313"/>
+						<pt x="837" y="76.5313"/>
+						<pt x="837" y="111.281"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="947.625" y="45.2813" width="30" height="20" name="in dev a"/>
+				<flow color="black" font_color="black" label_side="top" x="761.313" y="55.2813" name="add 100">
+					<pts>
+						<pt x="587" y="55.2813"/>
+						<pt x="947.625" y="55.2813"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="left" x="856" y="321" width="30" height="20" name="add on dev 4"/>
+				<flow color="#005500" font_color="#005500" x="795.5" y="286.375" name="add 25 b">
+					<pts>
+						<pt x="720" y="286.375"/>
+						<pt x="871" y="286.375"/>
+						<pt x="871" y="321"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="1227.5" y="399" width="30" height="20" name="In Dev 6"/>
+				<flow color="#AA0000" font_color="#AA0000" x="1114.75" y="409" name="add 50 c">
+					<pts>
+						<pt x="1014" y="409"/>
+						<pt x="1227.5" y="409"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="1311.16" y="541" width="30" height="20" name="In Dev 7"/>
+				<flow isee:segment_with_valve="1" color="#005500" font_color="#005500" label_side="left" label_angle="225" x="1161" y="499.25" name="complete 25 c">
+					<pts>
+						<pt x="1084.25" y="477"/>
+						<pt x="1161" y="477"/>
+						<pt x="1161" y="533.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="top" x="1054.25" y="464.281" width="30" height="20" name="add on dev 5"/>
+				<flow color="#005500" font_color="#005500" x="1015.25" y="474.281" name="add 25 c">
+					<pts>
+						<pt x="988.25" y="426.5"/>
+						<pt x="988.25" y="474.281"/>
+						<pt x="1054.25" y="474.281"/>
+					</pts>
+				</flow>
+				<flow color="#005500" font_color="#005500" x="1249.83" y="553" name="add 25 d">
+					<pts>
+						<pt x="1200.5" y="553"/>
+						<pt x="1311.16" y="553"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="381" y="824" width="30" height="20" name="Not Invest"/>
+				<flow isee:segment_with_valve="1" x="396" y="769.5" name="NoInvest">
+					<pts>
+						<pt x="335.5" y="727"/>
+						<pt x="396" y="727"/>
+						<pt x="396" y="824"/>
+					</pts>
+				</flow>
+				<flow x="342" y="835" name="return">
+					<pts>
+						<pt x="381" y="835"/>
+						<pt x="303" y="835"/>
+						<pt x="303" y="729.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="439" y="169.75" width="30" height="20" name="No Add on 1"/>
+				<flow isee:segment_with_valve="1" x="454" y="117.141" name="NoInvest 1">
+					<pts>
+						<pt x="542" y="76.5313"/>
+						<pt x="454" y="76.5313"/>
+						<pt x="454" y="169.75"/>
+					</pts>
+				</flow>
+				<flow x="511.5" y="179.75" name="return 1">
+					<pts>
+						<pt x="469" y="179.75"/>
+						<pt x="554" y="179.75"/>
+						<pt x="554" y="78.7813"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="583.5" y="346.75" width="30" height="20" name="No Add on 2"/>
+				<flow isee:segment_with_valve="1" x="602.5" y="304.375" name="NoInvest 2">
+					<pts>
+						<pt x="675" y="274"/>
+						<pt x="602.5" y="274"/>
+						<pt x="602.5" y="346.75"/>
+					</pts>
+				</flow>
+				<flow x="657.25" y="356.75" name="return 2">
+					<pts>
+						<pt x="613.5" y="356.75"/>
+						<pt x="701" y="356.75"/>
+						<pt x="701" y="290.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="856" y="510.75" width="30" height="20" name="No Add on 3"/>
+				<flow isee:segment_with_valve="1" x="871" y="456.141" name="NoInvest 3">
+					<pts>
+						<pt x="969" y="413.531"/>
+						<pt x="871" y="413.531"/>
+						<pt x="871" y="510.75"/>
+					</pts>
+				</flow>
+				<flow x="931" y="522" name="return 3">
+					<pts>
+						<pt x="886" y="522"/>
+						<pt x="976" y="522"/>
+						<pt x="976" y="426.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="1050" y="634.75" width="30" height="20" name="No Add on 4"/>
+				<flow isee:segment_with_valve="1" x="1065" y="586.641" name="NoInvest 4">
+					<pts>
+						<pt x="1155.5" y="550.531"/>
+						<pt x="1065" y="550.531"/>
+						<pt x="1065" y="634.75"/>
+					</pts>
+				</flow>
+				<flow x="1125" y="646" name="return 4">
+					<pts>
+						<pt x="1080" y="646"/>
+						<pt x="1170" y="646"/>
+						<pt x="1170" y="568.5"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="0" color="#AA0000" font_color="#AA0000" label_side="bottom" x="1090.5" y="260" name="complete 50 b">
+					<pts>
+						<pt x="984" y="260"/>
+						<pt x="1197" y="260"/>
+						<pt x="1197" y="533.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="954" y="250.281" width="30" height="20" name="in dev 101"/>
+				<flow color="#AA0000" font_color="#AA0000" label_side="top" x="831" y="260.281" name="add 50 b">
+					<pts>
+						<pt x="720" y="260.281"/>
+						<pt x="954" y="260.281"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="2025.25" y="492" width="30" height="20" name="In Dev 25 a"/>
+				<flow x="1938.13" y="507" name="start invest 25">
+					<pts>
+						<pt x="1851" y="507"/>
+						<pt x="2025.25" y="507"/>
+					</pts>
+				</flow>
+				<stock color="#005500" font_color="#005500" label_side="bottom" x="2254.5" y="502" name="installations 25"/>
+				<flow label_side="bottom" x="2137.63" y="506" name="completing invest 25">
+					<pts>
+						<pt x="2055.25" y="506"/>
+						<pt x="2232" y="506"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="2032.25" y="663" width="30" height="20" name="In Dev 50 a"/>
+				<flow x="1945.13" y="678" name="start invest 50">
+					<pts>
+						<pt x="1858" y="678"/>
+						<pt x="2032.25" y="678"/>
+					</pts>
+				</flow>
+				<stock color="#005500" font_color="#005500" label_side="bottom" x="2261.5" y="673" name="installations 50"/>
+				<flow x="2144.63" y="677" name="completing invest 50">
+					<pts>
+						<pt x="2062.25" y="677"/>
+						<pt x="2239" y="677"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="2026.25" y="845" width="30" height="20" name="In Dev 100 a"/>
+				<flow x="1939.13" y="860" name="start invest 100">
+					<pts>
+						<pt x="1852" y="860"/>
+						<pt x="2026.25" y="860"/>
+					</pts>
+				</flow>
+				<stock color="#005500" font_color="#005500" label_side="bottom" x="2256.5" y="855" name="Installations 100"/>
+				<flow x="2139.13" y="859" name="completing invest 100">
+					<pts>
+						<pt x="2056.25" y="859"/>
+						<pt x="2234" y="859"/>
+					</pts>
+				</flow>
+				<text_box uid="1" x="67" y="465.141" width="331" height="152">State of Landfills.
+Arrayed by Status (open/closed) and Size (large/small)
+Stocks show State of Landfill with respect to overall usage methane prodn
+e.g., Coverage 75 holds landfills that have 75% of their methane production being converted.
+
+Not shown: Open/close flows associated with each non-conveyor stock.</text_box>
+				<text_box uid="2" x="1597" y="504" width="168" height="246.718">Number of  conversion Investments by their SCALE relative to the landfill size
+
+Arrayed by Status (open/closed) and Size (large/small), WTE Config (i.e., what facility is being put into the system.
+</text_box>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="2032.25" y="564" width="30" height="20" name="In Dev 25 b"/>
+				<flow x="1945.13" y="579" name="start add on 25">
+					<pts>
+						<pt x="1858" y="579"/>
+						<pt x="2032.25" y="579"/>
+					</pts>
+				</flow>
+				<flow label_side="bottom" x="2158.38" y="579" name="completing add on 25">
+					<pts>
+						<pt x="2062.25" y="579"/>
+						<pt x="2254.5" y="579"/>
+						<pt x="2254.5" y="519.5"/>
+					</pts>
+				</flow>
+				<stock color="black" background="#BDBDBD" font_color="black" label_side="bottom" x="2035.25" y="738" width="30" height="20" name="In Dev 50 b"/>
+				<flow x="1948.13" y="753" name="start add on 50">
+					<pts>
+						<pt x="1861" y="753"/>
+						<pt x="2035.25" y="753"/>
+					</pts>
+				</flow>
+				<flow label_side="bottom" x="2162.38" y="753" name="completing add on 50 b">
+					<pts>
+						<pt x="2065.25" y="753"/>
+						<pt x="2259.5" y="753"/>
+						<pt x="2259.5" y="690.5"/>
+					</pts>
+				</flow>
+				<text_box uid="3" x="1805.25" y="463" width="168" height="25">Co-flow with invest in 25% </text_box>
+				<text_box uid="4" x="1817.13" y="608.141" width="205" height="25">Co-flow with sum of add on 25% </text_box>
+				<text_box uid="5" x="1071" y="93.141" width="331" height="152">Flows show different development pathways from one landfill state to another. Assume that we can invest 100%, 50% 25% scale. This constrains options such that, for example, if you are at 50% coverage you can either go to 75 or to 100. If you are at 25, you can go to 50, 75, or 100.</text_box>
+				<connector uid="6" font_color="#FF007F" angle="91.049">
+					<from>AddOn_Batchifier_25</from>
+					<to>addon_quantity</to>
+				</connector>
+				<aux color="#008F44" font_color="#008F44" label_angle="268.99" x="2140.75" y="131.25" name="AddOnLogic 25"/>
+				<aux color="black" label_angle="268.357" x="1616.75" y="161.333" name="Relative Attr"/>
+				<stock color="black" label_side="top" x="1940.75" y="181.25" name="AddOn Batchifier 25"/>
+				<aux color="black" label_angle="269.931" x="1939.25" y="99.333" name="addon quantity"/>
+				<flow x="2026" y="178.25" name="addon batch outflux">
+					<pts>
+						<pt x="1963.25" y="178.25"/>
+						<pt x="2112.75" y="178.25"/>
+					</pts>
+				</flow>
+				<connector uid="7" font_color="#FF007F" angle="317.707">
+					<from>addon_quantity</from>
+					<to>addon_batch_outflux</to>
+				</connector>
+				<connector uid="8" font_color="#FF007F" angle="22.2733">
+					<from>addon_batch_outflux</from>
+					<to>AddOnLogic_25</to>
+				</connector>
+				<flow x="1853.5" y="186.25" name="addon influx 25">
+					<pts>
+						<pt x="1788.75" y="186.25"/>
+						<pt x="1918.25" y="186.25"/>
+					</pts>
+				</flow>
+				<connector uid="9" font_color="#FF007F" angle="353.992">
+					<from>Relative_Attr</from>
+					<to>addon_influx_25</to>
+				</connector>
+				<connector uid="10" font_color="#FF007F" angle="339.49">
+					<from>Threshold_Investment_Quantity</from>
+					<to>addon_quantity</to>
+				</connector>
+				<aux color="red" font_color="red" x="1828.25" y="73.833" name="Threshold Investment Quantity"/>
+				<aux color="red" font_color="red" x="2183.25" y="336" name="Frac Consider AddOn"/>
+				<aux label_side="left" x="2069.5" y="286.333" name="AddOn 25 Consideration"/>
+				<connector uid="11" angle="54.5333">
+					<from>
+						<alias uid="12"/>
+					</from>
+					<to>AddOn_25_Consideration</to>
+				</connector>
+				<connector uid="13" angle="164.578">
+					<from>Frac_Consider_AddOn</from>
+					<to>AddOn_25_Consideration</to>
+				</connector>
+				<connector uid="14" angle="155.139">
+					<from>AddOn_25_Consideration</from>
+					<to>addon_influx_25</to>
+				</connector>
+				<aux color="red" label_side="top" x="1616.75" y="64.333" name="active pathways"/>
+				<connector uid="15" isee:type="info" angle="270">
+					<from>active_pathways</from>
+					<to>Relative_Attr</to>
+				</connector>
+				<aux color="red" label_side="top" x="1548.75" y="71.333" name="NPV input"/>
+				<connector uid="16" isee:type="info" angle="311.108">
+					<from>NPV_input</from>
+					<to>Relative_Attr</to>
+				</connector>
+				<aux color="red" label_side="top" x="1706.75" y="67.333" name="relevant scale options"/>
+				<connector uid="17" isee:type="info" angle="226.245">
+					<from>relevant_scale_options</from>
+					<to>Relative_Attr</to>
+				</connector>
+				<text_box uid="18" x="1564.63" y="288" width="331" height="152">Arrayed by landfill size, WTE config, WTE scale
+
+Add-on logic applies to outflow from Coverage 25 stock, start add on 25 flow that tracks capacity by WTE config
+
+Need this structure for each stock in the state of landfills sector. relevant scale options relate to different sizes of build out that are available to the stock. For example, if Coverage 75, only have 25% available to you...</text_box>
+				<connector uid="19" angle="53.3929">
+					<from>
+						<alias uid="20"/>
+					</from>
+					<to>add_25_b</to>
+				</connector>
+				<connector uid="21" angle="19.8552">
+					<from>
+						<alias uid="20"/>
+					</from>
+					<to>add_50_b</to>
+				</connector>
+				<connector uid="22" angle="160.346">
+					<from>
+						<alias uid="20"/>
+					</from>
+					<to>NoInvest_2</to>
+				</connector>
+				<connector uid="23" angle="32.5741">
+					<from>
+						<alias uid="24"/>
+					</from>
+					<to>start_add_on_25</to>
+				</connector>
+				<alias color="#005500" font_style="italic" font_color="#005500" label_side="left" uid="12" x="1989.75" y="342.663" width="45" height="35">
+					<of>Coverage_25</of>
+				</alias>
+				<alias color="#008F44" font_style="italic" font_color="#008F44" uid="20" x="749" y="336" width="18" height="18">
+					<of>AddOnLogic_25</of>
+				</alias>
+				<alias color="#008F44" font_style="italic" font_color="#008F44" uid="24" x="1803" y="557.75" width="18" height="18">
+					<of>AddOnLogic_25</of>
+				</alias>
+			</view>
+		</views>
+	</model>
+</xmile>
+

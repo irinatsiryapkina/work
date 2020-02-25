@@ -1,0 +1,18 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+ 1) root 195000 4.214455e+17 25959710  
+   2) Global Inputs.PTC REC Scenario Multiplier< 0.8250732 80418 1.075310e+17 24808870  
+     4) CA LF.SB1383 influx Multiplier>=0.5240479 38323 3.432033e+16 24138750 *
+     5) CA LF.SB1383 influx Multiplier< 0.5240479 42095 4.033341e+16 25418950  
+      10) Global Inputs.PTC REC Scenario Multiplier< 0.3443604 17488 1.428273e+16 24767400 *
+      11) Global Inputs.PTC REC Scenario Multiplier>=0.3443604 24607 1.335042e+16 25882000 *
+   3) Global Inputs.PTC REC Scenario Multiplier>=0.8250732 114582 1.326559e+17 26767410  
+     6) CA LF.SB1383 influx Multiplier>=0.4901733 58365 4.182528e+16 26121310  
+      12) Global Inputs.PTC REC Scenario Multiplier< 1.342407 25754 1.389726e+16 25633110 *
+      13) Global Inputs.PTC REC Scenario Multiplier>=1.342407 32611 1.694205e+16 26506860 *
+     7) CA LF.SB1383 influx Multiplier< 0.4901733 56217 4.117175e+16 27438190  
+      14) Global Inputs.PTC REC Scenario Multiplier< 1.36145 25639 1.460519e+16 26953640 *
+      15) Global Inputs.PTC REC Scenario Multiplier>=1.36145 30578 1.549941e+16 27844480 *

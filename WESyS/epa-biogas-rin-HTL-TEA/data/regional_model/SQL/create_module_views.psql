@@ -1,0 +1,25 @@
+BEGIN;
+
+SET ROLE "wte-admin";
+
+-- create combined module variable views
+\ir 'CA CAFO.variables.sql'
+\ir 'CA LF.variables.sql'
+\ir 'CA WWTP.variables.sql'
+
+\ir 'ROTUS CAFO.variables.sql'
+\ir 'ROTUS LF.variables.sql'
+\ir 'ROTUS WWTP.variables.sql'
+
+-- export combined module variable views to CSV
+\COPY (SELECT * FROM "CA CAFO"."variables") TO '../CA CAFO.csv' WITH CSV HEADER DELIMITER ',';
+\COPY (SELECT * FROM "CA LF"."variables")   TO '../CA LF.csv'   WITH CSV HEADER DELIMITER ',';
+\COPY (SELECT * FROM "CA WWTP"."variables") TO '../CA WWTP.csv' WITH CSV HEADER DELIMITER ',';
+
+\COPY (SELECT * FROM "ROTUS CAFO"."variables") TO '../ROTUS CAFO.csv' WITH CSV HEADER DELIMITER ',';
+\COPY (SELECT * FROM "ROTUS LF"."variables")   TO '../ROTUS LF.csv'   WITH CSV HEADER DELIMITER ',';
+\COPY (SELECT * FROM "ROTUS WWTP"."variables") TO '../ROTUS WWTP.csv' WITH CSV HEADER DELIMITER ',';
+
+COMMIT;
+
+RESET ROLE;

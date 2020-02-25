@@ -1,0 +1,19 @@
+\i 'bls.price_index.sql'
+
+\i 'eia.aeo_2018.sql'
+\i 'eia.ice_electric.sql'
+\i 'eia.ice_natgas.sql'
+
+\i 'epa.lmop_data.sql'
+\i 'epa.lmop_landfill_data.sql'
+
+\i 'nrel.conversion_efficiencies.sql'
+\i 'nrel.rin_prices.sql'
+\i 'nrel.tea.sql'
+
+\i 'opis.rin_prices.sql'
+
+\i 'pnnl.seiple_2016_manure.sql'
+\i 'pnnl.seiple_2017_sludge.sql'
+
+\i 'wbj.waste_processing_and_disposal_sites.sql'

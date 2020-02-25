@@ -1,0 +1,14 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+1) root 195000 8.640380e+14 539032.8  
+  2) Global Inputs.PTC REC Scenario Multiplier< 0.7218018 70343 1.741980e+14 467068.4  
+    4) Global Inputs.PTC REC Scenario Multiplier< 0.3299561 32136 7.536061e+13 439275.8  
+      8) Global Inputs.RIN Scenario Multiplier< 1.199341 19259 2.982855e+13 415076.3 *
+      9) Global Inputs.RIN Scenario Multiplier>=1.199341 12877 1.738558e+13 475468.9 *
+    5) Global Inputs.PTC REC Scenario Multiplier>=0.3299561 38207 5.313600e+13 490444.9 *
+  3) Global Inputs.PTC REC Scenario Multiplier>=0.7218018 124657 1.199717e+14 579641.8  
+    6) Global Inputs.PTC REC Scenario Multiplier< 1.328735 59189 3.039316e+13 554923.7 *
+    7) Global Inputs.PTC REC Scenario Multiplier>=1.328735 65468 2.071966e+13 601989.2 *

@@ -1,0 +1,167 @@
+---
+title: "WESyS Q4 milestone"
+author: "Danny Inman and Annika Eberle"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Testing VBSA 
+- The objective of this study is to:
+- Test our VBSA code
+- Test rmarkdown and knitr
+
+```{r include=FALSE}
+        rm(list=ls())
+        R_LIBS= ("/home/R/library")
+        options(scipen=999) #turn scientific notation off
+        
+        library (data.table)
+        library (dplyr)
+        library (plyr)
+        library(randtoolbox)
+        library(sensitivity)
+        library (boot)
+        library (ggplot2)
+        library (gridExtra)
+        library (grid)
+        
+        #load functions
+        source ("../vbsa.functions.R")
+        
+        # generate data for 5 factors - this will be the basis of our model
+        foo <- data.table (f1 = runif(n = 1000, min = 1, max = 6000), f2 = rnorm (n = 1000, sd = 50, mean = 125), 
+                           f3 = seq (from = 3001, to = 4000, by = 1) + rnorm (n = 1000, sd = 150, mean = 3500), 
+                           f4 = seq (from = 0.001, to = 1, by = 0.001),
+                           f5 = rpois (1000, 5))
+                          
+        
+        foo.model <- lm (f4 ~ ., data = foo)
+        
+```
+
+
+
+```{r, echo = FALSE}
+        load ("../vbsa.testing/foo.vbsa.design.R")
+        
+        #run study design through model and collect the results
+        
+        foo.output <- predict.lm (foo.model, vbsa.design, interval = "prediction", type = "response")
+        foo.output <- as.numeric (foo.output [,1])
+```
+
+``` {r, echo = FALSE}
+        k <- ncol(vbsa.design)   # number of factors
+        N <- 5000
+        # center output by subtracting the mean from output
+        output.centered <- foo.output - mean(foo.output)
+        
+        #split total output into A and B vectors (1xN) and C and D matrices (Nxk), see Saltelli 2008 ch. 4
+        A.out <- output.centered[1:N] # (N x 1)
+        B.out <- output.centered[(N+1):(N*2)] # (N x 1)
+        
+        C.out <- matrix(nrow=N, ncol=k)
+        for(i in 1:k){
+          C.out[,i] <- output.centered[((i+1)*N+1):((i+2)*N)]
+        }
+        
+        D.out <- matrix(nrow=N, ncol=k)
+        for(i in 1:k){
+          D.out[,i] <- output.centered[((i+1+k)*N+1):((i+2+k)*N)]
+        }
+        
+        ABCD <- cbind(A.out, B.out, C.out, D.out)
+        
+        var.names <- colnames (vbsa.design)
+        
+        vbsa.results <- get.sensitivity (ABCD, boots = 10000, vars = var.names)
+        
+        vbsa.results.2nd <- get.second.order(ABCD, vars = var.names)
+```
+## Methods
+- We created a dummy dataset "foo" with `r nrow (foo)` observations of `r ncol (foo)` variables
+- We used the folling model: lm (f4 ~ ., data = foo)
+- Sobol Quasi-Random Sequences was used to design a study with `r nrow (vbsa.design)` replications
+- The model was run with the Sobol Desing and the output were collected
+
+## Plot of foo output
+```{r, echo = FALSE}
+        plot (foo)
+```
+
+## First-Order Results
+```{r, echo = FALSE}
+        ###Plot Results #####
+        #First Order
+        df.1 <- subset (vbsa.results, index == "S.i")
+        
+        low.quan <- data.table (factor = var.names, lower = tapply (df.1$value, 
+                   df.1$variable, quantile, probs = c(0.01), na.rm = TRUE))
+
+        ns <- subset (low.quan, lower > 0)
+        
+        df.1 <- subset (df.1, df.1$variable %in% ns$factor)
+        
+        rm (low.quan, ns)
+
+        #filename = paste( set, "Si.png", sep=".")
+        #png (file = paste (figurepath, filename, sep = "/"))
+
+        df <- df.1
+        
+        gg1 <- ggplot (df, aes (x = df$variable, y = value, colour = df$variable)) +
+          geom_boxplot(notch = TRUE, show.legend = TRUE) + 
+          theme(axis.title.x = element_blank(),
+                axis.text.x = element_blank(),
+                axis.ticks.x = element_blank()) +
+          labs (title = "First Order Index", x = "Model Factor", y = expression ("S"["i"]))
+
+        gg1
+```
+
+## Total Effects
+```{r, echo = FALSE}
+
+        df.2 <- subset (vbsa.results, index == "S.t.i")
+
+        low.quan <- data.table (factor = var.names, lower = tapply (df.2$value, 
+                     df.2$variable, quantile, probs = c(0.01), na.rm = TRUE))
+
+        ns <- subset (low.quan, lower > 0.01)
+        
+        df.2 <- subset (df.2, df.2$variable %in% ns$factor)
+        
+        rm (low.quan, ns)
+        
+        df <- df.2
+        
+        gg2 <- ggplot (df, aes (x = df$variable, y = value, colour = df$variable)) +
+          geom_boxplot(notch = TRUE, show.legend = TRUE) + 
+            theme(axis.title.x = element_blank(),
+                axis.text.x = element_blank(),
+                axis.ticks.x = element_blank()) +
+          labs (title = "Total Effects", x = "Model Factor", y = expression ("S"["i"]))
+        
+        gg2
+```
+
+## Conclusions
+
+```{r, echo = FALSE}
+grid.arrange (gg1, gg2, nrow = 1)
+```
+
+## Conclusions - cont...
+
+-Of the five factors tested, `r df$variable[1]` was the most impactful
+
+::: notes
+testing the notes function here
+
+we can add notes to each slide through markdown
+:::
+

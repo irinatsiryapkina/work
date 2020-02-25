@@ -1,0 +1,7 @@
+CREATE DATABASE "wte";
+
+GRANT CONNECT ON DATABASE TO "dhetting";
+
+\c "wte"
+
+CREATE EXTENSION "postgis";

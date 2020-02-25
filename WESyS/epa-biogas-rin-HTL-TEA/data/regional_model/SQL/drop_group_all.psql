@@ -1,0 +1,5 @@
+\i 'drop_role_wte-client.sql'
+\i 'drop_role_wte-users.sql'
+\i 'drop_role_wte-ro.sql'
+\i 'drop_role_wte-rw.sql'
+\i 'drop_role_wte-admin.sql'

@@ -1,0 +1,19 @@
+DROP VIEW "bls"."price_index";
+
+DROP VIEW "eia"."aeo_2018";
+DROP VIEW "eia"."ice_electric";
+DROP VIEW "eia"."ice_natgas";
+
+DROP VIEW "epa"."lmop_data";
+DROP VIEW "epa"."lmop_landfill_data";
+
+DROP VIEW "nrel"."conversion_efficiencies";
+DROP VIEW "nrel"."rin_prices";
+DROP VIEW "nrel"."tea";
+
+DROP VIEW "opis"."rin_prices";
+
+DROP VIEW "pnnl"."seiple_2016_manure";
+DROP VIEW "pnnl"."seiple_2017_sludge";
+
+DROP VIEW "wbj"."waste_processing_and_disposal_sites";

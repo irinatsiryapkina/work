@@ -1,0 +1,1180 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <bib:Document rdf:about="https://www.scopus.com/record/display.uri?eid=2-s2.0-84901702264&amp;origin=resultslist&amp;sort=plf-f&amp;src=s&amp;st1=%22carbon+tax%22+AND+bio*&amp;nlo=&amp;nlr=&amp;nls=&amp;sid=a67fa79ab72ef88985fa537ac8026f76&amp;sot=b&amp;sdt=b&amp;sl=36&amp;s=TITLE-ABS-KEY%28%22carbon+tax%22+AND+bio*%29&amp;relpos=132&amp;citeCnt=55&amp;searchTerm=">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.scopus.com/record/display.uri?eid=2-s2.0-84901702264&amp;origin=resultslist&amp;sort=plf-f&amp;src=s&amp;st1=%22carbon+tax%22+AND+bio*&amp;nlo=&amp;nlr=&amp;nls=&amp;sid=a67fa79ab72ef88985fa537ac8026f76&amp;sot=b&amp;sdt=b&amp;sl=36&amp;s=TITLE-ABS-KEY%28%22carbon+tax%22+AND+bio*%29&amp;relpos=132&amp;citeCnt=55&amp;searchTerm=</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Scopus - Document details</dc:title>
+    </bib:Document>
+    <bib:Article rdf:about="#item_355">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>27</prism:volume>
+                <prism:number>4</prism:number>
+                <dc:title>Journal of Climate</dc:title>
+                <dc:identifier>DOI 10.1175/JCLI-D-13-00154.1</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Davies-Barnard</foaf:surname>
+                        <foaf:givenName>T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Valdes</foaf:surname>
+                        <foaf:givenName>P.J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singarayer</foaf:surname>
+                        <foaf:givenName>J.S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jones</foaf:surname>
+                        <foaf:givenName>C.D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>1413-1424</bib:pages>
+        <dc:date>2014</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Future land cover will have a significant impact on climate and is strongly influenced by the extent of agricultural land use. Differing assumptions of crop yield increase and carbon pricing mitigation strategies affect projected expansion of agricultural land in future scenarios. In the representative concentration pathway 4.5 (RCP4.5) from phase 5 of the Coupled Model Intercomparison Project (CMIP5), the carbon effects of these land cover changes are included, although the biogeophysical effects are not. The afforestation in RCP4.5 has important biogeophysical impacts on climate, in addition to the land carbon changes, which are directly related to the assumption of crop yield increase and the universal carbon tax. To investigate the biogeophysical climatic impact of combinations of agricultural crop yield increases and carbon pricing mitigation, five scenarios of land-use change based on RCP4.5 are used as inputs to an earth system model [Hadley Centre Global Environment Model, version 2-Earth System (HadGEM2-ES)]. In the scenario with the greatest increase in agricultural land (as a result of no increase in crop yield and no climate mitigation) there is a significant 20.49K worldwide cooling by 2100 compared to a control scenario with no land-use change. Regional cooling is up to 22.2K annually in northeastern Asia. Including carbon feedbacks from the land-use change gives a small global cooling of 20.067 K. This work shows that there are significant impacts from biogeophysical land-use changes caused by assumptions of crop yield and carbon mitigation, which mean that land carbon is not the whole story. It also elucidates the potential conflict between cooling from biogeophysical climate effects of land-use change and wider environmental aims. © 2014 American Meteorological Society.</dcterms:abstract>
+        <dc:title>Climatic impacts of land-use change due to crop yield increases and a universal carbon tax from a scenario model</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_356">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>67</prism:volume>
+                <prism:number>2</prism:number>
+                <dc:title>Journal of Environmental Economics and Management</dc:title>
+                <dc:identifier>DOI 10.1016/j.jeem.2013.11.001</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crago</foaf:surname>
+                        <foaf:givenName>C.L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Khanna</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Biofuel</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Optimal fuel tax</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Second best policy</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>89-103</bib:pages>
+        <dc:date>2014</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>A carbon tax on fuel would penalize carbon intensive fuels like gasoline and shift fuel consumption to less carbon intensive alternatives like biofuels. Since biofuel production competes for land with agricultural production, a carbon tax could increase land rents and raise food prices. This paper analyzes the welfare effect of a carbon tax on fuel consisting of gasoline and biofuel in the presence of a labor tax, with and without a biofuel subsidy. The market impacts of a carbon tax are also compared with that of a subsidy. Findings show that if a carbon tax increases biofuel demand, the tax interaction effect due to higher fuel prices is exacerbated by higher land rent and food prices and greater erosion of the carbon tax base. Thus, the second best optimal carbon tax for fuel is lower with biofuel in the fuel mix, especially if biofuel is subsidized. © 2013 Elsevier Inc.</dcterms:abstract>
+        <dc:title>Carbon abatement in the fuel market with biofuels: Implications for second best policies</dc:title>
+        <z:shortTitle>Carbon abatement in the fuel market with biofuels</z:shortTitle>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_357">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>9</prism:volume>
+                <prism:number>7</prism:number>
+                <dc:title>Environmental Research Letters</dc:title>
+                <dc:identifier>DOI 10.1088/1748-9326/9/7/074017</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Klein</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Humpenöder</foaf:surname>
+                        <foaf:givenName>F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bauer</foaf:surname>
+                        <foaf:givenName>N.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dietrich</foaf:surname>
+                        <foaf:givenName>J.P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Popp</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Leon Bodirsky</foaf:surname>
+                        <foaf:givenName>B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bonsch</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lotze-Campen</foaf:surname>
+                        <foaf:givenName>H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>biomass</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>biomass supply curve</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>climate change mitigation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>energy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>land use</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>resource potential</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:date>2014</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Low-stabilization scenarios consistent with the 2 °C target project large-scale deployment of purpose-grown lignocellulosic biomass. In case a GHG price regime integrates emissions from energy conversion and from land-use/land-use change, the strong demand for bioenergy and the pricing of terrestrial emissions are likely to coincide. We explore the global potential of purpose-grown lignocellulosic biomass and ask the question how the supply prices of biomass depend on prices for greenhouse gas (GHG) emissions from the land-use sector. Using the spatially explicit global land-use optimization model MAgPIE, we construct bioenergy supply curves for ten world regions and a global aggregate in two scenarios, with and without a GHG tax. We find that the implementation of GHG taxes is crucial for the slope of the supply function and the GHG emissions from the land-use sector. Global supply prices start at $5 GJ-1 and increase almost linearly, doubling at 150 EJ (in 2055 and 2095). The GHG tax increases bioenergy prices by $5 GJ -1 in 2055 and by $10 GJ-1 in 2095, since it effectively stops deforestation and thus excludes large amounts of high-productivity land. Prices additionally increase due to costs for N 2LO emissions from fertilizer use. The GHG tax decreases global land-use change emissions by one-third. However, the carbon emissions due to bioenergy production increase by more than 50% from conversion of land that is not under emission control. Average yields required to produce 240 EJ in 2095 are roughly 600 GJ ha-1 yr-1 with and without tax. © 2014 IOP Publishing Ltd.</dcterms:abstract>
+        <dc:title>The global economic long-term potential of modern biomass in a climate-constrained world</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_358">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>49</prism:volume>
+                <prism:number>4</prism:number>
+                <dc:title>Environmental Science and Technology</dc:title>
+                <dc:identifier>DOI 10.1021/es5052588</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dwivedi</foaf:surname>
+                        <foaf:givenName>P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hudiburg</foaf:surname>
+                        <foaf:givenName>T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jaiswal</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Parton</foaf:surname>
+                        <foaf:givenName>W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Long</foaf:surname>
+                        <foaf:givenName>S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Delucia</foaf:surname>
+                        <foaf:givenName>E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Khanna</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>2512-2522</bib:pages>
+        <dc:date>2015</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>We develop an integrated framework to determine and compare greenhouse gas (GHG) intensities and production costs of cellulosic ethanol derived from corn stover, switchgrass, and miscanthus grown on high and low quality soils for three representative counties in the Eastern United States. This information is critical for assessing the cost-effectiveness of utilizing cellulosic ethanol for mitigating GHG emissions and designing appropriate policy incentives to support cellulosic ethanol production nationwide. We find considerable variations in the GHG intensities and production costs of ethanol across feedstocks and locations mostly due to differences in yields and soil characteristics. As compared to gasoline, the GHG savings from miscanthus-based ethanol ranged between 130% and 156% whereas that from switchgrass ranged between 97% and 135%. The corresponding range for GHG savings with corn stover was 57% to 95% and marginally below the threshold of at least 60% for biofuels classified as cellulosic biofuels under the Renewable Fuels Standard. Estimates of the costs of producing ethanol relative to gasoline imply an abatement cost of at least $48 Mg-1 of GHG emissions (carbon dioxide equivalent) abated and can be used to infer the minimum carbon tax rate needed to induce consumption of cellulosic ethanol. © 2015 American Chemical Society.</dcterms:abstract>
+        <dc:title>Cost of abating greenhouse gas emissions with cellulosic ethanol</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_359">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>126</prism:volume>
+                <dc:title>Energy Conversion and Management</dc:title>
+                <dc:identifier>DOI 10.1016/j.enconman.2016.08.017</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cheng</foaf:surname>
+                        <foaf:givenName>L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Martínez</foaf:surname>
+                        <foaf:givenName>M.G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Anderson</foaf:surname>
+                        <foaf:givenName>C.L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Biofuel</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Downside risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Spot price</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Stochastic program</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Swap contract</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>463-472</bib:pages>
+        <dc:date>2016</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>While bioethanol has become a promising candidate for replacing fossil based transportation fuels, its economic feasibility still eludes industry investors. In particular, uncertainties exist in both production processes and associated markets. Hence, it is critical to develop process technology and strategize the operation and hedging decisions that improve financial viability. This paper considers long-term production scheduling under the impact of carbon tax constraints and ethanol spot price uncertainty, as well as risk management via ethanol swap contracts. More specifically, a framework consisting of a two-stage stochastic program and a two-factor time series model is presented to determine the weekly production rate and swap portfolios to maximize the process profit under spot price uncertainty. © 2016 Elsevier Ltd</dcterms:abstract>
+        <dc:title>Long term planning and hedging for a lignocellulosic biorefinery in a carbon constrained world</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_360">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>98</prism:volume>
+                <dc:title>Energy Policy</dc:title>
+                <dc:identifier>DOI 10.1016/j.enpol.2016.08.025</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gallagher</foaf:surname>
+                        <foaf:givenName>P.W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sleper</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Competitive market</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Consumer demand</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Ethanol-blended fuel</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Substitution</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>149-159</bib:pages>
+        <dc:date>2016</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>This study examines the prospect that a consumer-driven market could eventually replace the myriad regulations and demand quotas in the US ethanol and gasoline fuel market. Given efficient households that minimize the cost of operating automobiles, recent vehicle technology that improves blended fuel substitution, and typical market conditions of the last five years, blended fuels with 20% ethanol concentration could occupy a volume of 82.2 billion gallons in a 138.3 billion gallon gasoline market. The consumer welfare gain associated with blended fuel is $15.9 billion annually for US consumers, or about $1000 over the life of a vehicle. The ethanol demand associated with a voluntary blended fuel market is 16.4 BGY, slightly more than the conventional component of the Renewable Fuels Standard. It is time to replace the corn RFS with a free market. But an active competition policy in the fuel marketing system may also be required. Intervention for the impending Biomass Ethanol Industry, such as a subsidy or an exemption a carbon tax, may also be in order. © 2016 Elsevier Ltd</dcterms:abstract>
+        <dc:title>The market and consumer welfare effects of mid-level ethanol blends in the US fuel market</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_361">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>8</prism:volume>
+                <prism:number>2</prism:number>
+                <dc:title>Forests</dc:title>
+                <dc:identifier>DOI 10.3390/f8020043</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Qin</foaf:surname>
+                        <foaf:givenName>H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dong</foaf:surname>
+                        <foaf:givenName>L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huang</foaf:surname>
+                        <foaf:givenName>Y.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Adjacency constraints</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Combinatorial optimization</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Ecosystem services</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Forest planning</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Multi-function forest</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Simulated annealing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:date>2017</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>To mitigate global climatic changes, long-term carbon trading and carbon taxes have been implemented in many countries. However, carbon prices have varied in many of these regions. Therefore, the goal of this paper was to evaluate the effects of carbon prices on trade-offs between forest carbon and timber management objectives in spatial harvest scheduling problems. The objective function of the planning problem was designed to maximize the discounted net present value of harvested timber and the differences of carbon stocks in living tree biomass between the beginning and end of the planning horizon (DoC) within a 30-year time frame for a large forest region in northeast China. The constraints primarily related to maintaining an even flow of harvested timber and guaranteeing the maximum opening size. Forest developments were simulated using a set of standard stand-level growth and yield models, and the solutions of the planning problem were generated using the standard version of a simulated annealing algorithm. The effects of a wide range of carbon prices on the harvested timber and DoC levels were examined. The results showed that the trade-offs between forest harvested timber and the DoC displayed a typical nonlinear tendency as carbon prices increased. The current carbon prices (i.e., 25, 50 and 75 ¥/ton) in China had no significant effects on the optimal forest management plans compared with a scenario that used a carbon price of zero. The minimum carbon price that can provide the financial incentive for the forests to function as a significant carbon sink was estimated to be somewhat over 800 ¥/ton. This result could be useful in determining the appropriate carbon offset standard in this region. © 2017 by the authors; licensee MDPI, Basel, Switzerland.</dcterms:abstract>
+        <dc:title>Evaluating the effects of carbon prices on trade-offs between carbon and timber management objectives in forest spatial harvest scheduling problems: A case study from Northeast China</dc:title>
+        <z:shortTitle>Evaluating the effects of carbon prices on trade-offs between carbon and timber management objectives in forest spatial harvest scheduling problems</z:shortTitle>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_362">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>67</prism:volume>
+                <dc:title>Energy Economics</dc:title>
+                <dc:identifier>DOI 10.1016/j.eneco.2017.06.002</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Liu</foaf:surname>
+                        <foaf:givenName>B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shumway</foaf:surname>
+                        <foaf:givenName>C.R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yoder</foaf:surname>
+                        <foaf:givenName>J.K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Carbon-emission reduction</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Input substitution</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Lifecycle analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Revenue-neutral carbon tax</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Tax policy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>146-158</bib:pages>
+        <dc:date>2017</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>This paper develops a lifecycle economic analysis (LCEA) model that integrates endogenous input substitution into the standard lifecycle analysis (LCA) of biofuel that typically assumes fixed-proportions production. We use the LCEA model to examine impacts of a pure carbon tax and a revenue-neutral tax-subsidy policy on lifecycle greenhouse gas emissions from cellulosic ethanol using forest residues as feedstock in Washington State. In a model allowing for input substitution in the cellulosic ethanol feedstock, conversion, and transportation process, we consider energy source substitution (woody biomass for coal in the cellulosic ethanol conversion plant and biodiesel for diesel in feedstock production and feedstock and ethanol transportation) as well as substitution of capital and labor for energy in all stages of the lifecycle. We find that ignoring endogenous input substitution by using standard LCA leads to substantial underestimation of the impact of carbon tax policies on carbon emissions. Both tax policies can substantially reduce carbon emissions by inducing substitution among inputs. The revenue-neutral tax-subsidy policy reduces emissions more effectively than the carbon tax policy for carbon tax rates currently in place throughout most of the world. It stimulates substitution of woody biomass for coal and biodiesel for diesel at much lower tax rates when accompanied by corresponding subsidies for reduced emissions from renewable sources. © 2017 Elsevier B.V.</dcterms:abstract>
+        <dc:title>Lifecycle economic analysis of biofuels: Accounting for economic substitution in policy assessment</dc:title>
+        <z:shortTitle>Lifecycle economic analysis of biofuels</z:shortTitle>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_363">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>20</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Clean Technologies and Environmental Policy</dc:title>
+                <dc:identifier>DOI 10.1007/s10098-017-1461-7</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Memari</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ahmad</foaf:surname>
+                        <foaf:givenName>R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Abdul Rahim</foaf:surname>
+                        <foaf:givenName>A.R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Akbari Jokar</foaf:surname>
+                        <foaf:givenName>M.R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Bio-energy supply chain</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Biomass</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon trading</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Optimization</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Renewable energy</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>113-125</bib:pages>
+        <dc:date>2018</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Biomass residues due to their low bulk density typically require frequent transportation from biomass plantations in rural areas to conversion bio-energy power plants. This issue contrasts with environmental protection strategies, especially when power plants are facing different carbon reduction policies that enforce them to emit less than a given specific carbon amount. Although several researchers have investigated bio-energy supply chains concerning environmental policies, the majority of studies have been devoted to strategic decisions over a single planning period. This paper presents a multi-period bio-energy supply chain under carbon pricing (carbon tax) and carbon trading (cap-and-trade) policies at the tactical planning level. A mixed-integer linear programming model was adopted to optimize the proposed regional oil-palm biomass-to-bio-energy supply chain planning model. The numerical results indicate that when carbon pricing is in place when carbon tax increases linearly, carbon emissions’ reductions have a nonlinear trend, whereas both cost increase and carbon emissions’ reductions have a relatively upward trend in the carbon trading scheme. This paper also presents the sensitivity analysis of the proposed model regarding cost, emissions’ generation and supply chain performance. Finally, the paper recommends several significant practical implications and policy-making insights for managers and policymakers. © 2017, Springer-Verlag GmbH Germany, part of Springer Nature.</dcterms:abstract>
+        <dc:title>An optimization study of a palm oil-based regional bio-energy supply chain under carbon pricing and trading policies</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_364">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>9</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Climate Change Economics</dc:title>
+                <dc:identifier>DOI 10.1142/S2010007818400109</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sands</foaf:surname>
+                        <foaf:givenName>R.D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Bio-electricity</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>climate policy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>greenhouse gas</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>negative emissions</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>revenue recycling</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:date>2018</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>This paper documents application of the Future Agricultural Resources Model (FARM) to stylized carbon tax scenarios specified by the Stanford Energy Modeling Forum (EMF). Model results show that the method of tax revenue recycling makes a difference. Either labor-tax, or capital-tax, recycling can reduce the welfare cost of a carbon tax policy relative to lump sum recycling. Of the two tax recycling options, reducing capital taxes provides the greater reduction in welfare costs. However, carbon tax revenues decline with stringent carbon dioxide (CO2) emission targets and the availability of a negative-emissions technology such as bio-electricity with CO2 capture and storage (BECCS). As BECCS expands, net carbon tax revenues peak and decline due to an offsetting subsidy for carbon sequestration, limiting the potential for labor- or capital-tax recycling to reduce welfare costs of a climate policy. © 2018 The Author(s).</dcterms:abstract>
+        <dc:title>U.S. CARBON TAX SCENARIOS and BIOENERGY</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_365">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>101</prism:volume>
+                <dc:title>Environmental Modelling and Software</dc:title>
+                <dc:identifier>DOI 10.1016/j.envsoft.2017.12.006</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Elofsson</foaf:surname>
+                        <foaf:givenName>K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gren</foaf:surname>
+                        <foaf:givenName>I.-M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Bioenergy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Carbon sequestration</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Climate policy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>EU</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Policy instruments</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Timber</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>86-101</bib:pages>
+        <dc:date>2018</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>The purpose of this paper is to investigate cost-effective climate policy instruments for bioenergy and timber, adapted to the impacts on interdependent forest carbon pools, and applied in the EU climate policy to 2050. We develop a discrete time dynamic model including forest carbon pools in biomass, soil, and products, as well as fossil fuel consumption. The analytical results show that the optimal taxes on forest products depend on the growth in the respective carbon pool. The application to the EU 2050 climate policy for emission trading shows that total costs for target achievement can be reduced by 33 percent if all carbon pools are included, and the carbon tax on fossil fuel can be reduced by 50 percent. Optimal taxes on forest products differ among countries and over time depending on the potential for increased carbon sequestration over the planning period. © 2017 The Authors</dcterms:abstract>
+        <dc:title>Cost-efficient climate policies for interdependent carbon pools</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_366">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>153</prism:volume>
+                <dc:title>Energy</dc:title>
+                <dc:identifier>DOI 10.1016/j.energy.2018.04.057</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nie</foaf:surname>
+                        <foaf:givenName>Y.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bi</foaf:surname>
+                        <foaf:givenName>X.T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>British Columbia</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Forest residues</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Hydrothermal liquefaction</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Techno-economic assessment</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Transportation biofuels</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>464-475</bib:pages>
+        <dc:date>2018</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>A techno-economic assessment was conducted to estimate the capital and operating costs of a hypothetic biofuel system based on hydrothermal liquefaction (HTL) of forest residues in British Columbia. Three scenarios were investigated to understand how supply chain designs could influence the system's economic performance. The minimum selling price (MSP) of HTL biofuels was found to be 63%–80% higher than that of petroleum fuels. Converting forest residues to bio-oil and wood pellet before being transported to the conversion facility can lower the variable operating cost but not the MSP of HTL biofuels, due to the considerable increase in capital investment. Processing parameters such as the yield of bio-oil and biofuel can significantly influence the MSP of HTL biofuels, therefore, technology advancement can make great contribution in reducing the production cost. Alternatively, a high carbon tax is needed to make the HTL biofuels competitive with petroleum fuels. © 2018 Elsevier Ltd</dcterms:abstract>
+        <dc:title>Techno-economic assessment of transportation biofuels from hydrothermal liquefaction of forest residues in British Columbia</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_367">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>19</prism:volume>
+                <prism:number>1</prism:number>
+                <dc:title>Climate Policy</dc:title>
+                <dc:identifier>DOI 10.1080/14693062.2018.1467826</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wall</foaf:surname>
+                        <foaf:givenName>R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grafakos</foaf:surname>
+                        <foaf:givenName>S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gianoli</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stavropoulos</foaf:surname>
+                        <foaf:givenName>S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Green foreign direct investments</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>green growth</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>policy instruments</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>renewable energy</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>59-72</bib:pages>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Reducing GHG emissions and mitigating climate change would require significant investments in renewable energy technologies. Foreign direct investments (FDI) in renewable energy (RE) have increased over the last years, contributing to the diffusion of RE globally. In the field of climate policy, there are multiple policy instruments aimed at attracting investments in renewable energy. This article aims to map the FDI flows globally including source and destination countries. Furthermore, the article investigates which policy instruments attract more FDI in RE sectors such as solar, wind and biomass, based on an econometric analysis of 137 Organisation for Economic Co-operation and Development (OECD) and non-OECD countries. The results show that Feed in Tariffs (FIT) followed by Fiscal Measures (FM), such as tax incentives and Renewable Portfolio Standards (RPS), are the most significant policy instrument that attract FDI in the RE sector globally. Regarding carbon pricing instruments, based on our analysis, carbon tax proved to be correlated with high attraction of FDI in OECD countries, whereas Emissions Trading Schemes (ETS) proved to be correlated with high attraction of FDI mainly in non-OECD countries. Key policy insights Feed in Tariffs is the most significant policy instrument that attracts FDI in the Renewable Energy sector globally. Fiscal Measures (FM), such as tax incentives, show a significant and positive impact on renewable energy projects by foreign investors, and particularly on solar energy. Carbon pricing instruments, such as carbon taxation and emissions trading, proved to attract FDI in OECD and non-OECD countries respectively. Public investments, such as government funds for renewable energy projects, proved not as attractive to foreign private investors, perhaps because public funds are not perceived as stable in the long run. © 2018, © 2018 Informa UK Limited, trading as Taylor &amp; Francis Group.</dcterms:abstract>
+        <dc:title>Which policy instruments attract foreign direct investments in renewable energy?</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_368">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>13</prism:volume>
+                <prism:number>2</prism:number>
+                <dc:title>Biofuels, Bioproducts and Biorefining</dc:title>
+                <dc:identifier>DOI 10.1002/bbb.1857</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Diaz-Chavez</foaf:surname>
+                        <foaf:givenName>R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Van Dael</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Junginger</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fritsche</foaf:surname>
+                        <foaf:givenName>U.R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pelkmans</foaf:surname>
+                        <foaf:givenName>L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nabuurs</foaf:surname>
+                        <foaf:givenName>G.-J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Del Campo Colmenar</foaf:surname>
+                        <foaf:givenName>I.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gonzalez</foaf:surname>
+                        <foaf:givenName>D.S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rutz</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Janssen</foaf:surname>
+                        <foaf:givenName>R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>biomass</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>energy policy</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>lignocellulosic biomass</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>sustainability</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>trade</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>wood pellets</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>388-404</bib:pages>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Projections show that biomass will remain important for reaching future EU renewable energy targets. In addition to using domestic biomass, European bioenergy markets will also partly rely on imports of biomass, in particular in trade-oriented EU member states like the United Kingdom, the Netherlands, Belgium, and Denmark. There has been a lot of debate on the sustainability of (imported) biomass and how policy should deal with this. In this research, therefore, we defined long-term strategies for sustainable biomass imports in European bioenergy markets. We used the input of different stakeholders in our approach through focus-group discussions and a global survey, focusing on the following aspects: key principles of sustainable biomass trade, risks and opportunities of biomass trade, both for import regions (EU countries) and for sourcing regions, and practical barriers for trade. Overall we conclude that policies should be stable and consistent within a long-term vision. An overall sustainability assurance framework of biomass production and use is key, but should ultimately apply to all end uses of biomass. Furthermore, the mobilization of biomass should be supported, as well as commoditization, considering the large diversity of biomass. Side impacts of biomass use should be monitored. Reducing investors’ risk perception is crucial for future developments in the biobased economy, and a clear policy to phase out fossil fuels, e.g. through a carbon tax, needs to be implemented. The results of this research are of interest for policy makers when deciding on long-term strategies concerning sustainable bioenergy markets. © 2018 Society of Chemical Industry and John Wiley &amp; Sons, Ltd. © 2018 Society of Chemical Industry and John Wiley &amp; Sons, Ltd</dcterms:abstract>
+        <dc:title>Long-term strategies for sustainable biomass imports in European bioenergy markets</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_369">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>222</prism:volume>
+                <dc:title>Journal of Cleaner Production</dc:title>
+                <dc:identifier>DOI 10.1016/j.jclepro.2019.02.188</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alizadeh</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ma</foaf:surname>
+                        <foaf:givenName>J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marufuzzaman</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yu</foaf:surname>
+                        <foaf:givenName>F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Affinely adjustable robust counterpart model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Olefin supply chain/production network</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sample average approximation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>280-299</bib:pages>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>The growing environmental consciousness resulted from global climate changes has aroused petrochemical industries to search for the renewable alternatives for fossil fuels. Recently, biomass has been received increasing attention due to its economic and environmental benefits. Olefin, as one of the key raw materials in petrochemical industries, is able to be produced from biomass feedstocks. This study presents a robust three-stage stochastic programming model to characterize and optimize an olefin supply chain/production network aiming to provide a reliable and economic logistics network to support olefin production. This model encompasses probabilistic scenarios and uncertainty sets to capture the seasonality of biomass feedstocks and the uncertainty of carbon tax rate, respectively. The Municipal Solid Waste (MSW) is also involved in this model to complement the traditional biomass supplies to ensure the reliable feedstock for olefin production. To find the optimal solution of this model, a hybrid robust/stochastic approach is developed by integrating the affinely adjustable robust model with the sample average approximation (SAA) method. The state of Mississippi is used as a real case study to test and validate the proposed model and optimization approach. The results show that increasing feedstocks conversion rate by 20% and MSW recycling rate by 100% will increase olefin production by 17.26% and 14.3%, respectively, and increasing the carbon tax rate uncertainty from 0 to 30 will decrease the total network emissions by 2.8%. The proposed optimization approach will generate more robust and reliable results. These results indicate that the proposed model and optimization approach would benefit both economic and environmental perspectives in biomass based olefin production. © 2019 Elsevier Ltd</dcterms:abstract>
+        <dc:title>Sustainable olefin supply chain network design under seasonal feedstock supplies and uncertain carbon tax rate</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_370">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>102</prism:volume>
+                <prism:number>3</prism:number>
+                <dc:title>Journal of Dairy Science</dc:title>
+                <dc:identifier>DOI 10.3168/jds.2018-15788</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dutta</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>biodiesel</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>butter price</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>carbon emissions</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>European Union</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>vegetable oil</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>2051-2053</bib:pages>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Since its inception, the European Union (EU) carbon emission market has been vastly successful in reducing greenhouse gas emissions. Accordingly, the usage of environmentally friendly fuels (e.g., ethanol, biodiesel) has increased significantly over the last few years. Given that EU biodiesel is mainly produced from rapeseed oil and soybean oil, higher carbon taxes are likely to increase the demand of these important vegetable oils, which further affects the prices of its close substitute such as butter. Nevertheless, the association between the EU emission trading scheme and butter prices remains understudied. In this paper, we aim to fill this vacuum in the existing literature. Applying the autoregressive distributed lag bound testing procedure, we show that emission market seems to have a long-term effect on EU butter prices, implying that changes in the levels of carbon taxes will lead to changes in the price level of butter. These results are of vital importance to policymakers and investors. © 2019 American Dairy Science Association</dcterms:abstract>
+        <dc:title>Short communication: Effect of carbon emission trading on European Union butter prices</dc:title>
+        <z:shortTitle>Short communication</z:shortTitle>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_371">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>128</prism:volume>
+                <dc:title>Biomass and Bioenergy</dc:title>
+                <dc:identifier>DOI 10.1016/j.biombioe.2019.105328</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dutta</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>DCC-GARCH</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Emission trading</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>EU biodiesel market</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Rapeseed oil</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>The last decade has witnessed a significant growth in biodiesel production in order to mitigate the adverse impact of CO2 emissions. Given that the EU biodiesel is mainly produced from rapeseed oil, higher carbon taxes are likely to raise the production of biodiesel which, in turn, increase the prices of this important edible oil. Nevertheless, the association between the EU emission trading scheme and the biodiesel market remains understudied. In this paper, we aim to fill this vacuum in the existing literature. Adopting a bivariate DCC-GARCH model, we show that risk significantly transmits from emission market to the EU rapeseed oil market suggesting that volatile carbon prices would cause uncertainties in the rapeseed oil price index. We also find that an increase in the emission prices tends to promote the biodiesel feedstock prices. Implications of the results are discussed as well. © 2019 Elsevier Ltd</dcterms:abstract>
+        <dc:title>Impact of carbon emission trading on the European Union biodiesel feedstock market</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_372">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>185</prism:volume>
+                <dc:title>Energy</dc:title>
+                <dc:identifier>DOI 10.1016/j.energy.2019.07.119</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Y.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Li</foaf:surname>
+                        <foaf:givenName>G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Liu</foaf:surname>
+                        <foaf:givenName>Z.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cui</foaf:surname>
+                        <foaf:givenName>P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhu</foaf:surname>
+                        <foaf:givenName>Z.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yang</foaf:surname>
+                        <foaf:givenName>S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon tax</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>BTH process</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>CTH process</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Energy efficiency</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Hydrogen</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Techno-economic analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>1063-1075</bib:pages>
+        <dc:date>2019</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Hydrogen is a key raw material for many chemical processes and a clean fuel for various power generation strategies. Coal-to-hydrogen (CTH) conversion is an alternative way to produce hydrogen that is applicable to the abundant coal reserves in China. The use of fossil energy has contributed to severe environmental problems, which drives the development of potential hydrogen production processes. Biomass is a promising renewable energy as well as an attractive resource for producing hydrogen, and it may address some of these environmental problems. In this paper, the simulation results of the biomass-to-hydrogen (BTH) and CTH processes were validated using available experimental data from the literature. Based on the simulation results, a techno-economic analysis was conducted from the viewpoints of the first and second laws of thermodynamics. The techno-economic analysis included determination of the energy efficiency, material consumption, total capital investment, production cost and carbon tax. The energy efficiencies of BTH and CTH were 37.88% and 37.82%, respectively. The BTH process had a larger raw material consumption and total capital investment (TCI) than the CTH process. However, the BTH process had a lower production cost and GHG emissions than the CTH process. The results of energy analyses of the BTH and CTH processes showed that the energy efficiency can be improved from a thermodynamic perspective. The combination of thermodynamic analysis and techno-economic performance evaluation provides insights into the improvement and operation of clean hydrogen production. © 2019 Elsevier Ltd</dcterms:abstract>
+        <dc:title>Techno-economic analysis of biomass-to-hydrogen process in comparison with coal-to-hydrogen process</dc:title>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+    <bib:Article rdf:about="#item_373">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>92</prism:volume>
+                <prism:number>2</prism:number>
+                <dc:title>Natural Hazards</dc:title>
+                <dc:identifier>DOI 10.1007/s11069-018-3223-1</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ji</foaf:surname>
+                        <foaf:givenName>C.-J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hu</foaf:surname>
+                        <foaf:givenName>Y.-J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tang</foaf:surname>
+                        <foaf:givenName>B.-J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Carbon market</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Influencing factors</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Price mechanism</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Transmission</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <bib:pages>761-782</bib:pages>
+        <dc:date>2018</dc:date>
+        <z:libraryCatalog>Scopus</z:libraryCatalog>
+        <dcterms:abstract>Carbon emissions trading is being used by more and more countries or regions to solve the global warming problem. The establishment of China’s carbon market mechanism is still under exploration and improvement. This paper focuses on the price determination mechanism in the carbon market. Based on the price theories, we analyze the theoretical basis of the carbon price formation and the carbon price transmission mechanism from the perspective of the agents that affect carbon price. From these angles including residents’ demands, enterprises’ actual emissions and indirect effects on residents’ demands, the government’s setting for carbon market institutions and indirect effects on residents and enterprises, as well as energy markets and financial markets, we analyze how these factors influence the carbon price. In turn, we discuss how carbon price affects the enterprise costs, energy-saving technologies and residents’ welfare. Besides, we summarize the current price mechanism of domestic and overseas major carbon markets. Finally, based on the current research on carbon price theory and its influencing factors, we also present some further directions on carbon price mechanism and influencing factors including China’s carbon market price mechanism design, the quantitative analysis of carbon price factors and improvement of carbon price theory. © 2018, Springer Science+Business Media B.V., part of Springer Nature.</dcterms:abstract>
+        <dc:title>Research on carbon market price mechanism and influencing factors: a literature review</dc:title>
+        <z:shortTitle>Research on carbon market price mechanism and influencing factors</z:shortTitle>
+        <z:archive>Scopus</z:archive>
+    </bib:Article>
+</rdf:RDF>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="3" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0" namespace="std, isee">
+            <uses_arrays>1</uses_arrays>
+        </smile>
+        <name>Simple SD Demand Supply</name>
+        <uuid>558a437f-b9f4-4bd0-a5b5-7684fce4362b</uuid>
+        <vendor>isee systems, inc.</vendor>
+        <product version="10.1.2" isee:saved_by_v1="false" lang="en">STELLA</product>
+    </header>
+    <style>
+        <model font-family="Arial" font-size="9" />
+        <interface font-family="Arial" font-size="9" />
+    </style>
+    <sim_specs method="RK2" time_units="Months" isee:pause_after_rates="false" isee:instantaneous_flows="false">
+        <start>1</start>
+        <stop>48</stop>
+        <dt>0.25</dt>
+        <isee:analyze_mode>false</isee:analyze_mode>
+    </sim_specs>
+    <dimensions>
+        <dim name="Dim_Name_1" size="1" />
+    </dimensions>
+    <model_units />
+    <isee:prefs last_model="true" layer="model" grid_width="20" grid_height="50" divide_by_zero_alert="true" hide_taskbar="true" show_module_prefix="true">
+        <isee:window width="1240" height="657" />
+        <isee:security />
+        <isee:print_setup width="588" height="768" />
+    </isee:prefs>
+    <isee:equation_prefs order_by="sector" />
+    <model>
+        <stock name="Price">
+            <eqn>50</eqn>
+            <inflow>price_changes</inflow>
+            <non_negative />
+            <display x="286" y="296" color="#008F44" label_side="center" />
+        </stock>
+        <flow name="price\nchanges">
+            <eqn>Price*fractional_change_in_price</eqn>
+            <display x="316" y="218" color="#008F44" label_side="top" label_angle="76">
+                <pts>
+                    <pt x="343" y="218" />
+                    <pt x="290" y="218" />
+                    <pt x="290" y="279" />
+                </pts>
+            </display>
+        </flow>
+        <stock name="Land_Used_to_Produce_Biofuels">
+            <eqn>5</eqn>
+            <inflow>reallocating_land</inflow>
+            <non_negative />
+            <display x="90" y="139" color="#980000" />
+        </stock>
+        <stock name="Biofuels_Inventory">
+            <eqn>1000</eqn>
+            <inflow>supply</inflow>
+            <outflow>demand</outflow>
+            <non_negative />
+            <display x="252" y="87" color="blue" />
+        </stock>
+        <flow name="demand">
+            <eqn>Consumers_with_Biofuels_Compatable_Cars*biofuels_consumption_per_consumer</eqn>
+            <scale min="0" max="1200" />
+            <non_negative />
+            <display x="326" y="86" color="blue" label_side="top" label_angle="74">
+                <scale min="0" max="1200" />
+                <pts>
+                    <pt x="274" y="86" />
+                    <pt x="378" y="86" />
+                </pts>
+            </display>
+        </flow>
+        <flow name="supply">
+            <eqn>Land_Used_to_Produce_Biofuels*biofuel_yield_per_acre</eqn>
+            <scale min="0" max="1200" />
+            <non_negative />
+            <display x="168" y="84" color="blue" label_side="top" label_angle="83">
+                <scale min="0" max="1200" />
+                <pts>
+                    <pt x="107" y="84" />
+                    <pt x="230" y="84" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="fractional_change_in_biofuels_land">
+            <eqn>Price</eqn>
+            <gf>
+                <xscale min="0" max="100" />
+                <yscale min="-0.4" max="0.4" />
+                <ypts>-0.15200000000000002,-0.12,-0.092000000000000026,-0.064000000000000001,-0.040000000000000036,0,0.023999999999999966,0.051999999999999991,0.076000000000000012,0.095999999999999974,0.10799999999999998</ypts>
+            </gf>
+            <display x="174" y="258" color="#980000" />
+        </aux>
+        <stock name="Consumers_with_Biofuels_Compatable_Cars">
+            <eqn>50</eqn>
+            <inflow>adding</inflow>
+            <non_negative />
+            <display x="495" y="131" color="red" />
+        </stock>
+        <aux name="biofuels_consumption_per_consumer">
+            <eqn>Price</eqn>
+            <gf>
+                <xscale min="0" max="100" />
+                <yscale min="0" max="20" />
+                <ypts>19.800000000000001,19.300000000000001,18.5,16.899999999999999,14.6,10,7.5,5.7000000000000002,4.0999999999999996,2.7000000000000002,1.8999999999999999</ypts>
+            </gf>
+            <display x="401" y="181" color="red" label_side="right" label_angle="315" />
+        </aux>
+        <aux name="fractional_change_in_price">
+            <eqn>Biofuels_Inventory</eqn>
+            <gf>
+                <xscale min="0" max="2000" />
+                <yscale min="-0.5" max="0.5" />
+                <ypts>0.5,0.46500000000000002,0.375,0.255,0.11,0,-0.074999999999999997,-0.20999999999999999,-0.29999999999999999,-0.36499999999999999,-0.42999999999999999</ypts>
+            </gf>
+            <display x="236" y="155" color="#008F44" label_side="right" label_angle="8" />
+        </aux>
+        <flow name="adding">
+            <eqn>government_inventives</eqn>
+            <non_negative />
+            <display x="569" y="134" color="red" label_side="top" label_angle="80">
+                <pts>
+                    <pt x="622" y="134" />
+                    <pt x="517" y="134" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="biofuel_yield_per_acre">
+            <eqn>100</eqn>
+            <display x="177" y="150" color="#980000" />
+        </aux>
+        <stock name="Land_Not_Used_to_Produce_Biofuels">
+            <eqn>95</eqn>
+            <outflow>reallocating_land</outflow>
+            <non_negative />
+            <display x="90" y="265" color="#980000" label_side="bottom" label_angle="275" />
+        </stock>
+        <flow name="reallocating_land">
+            <eqn>Land_Used_to_Produce_Biofuels * fractional_change_in_biofuels_land</eqn>
+            <display x="96" y="202" color="#980000" label_side="left" label_angle="177">
+                <pts>
+                    <pt x="96" y="248" />
+                    <pt x="96" y="156" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="government_inventives">
+            <eqn>0</eqn>
+            <display x="587" y="190" color="red" />
+        </aux>
+        <display page_width="588" page_height="768" page_order="column" page_cols="2" isee:converter_size="medium" zoom="150" interval="DT" report_flows="summed" scroll_y="32">
+            <connector x="264" y="292" uid="0" color="#008F44">
+                <from>Price</from>
+                <to>fractional_change_in_biofuels_land</to>
+            </connector>
+            <connector x="112" y="133" uid="1" color="#980000">
+                <from>Land_Used_to_Produce_Biofuels</from>
+                <to>supply</to>
+            </connector>
+            <connector x="308" y="286" uid="2" color="#008F44">
+                <from>Price</from>
+                <to>biofuels_consumption_per_consumer</to>
+            </connector>
+            <connector x="395" y="174" uid="3" color="red">
+                <from>biofuels_consumption_per_consumer</from>
+                <to>demand</to>
+            </connector>
+            <connector x="473" y="125" uid="4" color="red">
+                <from>Consumers_with_Biofuels_Compatable_Cars</from>
+                <to>demand</to>
+            </connector>
+            <connector x="243" y="104" uid="5">
+                <from>Biofuels_Inventory</from>
+                <to>fractional_change_in_price</to>
+            </connector>
+            <connector x="234" y="164" uid="6" color="#008F44">
+                <from>fractional_change_in_price</from>
+                <to>price_changes</to>
+            </connector>
+            <connector x="285" y="278" uid="7" color="#008F44">
+                <from>Price</from>
+                <to>price_changes</to>
+            </connector>
+            <connector x="184" y="145" uid="8" color="#980000">
+                <from>biofuel_yield_per_acre</from>
+                <to>supply</to>
+            </connector>
+            <connector x="112" y="155" uid="9" color="#980000">
+                <from>Land_Used_to_Produce_Biofuels</from>
+                <to>reallocating_land</to>
+            </connector>
+            <connector x="166" y="254" uid="10" color="#980000">
+                <from>fractional_change_in_biofuels_land</from>
+                <to>reallocating_land</to>
+            </connector>
+            <connector x="588" y="181" uid="11" color="red">
+                <from>government_inventives</from>
+                <to>adding</to>
+            </connector>
+            <stacked_container x="383" y="249" height="190" width="358" uid="12">
+                <graph type="time_series" title="Untitled Graph" background="#E0E0E0" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:40:59Z" cleared="true" time_precision="2" from="1" to="48">
+                    <plot index="0" pen_width="3" color="black" precision="1" show_y_axis="true">
+                        <entity name="demand" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="#FF7F00" precision="1" show_y_axis="true">
+                        <entity name="supply" />
+                    </plot>
+                </graph>
+                <graph type="time_series" title="scatter" background="#C8C8C8" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:40:59Z" cleared="true" time_precision="2" from="1" to="48">
+                    <plot index="0" pen_width="3" color="#008F44" precision="1" show_y_axis="true">
+                        <entity name="Price" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="516" y="310" width="26" height="22" color="#0CA0FF" label_side="bottom" label="Graph 1" type="graph" icon_of="12" />
+            <style font-family="Arial" font-size="9" />
+        </display>
+        <interface page_order="column" page_width="788" page_height="528">
+            <simulation_delay>0</simulation_delay>
+            <style font-family="Arial" font-size="9" />
+        </interface>
+        <style font-family="Arial" font-size="9" />
+    </model>
+</xmile>

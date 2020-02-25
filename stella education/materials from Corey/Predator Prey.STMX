@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="3" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0">
+            <uses_arrays>
+                <dimensions>
+                    <dim name="Dim_Name_1" size="1" />
+                </dimensions>
+            </uses_arrays>
+        </smile>
+        <name>Predator Prey</name>
+        <uuid>8ba03dc0-44c2-44cc-a6ff-190559150793</uuid>
+        <vendor>isee systems</vendor>
+        <product version="10.0.1b1" lang="en">iThink</product>
+    </header>
+    <sim_specs>
+        <start>2000</start>
+        <stop>2051</stop>
+        <dt>0.25</dt>
+        <method>Euler</method>
+        <time_units>Years</time_units>
+    </sim_specs>
+    <model_units />
+    <isee:prefs layer="model" grid_width="20" grid_height="50" divide_by_zero_alert="true" hide_taskbar="true" show_module_prefix="true">
+        <isee:window width="1211" height="646" />
+        <isee:security />
+        <isee:print_setup width="576" height="769" orientation="portrait" />
+    </isee:prefs>
+    <isee:equation_prefs order_by="module" />
+    <model>
+        <aux name="area">
+            <eqn>1000</eqn>
+            <display x="133" y="386" color="black" />
+        </aux>
+        <flow name="deer_births">
+            <eqn>Deer*deer_birth__fraction</eqn>
+            <non_negative />
+            <display x="150" y="288" color="#7F00FF">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="59" y="288" />
+                    <pt x="242" y="288" />
+                </pts>
+            </display>
+        </flow>
+        <flow name="deer_deaths">
+            <eqn>Cougars*deer_killed__per_cougar</eqn>
+            <non_negative />
+            <display x="406" y="289" color="#7F00FF">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="286" y="289" />
+                    <pt x="526" y="289" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="deer_&#x0D;density">
+            <eqn>Deer/area</eqn>
+            <display x="234" y="380" color="#7F00FF">
+                <label_side>right</label_side>
+                <label_angle>59</label_angle>
+            </display>
+        </aux>
+        <aux name="deer_birth_&#x0D;fraction">
+            <eqn>1</eqn>
+            <display x="96" y="346" color="#7F00FF">
+                <label_side>left</label_side>
+                <label_angle>172</label_angle>
+            </display>
+        </aux>
+        <flow name="cougar_births">
+            <eqn>Cougars*cougar_birth__fraction</eqn>
+            <non_negative />
+            <display x="449" y="479" color="red">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="531" y="479" />
+                    <pt x="368" y="479" />
+                </pts>
+            </display>
+        </flow>
+        <flow name="cougar_deaths">
+            <eqn>Cougars*cougar_death__fraction</eqn>
+            <non_negative />
+            <display x="265" y="480" color="red">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="324" y="480" />
+                    <pt x="206" y="480" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="cougar_birth_&#x0D;fraction">
+            <eqn>0.25</eqn>
+            <display x="504" y="516" color="red" />
+        </aux>
+        <stock name="Deer">
+            <inflow>deer_births</inflow>
+            <outflow>deer_deaths</outflow>
+            <display x="264" y="289" color="#7F00FF">
+                <label_angle>95</label_angle>
+            </display>
+        </stock>
+        <stock name="Cougars">
+            <eqn>inital_cougars</eqn>
+            <inflow>cougar_births</inflow>
+            <outflow>cougar_deaths</outflow>
+            <display x="346" y="476" color="red">
+                <label_angle>85</label_angle>
+            </display>
+        </stock>
+        <aux name="deer_killed&#x0D;_per_cougar">
+            <eqn>deer__density</eqn>
+            <display x="335" y="374" color="red">
+                <label_angle>323</label_angle>
+            </display>
+        </aux>
+        <aux name="cougar_death_&#x0D;fraction">
+            <eqn>deer__density</eqn>
+            <display x="147" y="458" color="red">
+                <label_side>left</label_side>
+                <label_angle>227</label_angle>
+            </display>
+        </aux>
+        <aux name="inital_deer_density">
+            <eqn>50</eqn>
+            <display x="37" y="226" color="#7F00FF">
+                <label_side>right</label_side>
+            </display>
+        </aux>
+        <aux name="inital_cougars">
+            <eqn>1000</eqn>
+            <display x="27" y="556" color="red">
+                <label_side>right</label_side>
+            </display>
+        </aux>
+        <display show_pages="false" page_width="576" page_height="769" page_sequence="row" page_rows="3" page_cols="1" isee:show_values_on_hover="true" isee:converter_size="medium" zoom="100" isee:animate_flows="true" isee:animate_stocks="true" isee:animate_converters="true" report_balances="ending" report_flows="summed" scroll_x="0" scroll_y="0">
+            <connector x="242" y="300" uid="0" color="#7F00FF">
+                <from>Deer</from>
+                <to>deer_births</to>
+            </connector>
+            <connector x="99" y="338" uid="1" color="#7F00FF">
+                <from>deer_birth_&#x0D;fraction</from>
+                <to>deer_births</to>
+            </connector>
+            <connector x="365" y="494" uid="2" color="red">
+                <from>Cougars</from>
+                <to>cougar_births</to>
+            </connector>
+            <connector x="498" y="508" uid="3" color="red">
+                <from>cougar_birth_&#x0D;fraction</from>
+                <to>cougar_births</to>
+            </connector>
+            <connector x="328" y="492" uid="4" color="red">
+                <from>Cougars</from>
+                <to>cougar_deaths</to>
+            </connector>
+            <connector x="149" y="467" uid="5" color="red">
+                <from>cougar_death_&#x0D;fraction</from>
+                <to>cougar_deaths</to>
+            </connector>
+            <connector x="244" y="306" uid="6" color="#7F00FF">
+                <from>Deer</from>
+                <to>deer_&#x0D;density</to>
+            </connector>
+            <connector x="367" y="466" uid="7" color="red">
+                <from>Cougars</from>
+                <to>deer_deaths</to>
+            </connector>
+            <connector x="345" y="371" uid="8" color="red">
+                <from>deer_killed&#x0D;_per_cougar</from>
+                <to>deer_deaths</to>
+            </connector>
+            <connector x="142" y="386" uid="9" color="#FF007F">
+                <from>area</from>
+                <to>deer_&#x0D;density</to>
+            </connector>
+            <stacked_container x="608" y="84" height="303" width="528" visible_index="0" uid="pad_152719032">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="false" numbers_on_plots="true" isee:use_five_segments="false" isee:date_time="-854913020" cleared="true" time_precision="2" from="2000" to="2051">
+                    <plot pen_width="1" precision="0">
+                        <index>0</index>
+                        <color>#7F00FF</color>
+                        <show_y_axis>true</show_y_axis>
+                        <entity name="Deer" />
+                    </plot>
+                    <plot pen_width="1" precision="0">
+                        <index>1</index>
+                        <color>red</color>
+                        <show_y_axis>true</show_y_axis>
+                        <entity name="Cougars" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="692" y="341" width="26" height="22" color="#008F44" label="Graph 1" type="graph" icon_of="pad_152719032">
+                <label_side>bottom</label_side>
+            </pad_icon>
+            <button x="734" y="452" width="36" height="36" uid="10" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAkklEQVRIie2VOw7AIAhAa8NxHBy9/+To4IE6mBACqE1KG5PCBEh8fIyEVsvxvpwfMP6MiSlPTDPME3GMYxyzLSb4ItgWA6jRj918YEANvD2mbEuC+TGW2KkUj7qMYUmvMcv6mF/Ng2NkInc2sSTJGH02amoqgzaq62rRNg961E/UZ7NptbAipIf1mQZQtv9p+2IuYmxU+mgd7jY=</image>
+                <menu_action>pause</menu_action>
+            </button>
+            <button x="769" y="452" width="36" height="36" uid="11" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAlUlEQVRIiWO8cuEEA+0BEx3sGHbWsBBUoWNggV8BMbFL2BoGBob/uKUYidE/3OJm1JpRa+hjDVHZk8g8iM+E0Ypg0FqDPQkgF/5XLpzQMbCgMAqxWEO5oURZgxVA/AexHu5XNC4D7ioOizWQUELTBmcg+xXOxipL2DcEtZEKhleCxlLYYI1SCpMAFco0YuJvtOgkAwAAC6JKFweQHW4=</image>
+                <menu_action>stop</menu_action>
+            </button>
+            <button x="804" y="452" width="36" height="36" uid="12" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAxElEQVRIie2VOxKFIAxFwxuXY2Hp8liepYULsmCGF0kgJBkZC26lePXkB4brPOB9/QYwJuYtzLrtokH0uLJJgBij6FzMAADoARgxWoAaYwPoMJ098GKu8xiRTSLBgN54YMaB1sKMGAprK8z/jV7/3uASeyq5bjt9/TEC+TFr9UietJwlDgKv1Aw4UAGD00rXRaLUAFzNHxgaF3DbgpLasZYYdrsVoWFPLXYqZqDzYVxIHMVGWqE2Xfm2s+F0BX9tHjbfxdzx9YGVeOAvtw==</image>
+                <menu_action>restore_all</menu_action>
+            </button>
+            <button x="699" y="452" width="36" height="36" uid="13" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAqUlEQVRIie3WPQ6AIAwF4IfxOAyM3H9iZOA+OmAMLvbnqTFRJgbDR2mhhlYL7h/TA8bXmJhyTJlnZvmTBTFkAEyxKBgACwAK0zE0ZmEIzM64MC8ToAS8jBGwMy7AwhCAmgkUsK3xN4LXMmclMLYAMoVCpe2rx5QZyXxoY4h93lvfeQP0vmnHIQYtMPsGydwIh9ZqueT+qnLTaiF/PLS56VIPzkH+b9p7mRWwlEyLSXil9g==</image>
+                <menu_action>run</menu_action>
+            </button>
+        </display>
+        <interface scroll_x="0" scroll_y="0" zoom="100">
+            <simulation_delay>0</simulation_delay>
+            <pages show="false" row_count="1" column_count="1" home_page="1" width="788" height="528" />
+        </interface>
+    </model>
+</xmile>

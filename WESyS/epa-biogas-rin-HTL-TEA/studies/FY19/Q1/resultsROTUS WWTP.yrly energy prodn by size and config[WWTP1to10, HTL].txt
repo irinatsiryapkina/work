@@ -1,0 +1,34 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+  1) root 195000 7.482051e+14    3046.7950  
+    2) Global Inputs.Initial Indices of Comm Maturity[HTL]< 0.8286438 179556 8.998456e+13     457.6583 *
+    3) Global Inputs.Initial Indices of Comm Maturity[HTL]>=0.8286438 15444 6.430226e+14   33148.7800  
+      6) Global Inputs.dwell time multiplier>=0.3174561 13719 1.770908e+14   15899.5200  
+       12) Global Inputs.dwell time multiplier>=0.6045898 10837 1.240349e+13    3393.7170 *
+       13) Global Inputs.dwell time multiplier< 0.6045898 2882 1.566195e+14   62924.2700  
+         26) Global Inputs.RIN Scenario Multiplier< 1.496338 2213 1.623338e+13   16053.1500 *
+         27) Global Inputs.RIN Scenario Multiplier>=1.496338 669 1.194421e+14  217970.3000  
+           54) Global Inputs.per tonne tipping fee< 251.6968 383 5.139040e+12   49578.7300 *
+           55) Global Inputs.per tonne tipping fee>=251.6968 286 8.889917e+13  443473.7000  
+            110) Global Inputs.PTC REC Scenario Multiplier>=0.7351074 176 8.503090e+12  200637.8000 *
+            111) Global Inputs.PTC REC Scenario Multiplier< 0.7351074 110 5.341174e+13  832011.1000  
+              222) Global Inputs.AEO Selector< 3.029907 67 9.335216e+12  439753.8000 *
+              223) Global Inputs.AEO Selector>=3.029907 43 1.770464e+13 1443203.0000 *
+      7) Global Inputs.dwell time multiplier< 0.3174561 1725 4.293862e+14  170332.9000  
+       14) Global Inputs.per tonne tipping fee< 414.1373 1607 2.134014e+14  119818.8000  
+         28) Global Inputs.RIN Scenario Multiplier< 1.497681 1169 2.501082e+13   32419.2100 *
+         29) Global Inputs.RIN Scenario Multiplier>=1.497681 438 1.556282e+14  353083.9000  
+           58) Global Inputs.per tonne tipping fee< 277.6154 314 3.016719e+13  155376.8000 *
+           59) Global Inputs.per tonne tipping fee>=277.6154 124 8.210723e+13  853729.5000  
+            118) Global Inputs.AEO Selector< 2.920227 56 4.170714e+12  357732.5000 *
+            119) Global Inputs.AEO Selector>=2.920227 68 5.281425e+13 1262198.0000  
+              238) Global Inputs.PTC REC Scenario Multiplier>=1.077271 33 3.946020e+12  701290.8000 *
+              239) Global Inputs.PTC REC Scenario Multiplier< 1.077271 35 2.869682e+13 1791053.0000 *
+       15) Global Inputs.per tonne tipping fee>=414.1373 118 1.560404e+14  858266.7000  
+         30) Global Inputs.PTC REC Scenario Multiplier>=0.2740479 85 2.425773e+13  373280.2000 *
+         31) Global Inputs.PTC REC Scenario Multiplier< 0.2740479 33 6.029253e+13 2107475.0000  
+           62) Global Inputs.per tonne tipping fee>=430.6915 22 1.225901e+13 1263784.0000 *
+           63) Global Inputs.per tonne tipping fee< 430.6915 11 1.053829e+12 3794855.0000 *

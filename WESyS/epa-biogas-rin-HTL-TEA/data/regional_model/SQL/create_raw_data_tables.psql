@@ -1,0 +1,34 @@
+\i 'bls.US_BLS_consumer_price_index_2000_2016_20170629.sql'
+
+\i 'boc.np2014_d1_2014.sql'
+
+\i 'ca_dof.population_population_20171024.sql'
+
+\i 'eia.aeo_2018_20190129.sql'
+\i 'eia.ice_electric_2014_20170508.sql'
+\i 'eia.ice_electric_2015_20170508.sql'
+\i 'eia.ice_electric_2016_20170508.sql'
+\i 'eia.ice_electric_2017_20170508.sql'
+\i 'eia.ice_natgas_2014final_20170510.sql'
+\i 'eia.ice_natgas_2015final_20170510.sql'
+\i 'eia.ice_natgas_2016final_20170510.sql'
+\i 'eia.ice_natgas_2017_20170510.sql'
+
+--\i 'epa.lmopdata_20170404.sql'
+\i 'epa.lmopdata_20180716.sql'
+--\i 'epa.landfilllmop_20170425.sql'
+\i 'epa.landfilllmop_20180716.sql'
+
+\i 'nrel.conversion_efficiencies_20170511.sql'
+--\i 'nrel.HTL_TEA_biofuel_20170619.sql'
+--\i 'nrel.HTL_TEA_biofuel_bio_crude_20170619.sql'
+\i 'nrel.inman_d3_rin_projected_d3_rin_projected_20171023.sql'
+\i 'nrel.Tao_june_2017_wesys_tea_20170619.sql'
+
+\i 'opis.PROPRIETARY_RIN_prices_2010_to_2014_20181207.sql'
+\i 'opis.PROPRIETARY_RIN_prices_2014_to_2016_20181207.sql'
+
+\i 'pnnl.PROPRIETARY_20161202_confined_manure_by_site_seiple_20170619.sql'
+\i 'pnnl.Seiple_et_al_2017_PNNL_sludge_by_site_state_region_20170321a_Site.sql'
+
+\i 'wbj.WBJ_Directory_of_Waste_Processing_and_Disposal_Sites_2016_20161001.sql'

@@ -1,0 +1,101 @@
+DROP TABLE "bls"."_US_BLS_consumer_price_index_2000_2016_20170629";
+DROP TABLE "bls"."US_BLS_consumer_price_index_2000_2016_20170629";
+
+DROP TABLE "boc"."_np2014_d1_2014";
+DROP TABLE "boc"."np2014_d1_2014";
+
+DROP TABLE "ca_dof"."_population_20171024";
+DROP TABLE "ca_dof"."population_20171024";
+
+DROP TABLE "eia"."_aeo_2018_20190129";
+DROP TABLE "eia"."aeo_2018_20190129";
+
+DROP TABLE "eia"."_ice_electric_2014_20170508";
+DROP TABLE "eia"."ice_electric_2014_20170508";
+DROP TABLE "eia"."_ice_electric_2015_20170508";
+DROP TABLE "eia"."ice_electric_2015_20170508";
+DROP TABLE "eia"."_ice_electric_2016_20170508";
+DROP TABLE "eia"."ice_electric_2016_20170508";
+DROP TABLE "eia"."_ice_electric_2017_20170508";
+DROP TABLE "eia"."ice_electric_2017_20170508";
+DROP TABLE "eia"."_ice_natgas_2014final_20170510";
+DROP TABLE "eia"."ice_natgas_2014final_20170510";
+DROP TABLE "eia"."_ice_natgas_2015final_20170510";
+DROP TABLE "eia"."ice_natgas_2015final_20170510";
+DROP TABLE "eia"."_ice_natgas_2016final_20170510";
+DROP TABLE "eia"."ice_natgas_2016final_20170510";
+DROP TABLE "eia"."_ice_natgas_2017_20170510";
+DROP TABLE "eia"."ice_natgas_2017_20170510";
+
+-- DROP TABLE "epa"."_lmopdata_20170404";
+-- DROP TABLE "epa"."lmopdata_20170404";
+DROP TABLE "epa"."_lmopdata_20180716";
+DROP TABLE "epa"."lmopdata_20180716";
+-- DROP TABLE "epa"."_landfilllmop_20170425";
+-- DROP TABLE "epa"."landfilllmop_20170425";
+DROP TABLE "epa"."_landfilllmopdata_20180716";
+DROP TABLE "epa"."landfilllmopdata_20180716";
+
+DROP TABLE "nrel"."_conversion_efficiencies_20170511";
+DROP TABLE "nrel"."conversion_efficiencies_20170511";
+-- DROP TABLE "nrel"."_HTL_TEA_biofuel_20170619";
+-- DROP TABLE "nrel"."HTL_TEA_biofuel_20170619";
+-- DROP TABLE "nrel"."_HTL_TEA_biofuel_bio_crude_20170619";
+-- DROP TABLE "nrel"."HTL_TEA_biofuel_bio_crude_20170619";
+DROP TABLE "nrel"."_inman_d3_rin_projected_d3_rin_projected_20171023";
+DROP TABLE "nrel"."inman_d3_rin_projected_d3_rin_projected_20171023";
+DROP TABLE "nrel"."_Tao_june_2017_wesys_tea_20170619";
+DROP TABLE "nrel"."Tao_june_2017_wesys_tea_20170619";
+
+DROP TABLE "opis"."_PROPRIETARY_RIN_prices_2010_to_2014_20181207";
+DROP TABLE "opis"."PROPRIETARY_RIN_prices_2010_to_2014_20181207";
+
+DROP TABLE "opis"."_PROPRIETARY_RIN_prices_2014_to_2016_20181207";
+DROP TABLE "opis"."PROPRIETARY_RIN_prices_2014_to_2016_20181207";
+
+DROP TABLE "pnnl"."_PROPRIETARY_20161202_confined_manure_by_site_seiple_20170619";
+DROP TABLE "pnnl"."PROPRIETARY_20161202_confined_manure_by_site_seiple_20170619";
+DROP TABLE "pnnl"."_Seiple_et_al_2017_PNNL_sludge_by_site_state_region_20170321a_Sites";
+DROP TABLE "pnnl"."Seiple_et_al_2017_PNNL_sludge_by_site_state_region_20170321a_Sites";
+
+DROP TABLE "wbj"."_WBJ_Directory_of_Waste_Processing_and_Disposal_Sites_2016_20161001";
+DROP TABLE "wbj"."WBJ_Directory_of_Waste_Processing_and_Disposal_Sites_2016_20161001";
+
+RESET ROLE;
+
+DROP TABLE "dhetting"."US_BLS_consumer_price_index_2000_2016";
+DROP TABLE "dhetting"."np2014_d1";
+DROP TABLE "dhetting"."nst-est2018-01";
+DROP TABLE "dhetting"."population";
+DROP TABLE "dhetting"."aeo_2018";
+DROP TABLE "dhetting"."7c._U.S._Regional_Retail_Electricity_Prices";
+DROP TABLE "dhetting"."ice_electric-2014";
+DROP TABLE "dhetting"."ice_electric-2015";
+DROP TABLE "dhetting"."ice_electric-2016";
+DROP TABLE "dhetting"."ice_electric-2017";
+DROP TABLE "dhetting"."California_Total_Gasoline_Wholesale_per_Resale_Price_by_Refiners";
+DROP TABLE "dhetting"."PET_PRI_GND_DUCS_NUS_A";
+DROP TABLE "dhetting"."Petroleum_and_Other_Liquids_Prices";
+DROP TABLE "dhetting"."U.S._Total_Gasoline_Wholesale_per_Resale_Price_by_Refiners";
+DROP TABLE "dhetting"."ice_natgas-2014final";
+DROP TABLE "dhetting"."ice_natgas-2015final";
+DROP TABLE "dhetting"."ice_natgas-2016final";
+DROP TABLE "dhetting"."ice_natgas-2017";
+DROP TABLE "dhetting"."U.S._Price_of_Natural_Gas_Delivered_to_Residential_Consumers";
+DROP TABLE "dhetting"."landfilllmop_20180716";
+DROP TABLE "dhetting"."lmop_20180716";
+DROP TABLE "dhetting"."conversion_efficiencies";
+DROP TABLE "dhetting"."inman_d3_rin_projected_d3_rin_projected";
+DROP TABLE "dhetting"."Tao_june_2017_wesys_tea";
+DROP TABLE "dhetting"."Tao_nov_2017_wesys_tea";
+DROP TABLE "dhetting"."july_2018_wesys_tea";
+DROP TABLE "dhetting"."PROPRIETARY_RIN_prices_2010_to_2014";
+DROP TABLE "dhetting"."PROPRIETARY_RIN_prices_2014_to_2016";
+DROP TABLE "dhetting"."20161120_sluge_by_state_and_site_seiple_sludge_state";
+DROP TABLE "dhetting"."20161120_sluge_by_state_and_site_seiple_sludge_site";
+DROP TABLE "dhetting"."PROPRIETARY_20161202_confined_manure_by_site_seiple";
+DROP TABLE "dhetting"."Seiple_et_al_2017_PNNL_sludge_20170321a_Site";
+DROP TABLE "dhetting"."Seiple_et_al_2017_PNNL_sludge_20170321a_State";
+DROP TABLE "dhetting"."Seiple_et_al_2017_PNNL_sludge_20170321a_Region";
+DROP TABLE "dhetting"."Seiple_et_al_2017_PNNL_sludge_20170321a_Region_NoPR";
+DROP TABLE "dhetting"."WBJ_Directory_of_Waste_Processing_and_Disposal_Sites_2016";

@@ -1,0 +1,25 @@
+CREATE OR REPLACE VIEW "epa"."lmop_landfill_data" AS
+SELECT "landfill_id"
+     , "state_abbr"
+     , "landfill_open_year"
+     , "landfill_closure_year"
+     , "landfill_current_status"
+     , "landfill_design_capacity_tons"
+     , "landfill_design_area_acres"
+     , "landfill_design_depth_feet"
+     , "landfill_current_area_acres"
+     , "landfill_current_depth_feet"
+     , "waste_in_place_tons"
+     , "waste_in_place_year"
+     , "lfg_generated_mmscfd"
+     , "lfg_collection_system_in_place"
+     , "lfg_collected_mmscfd"
+     , "lfg_collected_year"
+     , "lfg_percent_methane"
+     , "flares_in_place"
+     , "lfg_flared_mmscfd"
+     , "lfg_flared_year"
+     , "gas_collection_system_comments"
+FROM "epa"."landfilllmopdata_20180716";
+
+COMMENT ON VIEW "epa"."lmop_landfill_data" IS '';

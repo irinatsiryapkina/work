@@ -1,0 +1,3 @@
+\i 'create_schema_national.sql'
+\i 'create_schema_ca.sql'
+\i 'create_schema_rotus.sql'

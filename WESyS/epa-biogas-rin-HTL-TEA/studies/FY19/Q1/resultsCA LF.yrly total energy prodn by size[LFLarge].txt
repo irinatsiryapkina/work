@@ -1,0 +1,12 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+1) root 195000 1.257958e+17 10529740  
+  2) CA LF.SB1383 influx Multiplier>=0.4943237 98605 1.960620e+16  9871890  
+    4) CA LF.SB1383 influx Multiplier>=0.7477417 49192 4.100668e+15  9535819 *
+    5) CA LF.SB1383 influx Multiplier< 0.7477417 49413 4.418538e+15 10206460 *
+  3) CA LF.SB1383 influx Multiplier< 0.4943237 96395 1.986580e+16 11202670  
+    6) CA LF.SB1383 influx Multiplier>=0.2437134 48880 4.689963e+15 10878520 *
+    7) CA LF.SB1383 influx Multiplier< 0.2437134 47515 4.756597e+15 11536130 *

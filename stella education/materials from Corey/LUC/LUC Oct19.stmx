@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="3" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0" namespace="std, isee">
+            <uses_arrays>2</uses_arrays>
+            <uses_submodels />
+        </smile>
+        <name>LUC Oct19</name>
+        <uuid>58fd2879-dd99-4cdd-9d31-dcb780bd11cd</uuid>
+        <vendor>isee systems, inc.</vendor>
+        <product version="10.1.2" isee:saved_by_v1="false" lang="en">STELLA</product>
+    </header>
+    <style>
+        <model font-family="Arial" font-size="9" />
+        <interface font-family="Arial" font-size="9" />
+    </style>
+    <sim_specs method="Euler" time_units="Years" isee:pause_after_rates="false" isee:instantaneous_flows="false">
+        <start>1985</start>
+        <stop>2023</stop>
+        <dt reciprocal="true">0.03125</dt>
+        <isee:analyze_mode>false</isee:analyze_mode>
+    </sim_specs>
+    <dimensions>
+        <dim name="test_input">
+            <elem name="a" />
+            <elem name="b" />
+            <elem name="c" />
+        </dim>
+        <dim name="Sex">
+            <elem name="Female" />
+            <elem name="Male" />
+        </dim>
+        <dim name="LandClass">
+            <elem name="Grass" />
+            <elem name="Forest" />
+        </dim>
+        <dim name="AnimalProduct">
+            <elem name="CowSheepGoat" />
+            <elem name="Dairy" />
+            <elem name="Pig" />
+            <elem name="Poultry" />
+        </dim>
+        <dim name="Commodity">
+            <elem name="Maize" />
+            <elem name="Wheat" />
+            <elem name="Rice" />
+            <elem name="CerealsGrainNEC" />
+            <elem name="OilCrop" />
+            <elem name="Sugar" />
+        </dim>
+        <dim name="Disposition">
+            <elem name="NetExport" />
+            <elem name="Feed" />
+            <elem name="Seed" />
+            <elem name="Processing" />
+            <elem name="OtherUtil" />
+            <elem name="Food" />
+        </dim>
+    </dimensions>
+    <model_units />
+    <data>
+        <import enabled="false" frequency="on_demand" orientation="horizontal" url="C:\Users\Steve Peterson\Documents\Projects\Current Projects\NREL LUC\models\luc-1\Data\Two Regions.csv" />
+    </data>
+    <isee:prefs last_model="true" layer="model" grid_width="20" grid_height="50" divide_by_zero_alert="true" hide_taskbar="true" show_module_prefix="true">
+        <isee:window width="1920" height="956" />
+        <isee:security />
+        <isee:print_setup width="768" height="588" />
+    </isee:prefs>
+    <isee:equation_prefs order_by="module" show_pages="true" />
+    <model>
+        <module name="USA" url="C:\Users\cp\Documents\In Transition\SD Stella Workshop Oct19\Models\LUC\LUC Oct19_Modules\LUC Region 1.itmx">
+            <display x="230" y="351" color="blue" label_angle="97" />
+            <connect to="commodity_production_shortfall" from="Global_Calcs.Avg_Commodity_Prod&apos;n_Shortfall" />
+            <connect to="AP_region_relevant_shortfall_surplus" from="Global_Calcs.Avg_AP_Prod&apos;n_Shortfall" />
+            <connect to="Noname_1" from="Global_Calcs.CP_Flux_US_to_ROW_DATA" />
+            <connect to="INIT_Abandoned" from="Global_Calcs.abandoned_US" />
+            <connect to="TOTAL_global_food_shortfall" from="Global_Calcs.TOTAL_global_food_shortfall" />
+            <connect to="AP_Exportation" from="Global_Calcs.AP_Flux_US_to_ROW_DATA" />
+            <connect to="total_global_AP_shortfall_surplus" from="Global_Calcs.TOTAL_global_food_shortfall_surplus" />
+            <connect to="total_ACTUAL_AP_import\export" from="Global_Calcs.TOTAL_actual_AP_import\_export" />
+            <connect to="TOTAL_actual_import\_export" from="Global_Calcs.TOTAL_actual_import\_export" />
+            <connect to="total_desired_AP_imports" from="Global_Calcs.TOTAL_desired_AP_imports" />
+            <connect to="TOTAL_desired_imports" from="Global_Calcs.TOTAL_desired_imports" />
+            <connect to="total_desired_AP_exports" from="Global_Calcs.TOTAL_desired_AP_exports" />
+            <connect to="TOTAL_desired_exports" from="Global_Calcs.TOTAL_desired_exports" />
+        </module>
+        <module name="Global_Calcs" url="C:\Users\cp\Documents\In Transition\SD Stella Workshop Oct19\Models\LUC\LUC Oct19_Modules\Rollups.itmx">
+            <display x="438" y="253" color="blue" label_angle="85" />
+            <connect to="imports_2" from="USA.potential_AP_imports" />
+            <connect to="imports_1" from="USA.potential_imports" />
+            <connect to="exports_1" from="USA.potential_exports" />
+            <connect to="local_shortfall_1" from="USA.local_surplus" />
+            <connect to="AP_local_shortfall_surplus" from="ROW.AP_local_shortfall_surplus" />
+            <connect to="Noname_5" from="USA.Crop_Land" />
+            <connect to="local_shortfall_2" from="USA.AP_local_shortfall_surplus" />
+            <connect to="Noname_8" from="ROW.Pasture__Land" />
+            <connect to="AP_target_exports" from="ROW.potential_AP_exports" />
+            <connect to="target_imports" from="ROW.potential_imports" />
+            <connect to="Noname_6" from="USA.Pasture__Land" />
+            <connect to="exports_2" from="USA.potential_AP_exports" />
+            <connect to="Noname_10" from="USA.RFS_ScenarioCellulosic_GPY" />
+            <connect to="Noname_9" from="ROW.Crop_Land" />
+            <connect to="AP_target_imports" from="ROW.potential_AP_imports" />
+            <connect to="target_exports" from="ROW.potential_exports" />
+            <connect to="Noname_4" from="USA.Actual_Forage_Land" />
+            <connect to="Noname_7" from="ROW.Actual_Forage_Land" />
+            <connect to="local_shortfall_surplus" from="ROW.local_surplus" />
+        </module>
+        <module name="ROW" url="C:\Users\cp\Documents\In Transition\SD Stella Workshop Oct19\Models\LUC\LUC Oct19_Modules\LUC Region 2.itmx">
+            <display x="631" y="353" color="blue" label_angle="97" />
+            <connect to="commodity_production_shortfall" from="Global_Calcs.Avg_Commodity_Prod&apos;n_Shortfall" />
+            <connect to="AP_region_relevant_shortfall_surplus" from="Global_Calcs.Avg_AP_Prod&apos;n_Shortfall" />
+            <connect to="Noname_1" from="Global_Calcs.CP_Flux_US_to_ROW_DATA" />
+            <connect to="TOTAL_global_food_shortfall" from="Global_Calcs.TOTAL_global_food_shortfall" />
+            <connect to="AP_Exportation" from="Global_Calcs.AP_Flux_US_to_ROW_DATA" />
+            <connect to="total_global_AP_shortfall_surplus" from="Global_Calcs.TOTAL_global_food_shortfall_surplus" />
+            <connect to="total_ACTUAL_AP_import\export" from="Global_Calcs.TOTAL_actual_AP_import\_export" />
+            <connect to="TOTAL_actual_import\_export" from="Global_Calcs.TOTAL_actual_import\_export" />
+            <connect to="abandoned_row" from="Global_Calcs.abandoned_ROW" />
+            <connect to="total_desired_AP_imports" from="Global_Calcs.TOTAL_desired_AP_imports" />
+            <connect to="TOTAL_desired_imports" from="Global_Calcs.TOTAL_desired_imports" />
+            <connect to="total_desired_AP_exports" from="Global_Calcs.TOTAL_desired_AP_exports" />
+            <connect to="TOTAL_desired_exports" from="Global_Calcs.TOTAL_desired_exports" />
+        </module>
+        <display show_pages="true" page_width="768" page_height="588" page_cols="2" page_rows="3" isee:converter_size="medium" report_balances="ending">
+            <connector x="247" y="332" uid="0">
+                <from>USA</from>
+                <to>Global_Calcs</to>
+            </connector>
+            <connector x="421" y="273" uid="1">
+                <from>Global_Calcs</from>
+                <to>USA</to>
+            </connector>
+            <connector x="455" y="272" uid="2">
+                <from>Global_Calcs</from>
+                <to>ROW</to>
+            </connector>
+            <connector x="615" y="333" uid="3">
+                <from>ROW</from>
+                <to>Global_Calcs</to>
+            </connector>
+            <stacked_container height="282" width="492" uid="4">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="5e+008" />
+                        <entity name="USA.total_available_land" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="5e+008" />
+                        <entity name="USA.total_pasture_land" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <scale min="0" max="5e+008" />
+                        <entity name="USA.total_crop_land" />
+                    </plot>
+                </graph>
+                <graph type="time_series" title="Commodity land allocation logic" background="#C8C8C8" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="USA.land_allocation_logic" index="Maize" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="USA.land_allocation_logic" index="Wheat" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="USA.land_allocation_logic" index="Rice" />
+                    </plot>
+                    <plot index="3" pen_width="3" color="#008F44" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="USA.land_allocation_logic" index="OilCrop" />
+                    </plot>
+                    <plot index="4" pen_width="3" color="#FF7F00" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="USA.land_allocation_logic" index="Sugar" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="179" y="481" width="26" height="22" color="#008F44" label_side="left" label_angle="167" label="Land USA" type="graph" icon_of="4" />
+            <stacked_container height="282" width="492" uid="5">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="7e+009" />
+                        <entity name="ROW.Crop_Land_Alloc_to_Fallow" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="7e+009" />
+                        <entity name="ROW.total_pasture_land" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <scale min="0" max="7e+009" />
+                        <entity name="ROW.total_crop_land" />
+                    </plot>
+                </graph>
+                <graph type="time_series" title="Commodity Land Allocation Logic" background="#C8C8C8" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="ROW.land_allocation_logic" index="Maize" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="ROW.land_allocation_logic" index="Wheat" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="ROW.land_allocation_logic" index="Rice" />
+                    </plot>
+                    <plot index="3" pen_width="3" color="#008F44" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="ROW.land_allocation_logic" index="OilCrop" />
+                    </plot>
+                    <plot index="4" pen_width="3" color="#FF7F00" precision="0.01" show_y_axis="true">
+                        <scale min="0" max="1" />
+                        <entity name="ROW.land_allocation_logic" index="Sugar" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="208" y="481" width="26" height="22" color="#008F44" label_side="right" label="Land ROW" type="graph" icon_of="5" />
+            <stacked_container height="282" width="492" uid="6">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023" />
+            </stacked_container>
+            <pad_icon x="208" y="504" width="26" height="22" color="#008F44" label_side="right" label="AP ROW" type="graph" icon_of="6" />
+            <stacked_container height="282" width="492" uid="7">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023" />
+            </stacked_container>
+            <pad_icon x="179" y="504" width="26" height="22" color="#008F44" label_side="left" label_angle="186" label="AP USA" type="graph" icon_of="7" />
+            <stacked_container height="282" width="492" uid="8">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023" />
+            </stacked_container>
+            <pad_icon x="179" y="529" width="26" height="22" color="#008F44" label_side="left" label="commodity Prod&apos;n USA" type="graph" icon_of="8" />
+            <stacked_container height="282" width="492" uid="9">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023" />
+            </stacked_container>
+            <pad_icon x="208" y="529" width="26" height="22" color="#008F44" label_side="right" label="Commodity Prod&apos;n ROW" type="graph" icon_of="9" />
+            <stacked_container height="282" width="492" uid="10">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="1e+006" />
+                        <entity name="USA.total_target_CP_outflow" index="Maize" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="1e+006" />
+                        <entity name="USA.total_target_CP_outflow" index="Wheat" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <scale min="0" max="1e+006" />
+                        <entity name="USA.total_target_CP_outflow" index="Rice" />
+                    </plot>
+                    <plot index="3" pen_width="3" color="#008F44" precision="1" show_y_axis="true">
+                        <scale min="0" max="1e+006" />
+                        <entity name="USA.total_target_CP_outflow" index="OilCrop" />
+                    </plot>
+                    <plot index="4" pen_width="3" color="#FF7F00" precision="1" show_y_axis="true">
+                        <scale min="0" max="1e+006" />
+                        <entity name="USA.total_target_CP_outflow" index="Sugar" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="179" y="554" width="26" height="22" color="#008F44" label_side="left" label="Req&apos;d Commodity Prod&apos;n USA" type="graph" icon_of="10" />
+            <stacked_container height="282" width="492" uid="11">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="3e+006" />
+                        <entity name="ROW.total_target_CP_outflow" index="Maize" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="3e+006" />
+                        <entity name="ROW.total_target_CP_outflow" index="Wheat" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <scale min="0" max="3e+006" />
+                        <entity name="ROW.total_target_CP_outflow" index="Rice" />
+                    </plot>
+                    <plot index="3" pen_width="3" color="#008F44" precision="1" show_y_axis="true">
+                        <scale min="0" max="3e+006" />
+                        <entity name="ROW.total_target_CP_outflow" index="OilCrop" />
+                    </plot>
+                    <plot index="4" pen_width="3" color="#FF7F00" precision="1" show_y_axis="true">
+                        <scale min="0" max="3e+006" />
+                        <entity name="ROW.total_target_CP_outflow" index="Sugar" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="208" y="554" width="26" height="22" color="#008F44" label_side="right" label_angle="9" label="Req&apos;d Commodity Prod&apos;n ROW" type="graph" icon_of="11" />
+            <style font-family="Arial" font-size="9" />
+        </display>
+        <interface page_cols="2" page_rows="5" page_width="788" page_height="528">
+            <simulation_delay>0</simulation_delay>
+            <stacked_container x="269" y="1205" height="282" width="492" uid="12">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="0" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <entity name="USA.total_available_land" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <entity name="USA.total_pasture_land" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <entity name="USA.total_crop_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="358" y="1264" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 1" type="graph" icon_of="12" />
+            <stacked_container x="776" y="1205" height="282" width="492" uid="13">
+                <graph type="time_series" title="Untitled" background="#E0E0E0" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="8e+009" />
+                        <entity name="ROW.total_available_land" />
+                    </plot>
+                    <plot index="1" pen_width="3" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="8e+009" />
+                        <entity name="ROW.total_pasture_land" />
+                    </plot>
+                    <plot index="2" pen_width="3" color="fuchsia" precision="1" show_y_axis="true">
+                        <scale min="0" max="8e+009" />
+                        <entity name="ROW.total_crop_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="936" y="1229" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 2" type="graph" icon_of="13" />
+            <stacked_container x="264" y="1539" height="282" width="492" uid="14">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <entity name="USA.total_available_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="326" y="1609" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 3" type="graph" icon_of="14" />
+            <stacked_container x="804" y="1863" height="282" width="492" uid="15">
+                <graph type="time_series" title="Untitled" background="#E0E0E0" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="8e+009" />
+                        <entity name="ROW.total_pasture_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="343" y="1891" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 4" type="graph" icon_of="15" />
+            <stacked_container x="257" y="1864" height="282" width="492" uid="16">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <entity name="USA.total_pasture_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="267" y="2175" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 5" type="graph" icon_of="16" />
+            <stacked_container x="254" y="2175" height="282" width="492" uid="17">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <entity name="USA.total_crop_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="331" y="2225" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 6" type="graph" icon_of="17" />
+            <stacked_container x="801" y="1540" height="282" width="492" uid="18">
+                <graph type="time_series" title="Untitled" background="#E0E0E0" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="8e+009" />
+                        <entity name="ROW.total_available_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="939" y="1638" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 7" type="graph" icon_of="18" />
+            <stacked_container x="799" y="2173" height="282" width="492" uid="19">
+                <graph type="time_series" title="Untitled" background="#E0E0E0" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" comparative="true" cleared="true" time_precision="2" from="2000" to="2023">
+                    <plot index="0" pen_width="3" color="blue" precision="1" show_y_axis="true">
+                        <entity name="ROW.total_crop_land" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="879" y="2196" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 8" type="graph" icon_of="19" />
+            <knob x="95" y="98" color="black" width="83" height="91" min="0" max="4" precision="1">
+                <entity name="USA.RFS_Multiplier" value="4" />
+            </knob>
+            <button x="220" y="97" width="65" height="34" uid="20" appearance="opaque" background="black" color="white" style="square" label="to the graphitas" font-family="Arial" font-size="12" text-align="center">
+                <link target="interface" x="0" y="680" />
+            </button>
+            <style font-family="Arial" font-size="9" />
+        </interface>
+        <popup x="191" y="124" content="4" />
+        <popup x="454" y="446" content="5" />
+        <popup x="191" y="124" content="6" />
+        <popup x="191" y="124" content="7" />
+        <popup x="191" y="124" content="8" />
+        <popup x="191" y="124" content="9" />
+        <popup x="191" y="124" content="10" />
+        <popup x="191" y="124" content="11" />
+        <style font-family="Arial" font-size="9" />
+    </model>
+</xmile>

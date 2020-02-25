@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="3" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0">
+            <uses_arrays>
+                <dimensions>
+                    <dim name="Dim_Name_1" size="1" />
+                </dimensions>
+            </uses_arrays>
+        </smile>
+        <name>Vegetation</name>
+        <uuid>9fa27be8-d13e-4e33-b989-73d44d5985e2</uuid>
+        <vendor>isee systems</vendor>
+        <product version="10.0.1b1" lang="en">iThink</product>
+    </header>
+    <sim_specs>
+        <start>2000</start>
+        <stop>2051</stop>
+        <dt>0.25</dt>
+        <method>RK2</method>
+        <time_units>Years</time_units>
+    </sim_specs>
+    <model_units />
+    <isee:prefs layer="model" grid_width="20" grid_height="50" divide_by_zero_alert="true" hide_taskbar="true" show_module_prefix="true">
+        <isee:window width="1211" height="646" />
+        <isee:security />
+        <isee:print_setup width="576" height="769" orientation="portrait" />
+    </isee:prefs>
+    <isee:equation_prefs order_by="module" />
+    <model>
+        <flow name="regenerating">
+            <eqn>Vegetation*regeneration__fraction</eqn>
+            <non_negative />
+            <display x="153" y="192" color="#008F44">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="62" y="192" />
+                    <pt x="245" y="192" />
+                </pts>
+            </display>
+        </flow>
+        <flow name="consuming">
+            <non_negative />
+            <display x="409" y="191" color="#008F44">
+                <label_side>top</label_side>
+                <pts>
+                    <pt x="289" y="191" />
+                    <pt x="529" y="191" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="regeneration_&#x0D;fraction">
+            <eqn>0.25</eqn>
+            <display x="99" y="250" color="#008F44">
+                <label_angle>279</label_angle>
+            </display>
+        </aux>
+        <stock name="Vegetation">
+            <eqn>100</eqn>
+            <inflow>regenerating</inflow>
+            <outflow>consuming</outflow>
+            <non_negative />
+            <display x="267" y="193" color="#008F44">
+                <label_angle>95</label_angle>
+            </display>
+        </stock>
+        <display show_pages="false" page_width="576" page_height="769" page_sequence="row" page_rows="3" page_cols="1" isee:show_values_on_hover="true" isee:converter_size="medium" zoom="100" isee:animate_flows="true" isee:animate_stocks="true" isee:animate_converters="true" report_balances="ending" report_flows="summed" scroll_x="0" scroll_y="0">
+            <connector x="245" y="204" uid="0" color="#008F44">
+                <from>Vegetation</from>
+                <to>regenerating</to>
+            </connector>
+            <connector x="102" y="242" uid="1" color="#008F44">
+                <from>regeneration_&#x0D;fraction</from>
+                <to>regenerating</to>
+            </connector>
+            <stacked_container x="608" y="84" height="303" width="528" visible_index="0" uid="pad_153511014">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="false" numbers_on_plots="true" isee:use_five_segments="false" isee:date_time="-854913056" cleared="true" time_precision="2" from="2000" to="2051">
+                    <plot pen_width="1" precision="0">
+                        <index>0</index>
+                        <color>#008F44</color>
+                        <show_y_axis>true</show_y_axis>
+                        <entity name="Vegetation" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="692" y="341" width="26" height="22" color="#008F44" label="Graph 1" type="graph" icon_of="pad_153511014">
+                <label_side>bottom</label_side>
+            </pad_icon>
+            <button x="685" y="430" width="36" height="36" uid="2" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAkklEQVRIie2VOw7AIAhAa8NxHBy9/+To4IE6mBACqE1KG5PCBEh8fIyEVsvxvpwfMP6MiSlPTDPME3GMYxyzLSb4ItgWA6jRj918YEANvD2mbEuC+TGW2KkUj7qMYUmvMcv6mF/Ng2NkInc2sSTJGH02amoqgzaq62rRNg961E/UZ7NptbAipIf1mQZQtv9p+2IuYmxU+mgd7jY=</image>
+                <menu_action>pause</menu_action>
+            </button>
+            <button x="720" y="430" width="36" height="36" uid="3" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAlUlEQVRIiWO8cuEEA+0BEx3sGHbWsBBUoWNggV8BMbFL2BoGBob/uKUYidE/3OJm1JpRa+hjDVHZk8g8iM+E0Ypg0FqDPQkgF/5XLpzQMbCgMAqxWEO5oURZgxVA/AexHu5XNC4D7ioOizWQUELTBmcg+xXOxipL2DcEtZEKhleCxlLYYI1SCpMAFco0YuJvtOgkAwAAC6JKFweQHW4=</image>
+                <menu_action>stop</menu_action>
+            </button>
+            <button x="755" y="430" width="36" height="36" uid="4" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAxElEQVRIie2VOxKFIAxFwxuXY2Hp8liepYULsmCGF0kgJBkZC26lePXkB4brPOB9/QYwJuYtzLrtokH0uLJJgBij6FzMAADoARgxWoAaYwPoMJ098GKu8xiRTSLBgN54YMaB1sKMGAprK8z/jV7/3uASeyq5bjt9/TEC+TFr9UietJwlDgKv1Aw4UAGD00rXRaLUAFzNHxgaF3DbgpLasZYYdrsVoWFPLXYqZqDzYVxIHMVGWqE2Xfm2s+F0BX9tHjbfxdzx9YGVeOAvtw==</image>
+                <menu_action>restore_all</menu_action>
+            </button>
+            <button x="650" y="430" width="36" height="36" uid="5" appearance="opaque" background="white" color="white" style="square">
+                <image width="34" height="31">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAIAAAANwYjmAAAAqUlEQVRIie3WPQ6AIAwF4IfxOAyM3H9iZOA+OmAMLvbnqTFRJgbDR2mhhlYL7h/TA8bXmJhyTJlnZvmTBTFkAEyxKBgACwAK0zE0ZmEIzM64MC8ToAS8jBGwMy7AwhCAmgkUsK3xN4LXMmclMLYAMoVCpe2rx5QZyXxoY4h93lvfeQP0vmnHIQYtMPsGydwIh9ZqueT+qnLTaiF/PLS56VIPzkH+b9p7mRWwlEyLSXil9g==</image>
+                <menu_action>run</menu_action>
+            </button>
+        </display>
+        <interface scroll_x="0" scroll_y="0" zoom="100">
+            <simulation_delay>0</simulation_delay>
+            <pages show="false" row_count="1" column_count="1" home_page="1" width="788" height="528" />
+        </interface>
+    </model>
+</xmile>

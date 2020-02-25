@@ -1,0 +1,19 @@
+DROP SCHEMA IF EXISTS "CA CAFO"    CASCADE;
+DROP SCHEMA IF EXISTS "CA LF"      CASCADE;
+DROP SCHEMA IF EXISTS "CA WWTP"    CASCADE;
+
+DROP SCHEMA IF EXISTS "ROTUS CAFO" CASCADE;
+DROP SCHEMA IF EXISTS "ROTUS LF"   CASCADE;
+DROP SCHEMA IF EXISTS "ROTUS WWTP" CASCADE;
+
+DROP SCHEMA IF EXISTS "Global Inputs" CASCADE;
+
+\i 'create_schema_CA CAFO.sql'
+\i 'create_schema_CA LF.sql'
+\i 'create_schema_CA WWTP.sql'
+
+\i 'create_schema_ROTUS CAFO.sql'
+\i 'create_schema_ROTUS LF.sql'
+\i 'create_schema_ROTUS WWTP.sql'
+
+\i 'create_schema_Global Inputs.sql'

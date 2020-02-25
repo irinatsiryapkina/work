@@ -1,0 +1,16 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+ 1) root 195000 2.579831e+15   12187.120  
+   2) Global Inputs.Initial Indices of Comm Maturity[HTL]< 0.8467712 183469 4.056101e+14    2969.761 *
+   3) Global Inputs.Initial Indices of Comm Maturity[HTL]>=0.8467712 11531 1.910623e+15  158843.900  
+     6) Global Inputs.dwell time multiplier>=0.4765625 9022 3.453160e+14   73197.880 *
+     7) Global Inputs.dwell time multiplier< 0.4765625 2509 1.261159e+15  466814.600  
+      14) Global Inputs.RIN Scenario Multiplier< 1.417358 1756 2.792438e+14  197310.800  
+        28) Global Inputs.per tonne tipping fee< 394.104 1568 1.270202e+14  123281.400 *
+        29) Global Inputs.per tonne tipping fee>=394.104 188 7.195936e+13  814747.900 *
+      15) Global Inputs.RIN Scenario Multiplier>=1.417358 753 5.569439e+14 1095299.000  
+        30) Global Inputs.per tonne tipping fee< 226.2131 382 1.253989e+14  568822.700 *
+        31) Global Inputs.per tonne tipping fee>=226.2131 371 2.166422e+14 1637385.000 *

@@ -1,0 +1,20 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+ 1) root 195000 8.871284e+16   115713.80  
+   2) Global Inputs.Initial Indices of Comm Maturity[HTL]< 0.8467712 183469 1.405943e+16    35206.06 *
+   3) Global Inputs.Initial Indices of Comm Maturity[HTL]>=0.8467712 11531 5.454372e+16  1396667.00  
+     6) Global Inputs.RIN Scenario Multiplier< 1.444092 8307 1.352559e+16   780060.60  
+      12) Global Inputs.RIN Scenario Multiplier< 0.8164062 4746 1.705256e+15   344450.00 *
+      13) Global Inputs.RIN Scenario Multiplier>=0.8164062 3561 9.719474e+15  1360630.00  
+        26) Global Inputs.per tonne tipping fee< 319.7983 2525 2.308964e+15   899176.40 *
+        27) Global Inputs.per tonne tipping fee>=319.7983 1036 5.562392e+15  2485312.00  
+          54) Global Inputs.dwell time multiplier>=0.5336182 781 1.148367e+15  1556538.00 *
+          55) Global Inputs.dwell time multiplier< 0.5336182 255 1.676926e+15  5329909.00 *
+     7) Global Inputs.RIN Scenario Multiplier>=1.444092 3224 2.972193e+16  2985424.00  
+      14) Global Inputs.dwell time multiplier>=0.4772119 2477 7.003631e+15  2059889.00 *
+      15) Global Inputs.dwell time multiplier< 0.4772119 747 1.356060e+16  6054433.00  
+        30) Global Inputs.PTC REC Scenario Multiplier>=0.4659424 557 5.038869e+15  4528511.00 *
+        31) Global Inputs.PTC REC Scenario Multiplier< 0.4659424 190 3.422713e+15 10527790.00 *

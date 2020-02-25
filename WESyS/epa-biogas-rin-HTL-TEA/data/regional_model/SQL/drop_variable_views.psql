@@ -1,0 +1,37 @@
+DROP VIEW "CA CAFO"."Expected Op Cost";
+DROP VIEW "CA CAFO"."ExpectedFCI";
+DROP VIEW "CA CAFO"."Initial_WTE_Distribution";
+DROP VIEW "CA CAFO"."per_facility_CH4_collection";
+DROP VIEW "CA LF"."Avg_landfill_capacity_by_size";
+DROP VIEW "CA LF"."Expected Op Cost";
+DROP VIEW "CA LF"."ExpectedFCI";
+DROP VIEW "CA LF"."INIT_per_LF_loading";
+DROP VIEW "CA LF"."Initial_Potential_Distribution";
+DROP VIEW "CA LF"."Initial_WTE_Distribution";
+DROP VIEW "CA LF"."population";
+DROP VIEW "CA WWTP"."Expected Op Cost";
+DROP VIEW "CA WWTP"."ExpectedFCI";
+DROP VIEW "CA WWTP"."Initial_WTE_Distribution";
+DROP VIEW "CA WWTP"."daily_facility_influx";
+DROP VIEW "CA WWTP"."per_facility_CH4_collection";
+
+DROP VIEW "Global Inputs"."conversion_efficiencies";
+DROP VIEW "Global Inputs"."per_tonne_tipping_fee";
+DROP VIEW "Global Inputs"."Unit_Price_Scenario";
+
+DROP VIEW "ROTUS CAFO"."Expected Op Cost";
+DROP VIEW "ROTUS CAFO"."ExpectedFCI";
+DROP VIEW "ROTUS CAFO"."Initial_WTE_Distribution";
+DROP VIEW "ROTUS CAFO"."per_facility_CH4_collection";
+DROP VIEW "ROTUS LF"."Avg_landfill_capacity_by_size";
+DROP VIEW "ROTUS LF"."Expected Op Cost";
+DROP VIEW "ROTUS LF"."ExpectedFCI";
+DROP VIEW "ROTUS LF"."INIT_per_LF_loading";
+DROP VIEW "ROTUS LF"."Initial_Potential_Distribution";
+DROP VIEW "ROTUS LF"."Initial_WTE_Distribution";
+DROP VIEW "ROTUS LF"."population";
+DROP VIEW "ROTUS WWTP"."Expected Op Cost";
+DROP VIEW "ROTUS WWTP"."ExpectedFCI";
+DROP VIEW "ROTUS WWTP"."Initial_WTE_Distribution";
+DROP VIEW "ROTUS WWTP"."daily_facility_influx";
+DROP VIEW "ROTUS WWTP"."per_facility_CH4_collection";

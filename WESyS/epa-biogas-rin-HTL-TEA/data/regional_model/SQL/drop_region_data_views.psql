@@ -1,0 +1,33 @@
+DROP VIEW "rotus"."cafo_resource";
+DROP VIEW "rotus"."cafo_tea";
+DROP VIEW "rotus"."landfill_capacity_by_size";
+DROP VIEW "rotus"."landfill_distribution";
+DROP VIEW "rotus"."landfill_size_summary";
+DROP VIEW "rotus"."landfill_tea";
+DROP VIEW "rotus"."population";
+DROP VIEW "rotus"."wholesale_price_cng_hist";
+DROP VIEW "rotus"."wholesale_price_elec_hist";
+DROP VIEW "rotus"."wholesale_price_png_hist";
+DROP VIEW "rotus"."wwtp_resource";
+DROP VIEW "rotus"."wwtp_tea";
+
+DROP VIEW "ca"."cafo_resource";
+DROP VIEW "ca"."cafo_tea";
+DROP VIEW "ca"."landfill_capacity_by_size";
+DROP VIEW "ca"."landfill_distribution";
+DROP VIEW "ca"."landfill_size_summary";
+DROP VIEW "ca"."landfill_tea";
+DROP VIEW "ca"."population";
+DROP VIEW "ca"."wholesale_price_cng_hist";
+DROP VIEW "ca"."wholesale_price_elec_hist";
+DROP VIEW "ca"."wholesale_price_png_hist";
+DROP VIEW "ca"."wwtp_resource";
+DROP VIEW "ca"."wwtp_tea";
+
+DROP VIEW "national"."cafo_resource";
+DROP VIEW "national"."cafo_tea";
+DROP VIEW "national"."landfill_capacity_by_size";
+DROP VIEW "national"."landfill_distribution";
+DROP VIEW "national"."landfill_tea";
+DROP VIEW "national"."wwtp_resource";
+DROP VIEW "national"."wwtp_tea";

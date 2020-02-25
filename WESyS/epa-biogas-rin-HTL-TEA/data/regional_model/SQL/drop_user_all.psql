@@ -1,0 +1,6 @@
+\i 'drop_user_aeberle.sql'
+\i 'drop_user_amilbrandt.sql'
+--\i 'drop_user_dhetting.sql'
+\i 'drop_user_dinman.sql'
+\i 'drop_user_dstright.sql'
+\i 'drop_user_enewes.sql'

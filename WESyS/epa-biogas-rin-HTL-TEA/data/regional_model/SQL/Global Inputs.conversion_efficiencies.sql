@@ -1,0 +1,292 @@
+-- WITH  "WTEConfig"     AS (SELECT UNNEST('{NoWTE, CF, Elec, CNG, PNG, BCFuel, TCFuel, HTL, FT}'::TEXT[]) AS "val")
+-- SELECT 'SELECT ''Global Inputs.conversion_efficiencies[' || a."val" || ']'' AS "variable", COALESCE((SELECT "conversion_efficiency" AS "val" FROM "conv_eff" WHERE "WTEConfig" = ''' || a."val" || '''), 0) AS "val_2015" UNION' AS "column_conv_eff_rotus"
+-- FROM       "WTEConfig"        a
+-- ORDER BY 1;
+
+CREATE OR REPLACE VIEW "Global Inputs"."conversion_efficiencies" AS (
+  WITH "conv_eff" AS (SELECT
+                        CASE WHEN "technology" = 'CHP' THEN 'Elec'
+                        ELSE "technology"
+                        END                                       AS "WTEConfig",
+                        ROUND("conversion_efficiency" / 100.0, 2) AS "conversion_efficiency"
+                      FROM "nrel"."conversion_efficiencies"
+  )
+  SELECT
+    'Global Inputs.conversion_efficiencies[BCFuel]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'BCFuel'), 0) AS "val_2015",
+    NULL :: NUMERIC                             AS "val_2016",
+    NULL :: NUMERIC                             AS "val_2017",
+    NULL :: NUMERIC                             AS "val_2018",
+    NULL :: NUMERIC                             AS "val_2019",
+    NULL :: NUMERIC                             AS "val_2020",
+    NULL :: NUMERIC                             AS "val_2021",
+    NULL :: NUMERIC                             AS "val_2022",
+    NULL :: NUMERIC                             AS "val_2023",
+    NULL :: NUMERIC                             AS "val_2024",
+    NULL :: NUMERIC                             AS "val_2025",
+    NULL :: NUMERIC                             AS "val_2026",
+    NULL :: NUMERIC                             AS "val_2027",
+    NULL :: NUMERIC                             AS "val_2028",
+    NULL :: NUMERIC                             AS "val_2029",
+    NULL :: NUMERIC                             AS "val_2030",
+    NULL :: NUMERIC                             AS "val_2031",
+    NULL :: NUMERIC                             AS "val_2032",
+    NULL :: NUMERIC                             AS "val_2033",
+    NULL :: NUMERIC                             AS "val_2034",
+    NULL :: NUMERIC                             AS "val_2035",
+    NULL :: NUMERIC                             AS "val_2036",
+    NULL :: NUMERIC                             AS "val_2037",
+    NULL :: NUMERIC                             AS "val_2038",
+    NULL :: NUMERIC                             AS "val_2039",
+    NULL :: NUMERIC                             AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[CF]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'CF'), 0) AS "val_2015",
+    NULL :: NUMERIC                         AS "val_2016",
+    NULL :: NUMERIC                         AS "val_2017",
+    NULL :: NUMERIC                         AS "val_2018",
+    NULL :: NUMERIC                         AS "val_2019",
+    NULL :: NUMERIC                         AS "val_2020",
+    NULL :: NUMERIC                         AS "val_2021",
+    NULL :: NUMERIC                         AS "val_2022",
+    NULL :: NUMERIC                         AS "val_2023",
+    NULL :: NUMERIC                         AS "val_2024",
+    NULL :: NUMERIC                         AS "val_2025",
+    NULL :: NUMERIC                         AS "val_2026",
+    NULL :: NUMERIC                         AS "val_2027",
+    NULL :: NUMERIC                         AS "val_2028",
+    NULL :: NUMERIC                         AS "val_2029",
+    NULL :: NUMERIC                         AS "val_2030",
+    NULL :: NUMERIC                         AS "val_2031",
+    NULL :: NUMERIC                         AS "val_2032",
+    NULL :: NUMERIC                         AS "val_2033",
+    NULL :: NUMERIC                         AS "val_2034",
+    NULL :: NUMERIC                         AS "val_2035",
+    NULL :: NUMERIC                         AS "val_2036",
+    NULL :: NUMERIC                         AS "val_2037",
+    NULL :: NUMERIC                         AS "val_2038",
+    NULL :: NUMERIC                         AS "val_2039",
+    NULL :: NUMERIC                         AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[CNG]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'CNG'), 0) AS "val_2015",
+    NULL :: NUMERIC                          AS "val_2016",
+    NULL :: NUMERIC                          AS "val_2017",
+    NULL :: NUMERIC                          AS "val_2018",
+    NULL :: NUMERIC                          AS "val_2019",
+    NULL :: NUMERIC                          AS "val_2020",
+    NULL :: NUMERIC                          AS "val_2021",
+    NULL :: NUMERIC                          AS "val_2022",
+    NULL :: NUMERIC                          AS "val_2023",
+    NULL :: NUMERIC                          AS "val_2024",
+    NULL :: NUMERIC                          AS "val_2025",
+    NULL :: NUMERIC                          AS "val_2026",
+    NULL :: NUMERIC                          AS "val_2027",
+    NULL :: NUMERIC                          AS "val_2028",
+    NULL :: NUMERIC                          AS "val_2029",
+    NULL :: NUMERIC                          AS "val_2030",
+    NULL :: NUMERIC                          AS "val_2031",
+    NULL :: NUMERIC                          AS "val_2032",
+    NULL :: NUMERIC                          AS "val_2033",
+    NULL :: NUMERIC                          AS "val_2034",
+    NULL :: NUMERIC                          AS "val_2035",
+    NULL :: NUMERIC                          AS "val_2036",
+    NULL :: NUMERIC                          AS "val_2037",
+    NULL :: NUMERIC                          AS "val_2038",
+    NULL :: NUMERIC                          AS "val_2039",
+    NULL :: NUMERIC                          AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[Elec]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'Elec'), 0) AS "val_2015",
+    NULL :: NUMERIC                           AS "val_2016",
+    NULL :: NUMERIC                           AS "val_2017",
+    NULL :: NUMERIC                           AS "val_2018",
+    NULL :: NUMERIC                           AS "val_2019",
+    NULL :: NUMERIC                           AS "val_2020",
+    NULL :: NUMERIC                           AS "val_2021",
+    NULL :: NUMERIC                           AS "val_2022",
+    NULL :: NUMERIC                           AS "val_2023",
+    NULL :: NUMERIC                           AS "val_2024",
+    NULL :: NUMERIC                           AS "val_2025",
+    NULL :: NUMERIC                           AS "val_2026",
+    NULL :: NUMERIC                           AS "val_2027",
+    NULL :: NUMERIC                           AS "val_2028",
+    NULL :: NUMERIC                           AS "val_2029",
+    NULL :: NUMERIC                           AS "val_2030",
+    NULL :: NUMERIC                           AS "val_2031",
+    NULL :: NUMERIC                           AS "val_2032",
+    NULL :: NUMERIC                           AS "val_2033",
+    NULL :: NUMERIC                           AS "val_2034",
+    NULL :: NUMERIC                           AS "val_2035",
+    NULL :: NUMERIC                           AS "val_2036",
+    NULL :: NUMERIC                           AS "val_2037",
+    NULL :: NUMERIC                           AS "val_2038",
+    NULL :: NUMERIC                           AS "val_2039",
+    NULL :: NUMERIC                           AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[FT]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'FT'), 0) AS "val_2015",
+    NULL :: NUMERIC                         AS "val_2016",
+    NULL :: NUMERIC                         AS "val_2017",
+    NULL :: NUMERIC                         AS "val_2018",
+    NULL :: NUMERIC                         AS "val_2019",
+    NULL :: NUMERIC                         AS "val_2020",
+    NULL :: NUMERIC                         AS "val_2021",
+    NULL :: NUMERIC                         AS "val_2022",
+    NULL :: NUMERIC                         AS "val_2023",
+    NULL :: NUMERIC                         AS "val_2024",
+    NULL :: NUMERIC                         AS "val_2025",
+    NULL :: NUMERIC                         AS "val_2026",
+    NULL :: NUMERIC                         AS "val_2027",
+    NULL :: NUMERIC                         AS "val_2028",
+    NULL :: NUMERIC                         AS "val_2029",
+    NULL :: NUMERIC                         AS "val_2030",
+    NULL :: NUMERIC                         AS "val_2031",
+    NULL :: NUMERIC                         AS "val_2032",
+    NULL :: NUMERIC                         AS "val_2033",
+    NULL :: NUMERIC                         AS "val_2034",
+    NULL :: NUMERIC                         AS "val_2035",
+    NULL :: NUMERIC                         AS "val_2036",
+    NULL :: NUMERIC                         AS "val_2037",
+    NULL :: NUMERIC                         AS "val_2038",
+    NULL :: NUMERIC                         AS "val_2039",
+    NULL :: NUMERIC                         AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[HTL]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'HTL'), 0) AS "val_2015",
+    NULL :: NUMERIC                          AS "val_2016",
+    NULL :: NUMERIC                          AS "val_2017",
+    NULL :: NUMERIC                          AS "val_2018",
+    NULL :: NUMERIC                          AS "val_2019",
+    NULL :: NUMERIC                          AS "val_2020",
+    NULL :: NUMERIC                          AS "val_2021",
+    NULL :: NUMERIC                          AS "val_2022",
+    NULL :: NUMERIC                          AS "val_2023",
+    NULL :: NUMERIC                          AS "val_2024",
+    NULL :: NUMERIC                          AS "val_2025",
+    NULL :: NUMERIC                          AS "val_2026",
+    NULL :: NUMERIC                          AS "val_2027",
+    NULL :: NUMERIC                          AS "val_2028",
+    NULL :: NUMERIC                          AS "val_2029",
+    NULL :: NUMERIC                          AS "val_2030",
+    NULL :: NUMERIC                          AS "val_2031",
+    NULL :: NUMERIC                          AS "val_2032",
+    NULL :: NUMERIC                          AS "val_2033",
+    NULL :: NUMERIC                          AS "val_2034",
+    NULL :: NUMERIC                          AS "val_2035",
+    NULL :: NUMERIC                          AS "val_2036",
+    NULL :: NUMERIC                          AS "val_2037",
+    NULL :: NUMERIC                          AS "val_2038",
+    NULL :: NUMERIC                          AS "val_2039",
+    NULL :: NUMERIC                          AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[NoWTE]'      AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'NoWTE'), 0) AS "val_2015",
+    NULL :: NUMERIC                            AS "val_2016",
+    NULL :: NUMERIC                            AS "val_2017",
+    NULL :: NUMERIC                            AS "val_2018",
+    NULL :: NUMERIC                            AS "val_2019",
+    NULL :: NUMERIC                            AS "val_2020",
+    NULL :: NUMERIC                            AS "val_2021",
+    NULL :: NUMERIC                            AS "val_2022",
+    NULL :: NUMERIC                            AS "val_2023",
+    NULL :: NUMERIC                            AS "val_2024",
+    NULL :: NUMERIC                            AS "val_2025",
+    NULL :: NUMERIC                            AS "val_2026",
+    NULL :: NUMERIC                            AS "val_2027",
+    NULL :: NUMERIC                            AS "val_2028",
+    NULL :: NUMERIC                            AS "val_2029",
+    NULL :: NUMERIC                            AS "val_2030",
+    NULL :: NUMERIC                            AS "val_2031",
+    NULL :: NUMERIC                            AS "val_2032",
+    NULL :: NUMERIC                            AS "val_2033",
+    NULL :: NUMERIC                            AS "val_2034",
+    NULL :: NUMERIC                            AS "val_2035",
+    NULL :: NUMERIC                            AS "val_2036",
+    NULL :: NUMERIC                            AS "val_2037",
+    NULL :: NUMERIC                            AS "val_2038",
+    NULL :: NUMERIC                            AS "val_2039",
+    NULL :: NUMERIC                            AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[PNG]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'PNG'), 0) AS "val_2015",
+    NULL :: NUMERIC                          AS "val_2016",
+    NULL :: NUMERIC                          AS "val_2017",
+    NULL :: NUMERIC                          AS "val_2018",
+    NULL :: NUMERIC                          AS "val_2019",
+    NULL :: NUMERIC                          AS "val_2020",
+    NULL :: NUMERIC                          AS "val_2021",
+    NULL :: NUMERIC                          AS "val_2022",
+    NULL :: NUMERIC                          AS "val_2023",
+    NULL :: NUMERIC                          AS "val_2024",
+    NULL :: NUMERIC                          AS "val_2025",
+    NULL :: NUMERIC                          AS "val_2026",
+    NULL :: NUMERIC                          AS "val_2027",
+    NULL :: NUMERIC                          AS "val_2028",
+    NULL :: NUMERIC                          AS "val_2029",
+    NULL :: NUMERIC                          AS "val_2030",
+    NULL :: NUMERIC                          AS "val_2031",
+    NULL :: NUMERIC                          AS "val_2032",
+    NULL :: NUMERIC                          AS "val_2033",
+    NULL :: NUMERIC                          AS "val_2034",
+    NULL :: NUMERIC                          AS "val_2035",
+    NULL :: NUMERIC                          AS "val_2036",
+    NULL :: NUMERIC                          AS "val_2037",
+    NULL :: NUMERIC                          AS "val_2038",
+    NULL :: NUMERIC                          AS "val_2039",
+    NULL :: NUMERIC                          AS "val_2040"
+  UNION
+  SELECT
+    'Global Inputs.conversion_efficiencies[TCFuel]' AS "variable",
+    COALESCE((SELECT "conversion_efficiency" AS "val"
+              FROM "conv_eff"
+              WHERE "WTEConfig" = 'TCFuel'), 0) AS "val_2015",
+    NULL :: NUMERIC                             AS "val_2016",
+    NULL :: NUMERIC                             AS "val_2017",
+    NULL :: NUMERIC                             AS "val_2018",
+    NULL :: NUMERIC                             AS "val_2019",
+    NULL :: NUMERIC                             AS "val_2020",
+    NULL :: NUMERIC                             AS "val_2021",
+    NULL :: NUMERIC                             AS "val_2022",
+    NULL :: NUMERIC                             AS "val_2023",
+    NULL :: NUMERIC                             AS "val_2024",
+    NULL :: NUMERIC                             AS "val_2025",
+    NULL :: NUMERIC                             AS "val_2026",
+    NULL :: NUMERIC                             AS "val_2027",
+    NULL :: NUMERIC                             AS "val_2028",
+    NULL :: NUMERIC                             AS "val_2029",
+    NULL :: NUMERIC                             AS "val_2030",
+    NULL :: NUMERIC                             AS "val_2031",
+    NULL :: NUMERIC                             AS "val_2032",
+    NULL :: NUMERIC                             AS "val_2033",
+    NULL :: NUMERIC                             AS "val_2034",
+    NULL :: NUMERIC                             AS "val_2035",
+    NULL :: NUMERIC                             AS "val_2036",
+    NULL :: NUMERIC                             AS "val_2037",
+    NULL :: NUMERIC                             AS "val_2038",
+    NULL :: NUMERIC                             AS "val_2039",
+    NULL :: NUMERIC                             AS "val_2040"
+);

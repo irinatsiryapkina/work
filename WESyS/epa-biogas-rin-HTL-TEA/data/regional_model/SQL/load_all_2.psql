@@ -1,0 +1,19 @@
+BEGIN;
+
+RESET ROLE;
+
+\i 'create_raw_data_tables.psql'
+
+SET ROLE "wte-admin";
+
+\i 'create_system_tables.psql'
+\i 'create_data_views.psql'
+\i 'create_region_data_views.psql'
+\i 'create_variable_views.psql'
+
+COMMIT;
+
+\i 'vacuum_full_analyze_system_tables.sql'
+\i 'vacuum_full_analyze_data_tables.sql'
+
+RESET ROLE;

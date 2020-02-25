@@ -1,0 +1,2 @@
+Models that are in this directory are "clean" versions with default values. Please save models being used/modified for a particular study in that study's directory. 
+Please inform Steve Peterson prior to saving any model changes to this directory.

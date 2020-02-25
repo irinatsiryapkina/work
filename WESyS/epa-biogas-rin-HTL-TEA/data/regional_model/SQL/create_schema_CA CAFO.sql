@@ -1,0 +1,22 @@
+CREATE SCHEMA "CA CAFO";
+
+COMMENT ON SCHEMA "CA CAFO" IS 'Prepared variable data for the CA CAFO module.';
+
+REVOKE USAGE  ON SCHEMA "CA CAFO" FROM "public";
+GRANT  USAGE  ON SCHEMA "CA CAFO" TO   "wte-ro";
+GRANT  CREATE ON SCHEMA "CA CAFO" TO   "wte-admin";
+
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" REVOKE ALL PRIVILEGES                            ON TABLES    FROM "public";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" REVOKE ALL PRIVILEGES                            ON SEQUENCES FROM "public";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" REVOKE ALL PRIVILEGES                            ON FUNCTIONS FROM "public";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" REVOKE ALL PRIVILEGES                            ON TYPES     FROM "public";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  SELECT                                    ON TABLES    TO   "wte-ro";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  SELECT                                    ON SEQUENCES TO   "wte-ro";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  USAGE                                     ON TYPES     TO   "wte-ro";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  INSERT, UPDATE, DELETE                    ON TABLES    TO   "wte-rw";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  USAGE                                     ON SEQUENCES TO   "wte-rw";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  EXECUTE                                   ON FUNCTIONS TO   "wte-rw";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  TRUNCATE, REFERENCES, TRIGGER, REFERENCES ON TABLES    TO   "wte-admin";
+ALTER DEFAULT PRIVILEGES FOR ROLE "wte-admin" IN SCHEMA "CA CAFO" GRANT  UPDATE                                    ON SEQUENCES TO   "wte-admin";
+
+ALTER SCHEMA "CA CAFO" OWNER TO "wte-admin";

@@ -1,0 +1,27 @@
+BEGIN;
+
+SET ROLE "wte-admin";
+
+\i 'drop_variable_views.psql'
+\i 'drop_variable_schemas.sql'
+
+\i 'drop_region_data_views.psql'
+\i 'drop_region_schemas.psql'
+
+\i 'drop_data_views.psql'
+\i 'drop_raw_data_tables.psql'
+
+SET ROLE "wte-admin";
+
+\i 'drop_data_schemas.psql'
+\i 'drop_system_tables.sql'
+\i 'drop_system_schemas.psql'
+
+RESET ROLE;
+
+\i 'drop_user_schemas.psql'
+\i 'revoke_group_privileges.sql'
+\i 'drop_user_all.psql'
+\i 'drop_group_all.psql'
+
+COMMIT;

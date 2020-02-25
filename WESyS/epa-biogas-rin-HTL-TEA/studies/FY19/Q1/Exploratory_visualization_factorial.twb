@@ -1,0 +1,2968 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.17.1226.1925                               -->
+<workbook original-version='10.5' source-build='10.5.0 (10500.17.1226.1925)' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Reformat (biogas_output)' inline='true' name='federated.01f14ye0g94quu10yvp170lkg31e' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='biogas_output' name='excel-direct.1bimuee04oew8g12baygf0cthe3x'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/lvimmers/Documents/Github-WESyS/epa-biogas-rin/studies/FY19/Q1/Exploratory_factorial.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='date' date-parse-format='yyyy' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[2015]' />
+            <value name='[2016]' />
+            <value name='[2017]' />
+            <value name='[2018]' />
+            <value name='[2019]' />
+            <value name='[2020]' />
+            <value name='[2021]' />
+            <value name='[2022]' />
+            <value name='[2023]' />
+            <value name='[2024]' />
+            <value name='[2025]' />
+            <value name='[2026]' />
+            <value name='[2027]' />
+            <value name='[2028]' />
+            <value name='[2029]' />
+            <value name='[2030]' />
+            <value name='[2031]' />
+            <value name='[2032]' />
+            <value name='[2033]' />
+            <value name='[2034]' />
+            <value name='[2035]' />
+            <value name='[2036]' />
+            <value name='[2037]' />
+            <value name='[2038]' />
+            <value name='[2039]' />
+            <value name='[2040]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[Reformat].[2015]' />
+              <field name='[Reformat].[2016]' />
+              <field name='[Reformat].[2017]' />
+              <field name='[Reformat].[2018]' />
+              <field name='[Reformat].[2019]' />
+              <field name='[Reformat].[2020]' />
+              <field name='[Reformat].[2021]' />
+              <field name='[Reformat].[2022]' />
+              <field name='[Reformat].[2023]' />
+              <field name='[Reformat].[2024]' />
+              <field name='[Reformat].[2025]' />
+              <field name='[Reformat].[2026]' />
+              <field name='[Reformat].[2027]' />
+              <field name='[Reformat].[2028]' />
+              <field name='[Reformat].[2029]' />
+              <field name='[Reformat].[2030]' />
+              <field name='[Reformat].[2031]' />
+              <field name='[Reformat].[2032]' />
+              <field name='[Reformat].[2033]' />
+              <field name='[Reformat].[2034]' />
+              <field name='[Reformat].[2035]' />
+              <field name='[Reformat].[2036]' />
+              <field name='[Reformat].[2037]' />
+              <field name='[Reformat].[2038]' />
+              <field name='[Reformat].[2039]' />
+              <field name='[Reformat].[2040]' />
+            </group>
+          </groups>
+          <relation connection='excel-direct.1bimuee04oew8g12baygf0cthe3x' name='Reformat' table='[Reformat$]' type='table'>
+            <columns gridOrigin='A1:AE1665:no:A1:AE1665:0' header='yes' outcome='6'>
+              <column datatype='string' name='Name' ordinal='0' />
+              <column datatype='string' name='Run' ordinal='1' />
+              <column datatype='string' name='Pathway' ordinal='2' />
+              <column datatype='string' name='Region' ordinal='3' />
+              <column datatype='string' name='Resource' ordinal='4' />
+              <column datatype='real' name='2015' ordinal='5' />
+              <column datatype='real' name='2016' ordinal='6' />
+              <column datatype='real' name='2017' ordinal='7' />
+              <column datatype='real' name='2018' ordinal='8' />
+              <column datatype='real' name='2019' ordinal='9' />
+              <column datatype='real' name='2020' ordinal='10' />
+              <column datatype='real' name='2021' ordinal='11' />
+              <column datatype='real' name='2022' ordinal='12' />
+              <column datatype='real' name='2023' ordinal='13' />
+              <column datatype='real' name='2024' ordinal='14' />
+              <column datatype='real' name='2025' ordinal='15' />
+              <column datatype='real' name='2026' ordinal='16' />
+              <column datatype='real' name='2027' ordinal='17' />
+              <column datatype='real' name='2028' ordinal='18' />
+              <column datatype='real' name='2029' ordinal='19' />
+              <column datatype='real' name='2030' ordinal='20' />
+              <column datatype='real' name='2031' ordinal='21' />
+              <column datatype='real' name='2032' ordinal='22' />
+              <column datatype='real' name='2033' ordinal='23' />
+              <column datatype='real' name='2034' ordinal='24' />
+              <column datatype='real' name='2035' ordinal='25' />
+              <column datatype='real' name='2036' ordinal='26' />
+              <column datatype='real' name='2037' ordinal='27' />
+              <column datatype='real' name='2038' ordinal='28' />
+              <column datatype='real' name='2039' ordinal='29' />
+              <column datatype='real' name='2040' ordinal='30' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AE1665:no:A1:AE1665:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Run</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Run]</local-name>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias>Run</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pathway</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Pathway]</local-name>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias>Pathway</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Resource</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Resource]</local-name>
+            <parent-name>[Reformat]</parent-name>
+            <remote-alias>Resource</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Run]' role='dimension' type='nominal' />
+      <column-instance column='[Run]' derivation='None' name='[none:Run:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.593145' measure-ordering='alphabetic' measure-percentage='0.406855' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[none:Run:nk]' type='shape'>
+            <map to='asterisk'>
+              <bucket>&quot;Run 105&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 115&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 125&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 15&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 25&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 35&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 45&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 5&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 55&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 65&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 75&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 85&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Run 95&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 1&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 101&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 11&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 111&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 121&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 21&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 31&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 41&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 51&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 61&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 71&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 81&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Run 91&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 106&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 116&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 126&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 16&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 26&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 36&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 46&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 56&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 6&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 66&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 76&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 86&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Run 96&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 108&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 118&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 128&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 18&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 28&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 38&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 48&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 58&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 68&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 78&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 8&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 88&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Run 98&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 109&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 119&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 19&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 29&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 39&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 49&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 59&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 69&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 79&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 89&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 9&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Run 99&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 103&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 113&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 123&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 13&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 23&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 3&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 33&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 43&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 53&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 63&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 73&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 83&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Run 93&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 10&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 100&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 110&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 120&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 20&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 30&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 40&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 50&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 60&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 70&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 80&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Run 90&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 102&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 112&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 12&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 122&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 2&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 22&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 32&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 42&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 52&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 62&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 72&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 82&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Run 92&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 104&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 114&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 124&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 14&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 24&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 34&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 4&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 44&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 54&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 64&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 74&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 84&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Run 94&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 107&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 117&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 127&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 17&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 27&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 37&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 47&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 57&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 67&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 7&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 77&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 87&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Run 97&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Reformat (biogas_output)' name='federated.01f14ye0g94quu10yvp170lkg31e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01f14ye0g94quu10yvp170lkg31e'>
+            <column datatype='string' name='[Pathway]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Pivot Field Names]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Resource]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Run]' role='dimension' type='nominal' />
+            <column-instance column='[Run]' derivation='Attribute' name='[attr:Run:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pathway]' derivation='None' name='[none:Pathway:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Resource]' derivation='None' name='[none:Resource:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Run]' derivation='None' name='[none:Run:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='Year-Trunc' name='[tyr:Pivot Field Names:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Pathway:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Pathway:nk]' member='&quot;frac organics from SB 1383 go to POTW&quot;' />
+                <groupfilter function='member' level='[none:Pathway:nk]' member='&quot;SB1383 influx Multiplier&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Region:nk]' />
+              <groupfilter function='member' level='[none:Region:nk]' member='&quot;Global&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</column>
+            <column>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]' value='128' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <shape column='[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]' />
+              <tooltip column='[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>(([federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk] / ([federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk] / [federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk])) * [federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk])</rows>
+        <cols>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='240'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='48'>
+            <card type='columns' />
+          </strip>
+          <strip size='48'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='240'>
+            <card pane-specification-id='0' param='[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]' type='shape' />
+          </strip>
+          <strip size='150'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 128&quot;</value>
+                <value>593921.21826999995</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 128&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 128&quot;</value>
+                <value>593874.361302</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 128&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 128&quot;</value>
+                <value>593822.85465200001</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 128&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 128&quot;</value>
+                <value>593765.85673999996</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 128&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 128&quot;</value>
+                <value>593702.29376100004</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 128&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 124&quot;</value>
+                <value>215418.141692</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 124&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 124&quot;</value>
+                <value>215381.77464399999</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 124&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 124&quot;</value>
+                <value>215341.348421</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 124&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 124&quot;</value>
+                <value>215296.02921000001</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 124&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 124&quot;</value>
+                <value>215244.71926799999</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 124&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 112&quot;</value>
+                <value>538528.84019999998</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 112&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 112&quot;</value>
+                <value>538446.76662500005</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 112&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 112&quot;</value>
+                <value>538356.53357600002</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 112&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 112&quot;</value>
+                <value>538256.66177300003</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 112&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 112&quot;</value>
+                <value>538145.26310400001</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 112&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 96&quot;</value>
+                <value>593919.48391499999</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 96&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 96&quot;</value>
+                <value>593872.56929899997</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 96&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 96&quot;</value>
+                <value>593820.99831900001</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 96&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 96&quot;</value>
+                <value>593763.92799999996</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 96&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 96&quot;</value>
+                <value>593700.28269799997</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 96&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 92&quot;</value>
+                <value>215415.34493200001</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 92&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 92&quot;</value>
+                <value>215378.87658000001</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 92&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 92&quot;</value>
+                <value>215338.33609</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 92&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 92&quot;</value>
+                <value>215292.88661700001</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 92&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 92&quot;</value>
+                <value>215241.426297</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 92&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 80&quot;</value>
+                <value>538525.67450099997</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 80&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 80&quot;</value>
+                <value>538443.49516199995</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 80&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 80&quot;</value>
+                <value>538353.14405300003</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 80&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 80&quot;</value>
+                <value>538253.13931700005</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 80&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 80&quot;</value>
+                <value>538141.58944899996</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 80&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 64&quot;</value>
+                <value>593920.34946900001</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 64&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 64&quot;</value>
+                <value>593873.46354300005</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 64&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 64&quot;</value>
+                <value>593821.92457200005</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 64&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 64&quot;</value>
+                <value>593764.89027099998</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 64&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 64&quot;</value>
+                <value>593701.28590899997</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 64&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 60&quot;</value>
+                <value>215416.68444800001</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 60&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 60&quot;</value>
+                <value>215380.260488</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 60&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 60&quot;</value>
+                <value>215339.76964400001</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 60&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 60&quot;</value>
+                <value>215294.37621300001</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 60&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 60&quot;</value>
+                <value>215242.97986399999</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 60&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 48&quot;</value>
+                <value>538527.25452299998</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 48&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 48&quot;</value>
+                <value>538445.12782499997</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 48&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 48&quot;</value>
+                <value>538354.83546500001</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 48&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 48&quot;</value>
+                <value>538254.89686199999</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 48&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 48&quot;</value>
+                <value>538143.42219399998</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 48&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 32&quot;</value>
+                <value>593919.48391499999</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 32&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 32&quot;</value>
+                <value>593872.56929899997</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 32&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 32&quot;</value>
+                <value>593820.99831900001</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 32&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 32&quot;</value>
+                <value>593763.92799999996</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 32&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 32&quot;</value>
+                <value>593700.28269799997</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 32&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 28&quot;</value>
+                <value>215415.34493200001</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 28&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 28&quot;</value>
+                <value>215378.87658000001</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 28&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 28&quot;</value>
+                <value>215338.33609</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 28&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 28&quot;</value>
+                <value>215292.88661700001</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 28&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 28&quot;</value>
+                <value>215241.426297</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 28&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 16&quot;</value>
+                <value>538525.67450099997</value>
+                <value>#2040-01-01 00:00:00#</value>
+                <value>&quot;Run 16&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 16&quot;</value>
+                <value>538443.49516199995</value>
+                <value>#2039-01-01 00:00:00#</value>
+                <value>&quot;Run 16&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 16&quot;</value>
+                <value>538353.14405300003</value>
+                <value>#2038-01-01 00:00:00#</value>
+                <value>&quot;Run 16&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 16&quot;</value>
+                <value>538253.13931700005</value>
+                <value>#2037-01-01 00:00:00#</value>
+                <value>&quot;Run 16&quot;</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                    <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[sum:Pivot Field Values:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[tyr:Pivot Field Names:qk]</field>
+                  <field>[federated.01f14ye0g94quu10yvp170lkg31e].[attr:Run:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTL tot&quot;</value>
+                <value>&quot;CA&quot;</value>
+                <value>&quot;CAFO&quot;</value>
+                <value>&quot;Run 16&quot;</value>
+                <value>538141.58944899996</value>
+                <value>#2036-01-01 00:00:00#</value>
+                <value>&quot;Run 16&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Name:nk]</field>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pathway:nk]</field>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Pivot Field Names:nk]</field>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Region:nk]</field>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Resource:nk]</field>
+            <field>[federated.01f14ye0g94quu10yvp170lkg31e].[none:Run:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      gzOc8A1RpvkAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

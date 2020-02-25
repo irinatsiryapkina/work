@@ -1,0 +1,14 @@
+-- revoke all user privileges across existing objects in database
+
+\ir revoke_aeberle.sql
+\ir revoke_amilbrandt.sql
+\ir revoke_dinman.sql
+\ir revoke_enewes.sql
+\ir revoke_wte-admin.sql
+\ir revoke_wte-ro.sql
+\ir revoke_all.psql.sql
+\ir revoke_dhetting.sql
+\ir revoke_dstright.sql
+\ir revoke_public.sql
+\ir revoke_wte-client.sql
+\ir revoke_wte-rw.sql

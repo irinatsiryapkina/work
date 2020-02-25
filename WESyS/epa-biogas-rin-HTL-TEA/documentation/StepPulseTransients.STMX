@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmile version="1.0" xmlns="http://docs.oasis-open.org/xmile/ns/XMILE/v1.0" xmlns:isee="http://iseesystems.com/XMILE">
+	<header>
+		<smile version="1.0" namespace="std, isee" uses_arrays="1" uses_conveyor=""/>
+		<name>StepPulseTransients</name>
+		<uuid>435c6b65-a245-4f30-92dd-7610f629519f</uuid>
+		<vendor>isee systems, inc.</vendor>
+		<product version="1.6.2" isee:build_number="1445" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+	</header>
+	<sim_specs isee:simulation_delay="0.101639" method="Euler" time_units="Time" isee:instantaneous_flows="false">
+		<start>0</start>
+		<stop>60</stop>
+		<dt>0.25</dt>
+	</sim_specs>
+	<dimensions>
+		<dim name="Dim_Name_1" size="1"/>
+	</dimensions>
+	<isee:prefs show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" saved_runs="5" keep="false" rifp="false"/>
+	<isee:multiplayer_settings include_chat="true" allow_observers="false" advance_time_increment="1" observer_start_page="home_page" enabled="false"/>
+	<isee:time_formats default_format="Builtin">
+		<isee:time_format name="Builtin" type="adaptive"/>
+	</isee:time_formats>
+	<default_format/>
+	<isee:sensi_specs_list active_index="0">
+		<isee:sensi_specs name="Sensitivity Analysis 1" method="multivariate" runs="0"/>
+	</isee:sensi_specs_list>
+	<model_units>
+		<unit name="Dimensionless">
+			<eqn>1</eqn>
+			<alias>dmnl</alias>
+			<alias>unitless</alias>
+		</unit>
+	</model_units>
+	<model>
+		<variables>
+			<stock name="One Stock">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>inflow_A</inflow>
+				<outflow>outflow_A</outflow>
+				<non_negative/>
+				<units>Stuff</units>
+			</stock>
+			<flow name="inflow A">
+				<eqn>test_input_logic</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<flow name="outflow A">
+				<eqn>One_Stock/residence_time_A</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<aux name="overall residence time">
+				<eqn>20</eqn>
+				<units>time</units>
+			</aux>
+			<aux name="residence time A">
+				<eqn>overall_residence_time/Order_A</eqn>
+				<units>time</units>
+			</aux>
+			<aux name="Order A">
+				<eqn>1</eqn>
+				<units>Unitless</units>
+			</aux>
+			<aux name="test input logic">
+				<eqn>pulse_input_logic + step_input_logic</eqn>
+				<units>stuff/time</units>
+			</aux>
+			<aux name="pulse input logic">
+				<eqn>PULSE(pulse_quantity,implementation_time,1e9) * &quot;Use_Pulse?&quot;</eqn>
+				<units>stuff/time</units>
+			</aux>
+			<aux name="step input logic">
+				<eqn>STEP(step_height, implementation_time) * &quot;Use_Step?&quot;</eqn>
+				<units>stuff/time</units>
+			</aux>
+			<aux name="Use Pulse?">
+				<eqn>1</eqn>
+				<units>Unitless</units>
+			</aux>
+			<aux name="Use Step?">
+				<eqn>0</eqn>
+				<units>Unitless</units>
+			</aux>
+			<aux name="pulse quantity">
+				<eqn>100</eqn>
+				<units>Stuff</units>
+			</aux>
+			<aux name="step height">
+				<eqn>10</eqn>
+				<units>stuff/time</units>
+			</aux>
+			<aux name="implementation time">
+				<eqn>10</eqn>
+				<units>time</units>
+			</aux>
+			<stock name="Stock B 1">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>inflow_B</inflow>
+				<outflow>outflowB_1</outflow>
+				<non_negative/>
+				<units>Stuff</units>
+			</stock>
+			<flow name="inflow B">
+				<eqn>test_input_logic</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<flow name="outflowB 1">
+				<eqn>Stock_B_1/residence_time_B</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<aux name="residence time B">
+				<eqn>overall_residence_time/Order_B</eqn>
+				<units>time</units>
+			</aux>
+			<aux name="Order B">
+				<eqn>3</eqn>
+				<units>Unitless</units>
+			</aux>
+			<stock name="Stock B 2">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflowB_1</inflow>
+				<outflow>outflowB_2</outflow>
+				<non_negative/>
+				<units>Stuff</units>
+			</stock>
+			<flow name="outflowB 2">
+				<eqn>Stock_B_2/residence_time_B</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<stock name="Stock B 3">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflowB_2</inflow>
+				<outflow>outflowB_3</outflow>
+				<non_negative/>
+				<units>Stuff</units>
+			</stock>
+			<flow name="outflowB 3">
+				<eqn>Stock_B_3/residence_time_B</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<aux name="Three Stock">
+				<eqn>Stock_B_1 + Stock_B_2 + Stock_B_3</eqn>
+				<scale min="0" max="100"/>
+				<units>Stuff</units>
+			</aux>
+			<stock name="Stock C 1">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>inflow_A_3</inflow>
+				<outflow>outflow_C_1</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="inflow A 3">
+				<eqn>test_input_logic</eqn>
+				<non_negative/>
+			</flow>
+			<flow name="outflow C 1">
+				<eqn>Stock_C_1/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<aux name="residence time C">
+				<eqn>overall_residence_time/Order_C</eqn>
+			</aux>
+			<aux name="Order C">
+				<eqn>7</eqn>
+			</aux>
+			<stock name="Stock C 2">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflow_C_1</inflow>
+				<outflow>outflow_C_2</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 2">
+				<eqn>Stock_C_2/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Stock C 3">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflow_C_2</inflow>
+				<outflow>outflow_C_3</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 3">
+				<eqn>Stock_C_3/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<aux name="Seven Stock">
+				<eqn>Stock_C_1 + Stock_C_2 + Stock_C_3 + Stock_C_4 + Stock_C_5 + Stock_C_6 + Stock_C_7</eqn>
+				<scale min="0" max="100"/>
+			</aux>
+			<stock name="Stock C 4">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflow_C_3</inflow>
+				<outflow>outflow_C_4</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 4">
+				<eqn>Stock_C_4/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Stock C 5">
+				<eqn>0</eqn>
+				<scale min="7.4e-323" max="100"/>
+				<inflow>outflow_C_4</inflow>
+				<outflow>outflow_C_5</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 5">
+				<eqn>Stock_C_5/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Stock C 6">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>outflow_C_5</inflow>
+				<outflow>outflow_C_6</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 6">
+				<eqn>Stock_C_6/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Stock C 7">
+				<eqn>0</eqn>
+				<scale min="7.4e-323" max="100"/>
+				<inflow>outflow_C_6</inflow>
+				<outflow>outflow_C_7</outflow>
+				<non_negative/>
+			</stock>
+			<flow name="outflow C 7">
+				<eqn>Stock_C_7/residence_time_C</eqn>
+				<non_negative/>
+			</flow>
+			<stock name="Conveyor">
+				<eqn>0</eqn>
+				<scale min="0" max="100"/>
+				<inflow>inflow_D</inflow>
+				<outflow>Outflow_D</outflow>
+				<conveyor>
+					<len>overall_residence_time</len>
+				</conveyor>
+				<units>Stuff</units>
+			</stock>
+			<flow name="inflow D">
+				<eqn>test_input_logic</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<flow name="Outflow D">
+				<eqn>0</eqn>
+				<non_negative/>
+				<units>stuff/time</units>
+			</flow>
+			<group name="First Order Dynamics" run="false">
+				<entity name="One_Stock"/>
+				<entity name="inflow_A"/>
+				<entity name="outflow_A"/>
+				<entity name="residence_time_A"/>
+				<entity name="Order_A"/>
+			</group>
+			<group name="Third Order Dynamics" run="false">
+				<entity name="Three_Stock"/>
+				<entity name="Stock_B_1"/>
+				<entity name="outflowB_1"/>
+				<entity name="Stock_B_2"/>
+				<entity name="outflowB_2"/>
+				<entity name="Stock_B_3"/>
+				<entity name="residence_time_B"/>
+				<entity name="inflow_B"/>
+				<entity name="outflowB_3"/>
+				<entity name="Order_B"/>
+			</group>
+			<group name="Seventh Order Dynamics" run="false">
+				<entity name="Stock_C_1"/>
+				<entity name="inflow_A_3"/>
+				<entity name="Seven_Stock"/>
+				<entity name="outflow_C_1"/>
+				<entity name="residence_time_C"/>
+				<entity name="Stock_C_6"/>
+				<entity name="Stock_C_2"/>
+				<entity name="outflow_C_7"/>
+				<entity name="outflow_C_2"/>
+				<entity name="outflow_C_3"/>
+				<entity name="outflow_C_5"/>
+				<entity name="Stock_C_3"/>
+				<entity name="Stock_C_4"/>
+				<entity name="Stock_C_5"/>
+				<entity name="outflow_C_6"/>
+				<entity name="Stock_C_7"/>
+				<entity name="outflow_C_4"/>
+				<entity name="Order_C"/>
+			</group>
+			<group name="Infinite Order Dynamics" run="false">
+				<entity name="Conveyor"/>
+				<entity name="inflow_D"/>
+				<entity name="Outflow_D"/>
+			</group>
+			<group name="Ancillary calculations" run="false">
+				<entity name="overall_residence_time"/>
+				<entity name="test_input_logic"/>
+				<entity name="pulse_input_logic"/>
+				<entity name="step_input_logic"/>
+				<entity name='"Use_Step?"'/>
+				<entity name="pulse_quantity"/>
+				<entity name="step_height"/>
+				<entity name='"Use_Pulse?"'/>
+				<entity name="implementation_time"/>
+			</group>
+			<isee:dependencies>
+				<var name="inflow_A">
+					<in>test_input_logic</in>
+				</var>
+				<var name="outflow_A">
+					<in>One_Stock</in>
+					<in>residence_time_A</in>
+				</var>
+				<var name="residence_time_A">
+					<in>overall_residence_time</in>
+					<in>Order_A</in>
+				</var>
+				<var name="test_input_logic">
+					<in>pulse_input_logic</in>
+					<in>step_input_logic</in>
+				</var>
+				<var name="pulse_input_logic">
+					<in>&quot;Use_Pulse?&quot;</in>
+					<in>pulse_quantity</in>
+					<in>implementation_time</in>
+				</var>
+				<var name="step_input_logic">
+					<in>&quot;Use_Step?&quot;</in>
+					<in>step_height</in>
+					<in>implementation_time</in>
+				</var>
+				<var name="inflow_B">
+					<in>test_input_logic</in>
+				</var>
+				<var name="outflowB_1">
+					<in>Stock_B_1</in>
+					<in>residence_time_B</in>
+				</var>
+				<var name="residence_time_B">
+					<in>overall_residence_time</in>
+					<in>Order_B</in>
+				</var>
+				<var name="outflowB_2">
+					<in>residence_time_B</in>
+					<in>Stock_B_2</in>
+				</var>
+				<var name="outflowB_3">
+					<in>residence_time_B</in>
+					<in>Stock_B_3</in>
+				</var>
+				<var name="Three_Stock">
+					<in>Stock_B_1</in>
+					<in>Stock_B_2</in>
+					<in>Stock_B_3</in>
+				</var>
+				<var name="inflow_A_3">
+					<in>test_input_logic</in>
+				</var>
+				<var name="outflow_C_1">
+					<in>Stock_C_1</in>
+					<in>residence_time_C</in>
+				</var>
+				<var name="residence_time_C">
+					<in>overall_residence_time</in>
+					<in>Order_C</in>
+				</var>
+				<var name="outflow_C_2">
+					<in>residence_time_C</in>
+					<in>Stock_C_2</in>
+				</var>
+				<var name="outflow_C_3">
+					<in>residence_time_C</in>
+					<in>Stock_C_3</in>
+				</var>
+				<var name="Seven_Stock">
+					<in>Stock_C_1</in>
+					<in>Stock_C_2</in>
+					<in>Stock_C_3</in>
+					<in>Stock_C_4</in>
+					<in>Stock_C_5</in>
+					<in>Stock_C_6</in>
+					<in>Stock_C_7</in>
+				</var>
+				<var name="outflow_C_4">
+					<in>residence_time_C</in>
+					<in>Stock_C_4</in>
+				</var>
+				<var name="outflow_C_5">
+					<in>Stock_C_5</in>
+					<in>residence_time_C</in>
+				</var>
+				<var name="outflow_C_6">
+					<in>Stock_C_6</in>
+					<in>residence_time_C</in>
+				</var>
+				<var name="outflow_C_7">
+					<in>residence_time_C</in>
+					<in>Stock_C_7</in>
+				</var>
+				<var name="inflow_D">
+					<in>test_input_logic</in>
+				</var>
+			</isee:dependencies>
+		</variables>
+		<views>
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white"/>
+				<numeric_display color="blue" background="white" font_size="9pt" isee:transparent="false"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous"/>
+				<button color="black" background="#E0E0E0" font_size="12pt" transparent="false" corner_radius="0" isee:flat="false" icon_side="top"/>
+				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" popup_background_color="#FFFECF"/>
+				<slider color="black" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:always_show_hover_tip="false" input_expands="true" input_width="100"/>
+				<isee:sim_speed_slider color="black" background="white"/>
+				<isee:time_slider color="black" background="white"/>
+				<isee:pie_input color="black" background="white" legend_position="bottom" isee:transparent="false"/>
+				<knob color="#66CC66" background="#E0E0E0" font_size="12pt" label_side="bottom" wrap_title="true"/>
+				<numeric_input color="black" background="#E0E0E0" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<switch color="black" background="#E0E0E0" font_size="12pt" label_side="top" wrap_title="true" isee:appearance="switch"/>
+				<options color="black" background="white" appearance="radio-buttons" arrangement="vertical"/>
+				<graphical_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<group_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<lamp color="black" background="white" font_size="9pt"/>
+				<gauge color="black" background="white" needle_color="#F09F72" bar_color="#EEEEEE" bar_progress_color="black" appearance="radial" num_major_ticks="11" num_minor_ticks="11" show_numeric_value="true"/>
+				<isee:spatial_map color="black" background="white"/>
+				<isee:animation_object color="black" background="white"/>
+			</style>
+			<view isee:show_pages="false" page_width="980" page_height="1280" isee:page_cols="3" isee:page_rows="2" isee:popup_graphs_are_comparative="true" type="stock_flow">
+				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
+						<shape type="rectangle" width="45" height="35"/>
+					</stock>
+					<flow color="blue" background="white" font_color="blue" font_size="9pt" label_side="bottom"/>
+					<module color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
+						<shape type="rectangle" width="55" height="45"/>
+					</module>
+					<aux color="blue" background="white" font_color="blue" font_size="9pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</aux>
+					<group color="red" background="white" font_color="red" font_size="9pt"/>
+					<connector color="#FF007F" background="white" font_color="#FF007F" font_size="9pt" isee:thickness="1"/>
+					<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<isee:loop_indicator color="black" background="white"/>
+					<numeric_display color="blue" background="white" font_size="9pt" isee:transparent="false"/>
+					<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false">
+						<isee:series_styles>
+							<isee:series_style color="blue" thickness="1"/>
+							<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#FF7F00" thickness="1"/>
+							<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#FF007F" thickness="1"/>
+							<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+							<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+							<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+							<isee:series_style color="#C8C8C8" thickness="1"/>
+						</isee:series_styles>
+					</graph>
+					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous"/>
+				</style>
+				<connector uid="1" color="blue" angle="331.39">
+					<from>One_Stock</from>
+					<to>outflow_A</to>
+				</connector>
+				<connector uid="2" color="blue" angle="108.435">
+					<from>residence_time_A</from>
+					<to>outflow_A</to>
+				</connector>
+				<connector uid="3" color="blue" angle="69.444">
+					<from>
+						<alias uid="4"/>
+					</from>
+					<to>residence_time_A</to>
+				</connector>
+				<connector uid="5" color="blue" angle="122.005">
+					<from>Order_A</from>
+					<to>residence_time_A</to>
+				</connector>
+				<connector uid="6" angle="206.565">
+					<from>pulse_input_logic</from>
+					<to>test_input_logic</to>
+				</connector>
+				<connector uid="7" angle="153.435">
+					<from>step_input_logic</from>
+					<to>test_input_logic</to>
+				</connector>
+				<connector uid="8" color="blue" angle="38.6598">
+					<from>
+						<alias uid="9"/>
+					</from>
+					<to>inflow_A</to>
+				</connector>
+				<connector uid="10" angle="180">
+					<from>&quot;Use_Pulse?&quot;</from>
+					<to>pulse_input_logic</to>
+				</connector>
+				<connector uid="11" angle="180">
+					<from>&quot;Use_Step?&quot;</from>
+					<to>step_input_logic</to>
+				</connector>
+				<connector uid="12" angle="0">
+					<from>pulse_quantity</from>
+					<to>pulse_input_logic</to>
+				</connector>
+				<connector uid="13" angle="353.66">
+					<from>step_height</from>
+					<to>step_input_logic</to>
+				</connector>
+				<connector uid="14" angle="153.435">
+					<from>implementation_time</from>
+					<to>pulse_input_logic</to>
+				</connector>
+				<connector uid="15" angle="206.565">
+					<from>implementation_time</from>
+					<to>step_input_logic</to>
+				</connector>
+				<connector uid="16" color="#7F00FF" angle="93.9825">
+					<from>residence_time_B</from>
+					<to>outflowB_2</to>
+				</connector>
+				<connector uid="17" color="#7F00FF" angle="331.39">
+					<from>Stock_B_1</from>
+					<to>outflowB_1</to>
+				</connector>
+				<connector uid="18" color="#7F00FF" angle="154.392">
+					<from>residence_time_B</from>
+					<to>outflowB_1</to>
+				</connector>
+				<connector uid="19" color="#7F00FF" angle="83.6598">
+					<from>
+						<alias uid="20"/>
+					</from>
+					<to>residence_time_B</to>
+				</connector>
+				<connector uid="21" color="#7F00FF" angle="173.66">
+					<from>Order_B</from>
+					<to>residence_time_B</to>
+				</connector>
+				<connector uid="22" color="#7F00FF" angle="31.5638">
+					<from>
+						<alias uid="23"/>
+					</from>
+					<to>inflow_B</to>
+				</connector>
+				<connector uid="24" color="#7F00FF" angle="29.1466">
+					<from>residence_time_B</from>
+					<to>outflowB_3</to>
+				</connector>
+				<connector uid="25" color="#7F00FF" angle="335.556">
+					<from>Stock_B_2</from>
+					<to>outflowB_2</to>
+				</connector>
+				<connector uid="26" color="#7F00FF" angle="347.196">
+					<from>Stock_B_3</from>
+					<to>outflowB_3</to>
+				</connector>
+				<connector uid="27" color="#7F00FF" angle="27.0778">
+					<from>Stock_B_1</from>
+					<to>Three_Stock</to>
+				</connector>
+				<connector uid="28" color="#7F00FF" angle="90">
+					<from>Stock_B_2</from>
+					<to>Three_Stock</to>
+				</connector>
+				<connector uid="29" color="#7F00FF" angle="146.936">
+					<from>Stock_B_3</from>
+					<to>Three_Stock</to>
+				</connector>
+				<connector uid="30" color="#008F44" angle="154.705">
+					<from>residence_time_C</from>
+					<to>outflow_C_2</to>
+				</connector>
+				<connector uid="31" color="#008F44" angle="344.745">
+					<from>Stock_C_1</from>
+					<to>outflow_C_1</to>
+				</connector>
+				<connector uid="32" color="#008F44" angle="163.199">
+					<from>residence_time_C</from>
+					<to>outflow_C_1</to>
+				</connector>
+				<connector uid="33" color="#008F44" angle="18.4349">
+					<from>
+						<alias uid="34"/>
+					</from>
+					<to>residence_time_C</to>
+				</connector>
+				<connector uid="35" color="#008F44" angle="186.34">
+					<from>Order_C</from>
+					<to>residence_time_C</to>
+				</connector>
+				<connector uid="36" color="#008F44" angle="54.4623">
+					<from>
+						<alias uid="37"/>
+					</from>
+					<to>inflow_A_3</to>
+				</connector>
+				<connector uid="38" color="#008F44" angle="144.462">
+					<from>residence_time_C</from>
+					<to>outflow_C_3</to>
+				</connector>
+				<connector uid="39" color="#008F44" angle="340.017">
+					<from>Stock_C_2</from>
+					<to>outflow_C_2</to>
+				</connector>
+				<connector uid="40" color="#008F44" angle="90">
+					<from>residence_time_C</from>
+					<to>outflow_C_4</to>
+				</connector>
+				<connector uid="41" color="#008F44" angle="342.35">
+					<from>Stock_C_3</from>
+					<to>outflow_C_3</to>
+				</connector>
+				<connector uid="42" color="#008F44" angle="32.2756">
+					<from>Stock_C_1</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="43" color="#008F44" angle="43.3634">
+					<from>Stock_C_2</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="44" color="#008F44" angle="73.6105">
+					<from>Stock_C_3</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="45" color="#008F44" angle="344.745">
+					<from>Stock_C_4</from>
+					<to>outflow_C_4</to>
+				</connector>
+				<connector uid="46" color="#008F44" angle="340.017">
+					<from>Stock_C_5</from>
+					<to>outflow_C_5</to>
+				</connector>
+				<connector uid="47" color="#008F44" angle="353.66">
+					<from>residence_time_C</from>
+					<to>outflow_C_7</to>
+				</connector>
+				<connector uid="48" color="#008F44" angle="333.435">
+					<from>Stock_C_6</from>
+					<to>outflow_C_6</to>
+				</connector>
+				<connector uid="49" color="#008F44" angle="38.0766">
+					<from>residence_time_C</from>
+					<to>outflow_C_5</to>
+				</connector>
+				<connector uid="50" color="#008F44" angle="6.34019">
+					<from>residence_time_C</from>
+					<to>outflow_C_6</to>
+				</connector>
+				<connector uid="51" color="#008F44" angle="335.556">
+					<from>Stock_C_7</from>
+					<to>outflow_C_7</to>
+				</connector>
+				<connector uid="52" angle="83.6598">
+					<from>
+						<alias uid="53"/>
+					</from>
+					<to>inflow_D</to>
+				</connector>
+				<connector uid="54" color="#008F44" angle="122.905">
+					<from>Stock_C_4</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="55" color="#008F44" angle="142.306">
+					<from>Stock_C_5</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="56" color="#008F44" angle="145.713">
+					<from>Stock_C_6</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<connector uid="57" color="#008F44" angle="153.435">
+					<from>Stock_C_7</from>
+					<to>Seven_Stock</to>
+				</connector>
+				<stock x="263" y="92" name="One Stock"/>
+				<flow x="173.25" y="90" name="inflow A">
+					<pts>
+						<pt x="106" y="90"/>
+						<pt x="240.5" y="90"/>
+					</pts>
+				</flow>
+				<flow color="blue" label_angle="86.6781" x="342.75" y="90" name="outflow A">
+					<pts>
+						<pt x="285.5" y="90"/>
+						<pt x="424" y="90"/>
+					</pts>
+				</flow>
+				<aux x="1140" y="73" name="overall residence time"/>
+				<aux x="386" y="131" name="residence time A"/>
+				<aux x="444" y="162" name="Order A"/>
+				<aux x="1202" y="107" name="test input logic"/>
+				<aux x="1297" y="59" name="pulse input logic"/>
+				<aux x="1300" y="163" name="step input logic"/>
+				<aux x="1403" y="59" name="Use Pulse?"/>
+				<aux x="1406" y="163" name="Use Step?"/>
+				<aux x="1206" y="59" name="pulse quantity"/>
+				<aux x="1208" y="162" name="step height"/>
+				<aux x="1398" y="107" name="implementation time"/>
+				<stock color="#7F00FF" font_color="#7F00FF" x="212" y="372" name="Stock B 1"/>
+				<flow color="#7F00FF" font_color="#7F00FF" x="139.25" y="370" name="inflow B">
+					<pts>
+						<pt x="89" y="370"/>
+						<pt x="189.5" y="370"/>
+					</pts>
+				</flow>
+				<flow color="#7F00FF" font_color="#7F00FF" label_angle="86.6781" x="295" y="370" name="outflowB 1">
+					<pts>
+						<pt x="234.5" y="370"/>
+						<pt x="367.5" y="370"/>
+					</pts>
+				</flow>
+				<aux color="#7F00FF" font_color="#7F00FF" x="464" y="451" name="residence time B"/>
+				<aux color="#7F00FF" font_color="#7F00FF" x="555" y="451" name="Order B"/>
+				<stock color="#7F00FF" font_color="#7F00FF" x="390" y="370" name="Stock B 2"/>
+				<flow color="#7F00FF" font_color="#7F00FF" label_angle="86.6781" x="458.5" y="372" name="outflowB 2">
+					<pts>
+						<pt x="412.5" y="372"/>
+						<pt x="516.5" y="372"/>
+					</pts>
+				</flow>
+				<stock color="#7F00FF" font_color="#7F00FF" x="539" y="378" name="Stock B 3"/>
+				<flow color="#7F00FF" font_color="#7F00FF" label_angle="86.6781" x="609.25" y="370" name="outflowB 3">
+					<pts>
+						<pt x="561.5" y="370"/>
+						<pt x="681" y="370"/>
+					</pts>
+				</flow>
+				<aux color="#7F00FF" font_color="#7F00FF" label_side="top" x="390" y="281" name="Three Stock"/>
+				<stock color="#008F44" font_color="#008F44" x="199" y="654" name="Stock C 1"/>
+				<flow color="#008F44" font_color="#008F44" x="133.75" y="652" name="inflow A 3">
+					<pts>
+						<pt x="91" y="652"/>
+						<pt x="176.5" y="652"/>
+					</pts>
+				</flow>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="268" y="652" name="outflow C 1">
+					<pts>
+						<pt x="221.5" y="652"/>
+						<pt x="326.5" y="652"/>
+					</pts>
+				</flow>
+				<aux color="#008F44" font_color="#008F44" x="682" y="777" name="residence time C"/>
+				<aux color="#008F44" font_color="#008F44" x="854" y="806" name="Order C"/>
+				<stock color="#008F44" font_color="#008F44" x="349" y="652" name="Stock C 2"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="417.5" y="652" name="outflow C 2">
+					<pts>
+						<pt x="371.5" y="652"/>
+						<pt x="475.5" y="652"/>
+					</pts>
+				</flow>
+				<stock color="#008F44" font_color="#008F44" x="498" y="660" name="Stock C 3"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="565.5" y="652" name="outflow C 3">
+					<pts>
+						<pt x="520.5" y="652"/>
+						<pt x="622.5" y="652"/>
+					</pts>
+				</flow>
+				<aux color="#008F44" font_color="#008F44" x="559" y="565" name="Seven Stock"/>
+				<stock color="#008F44" font_color="#008F44" x="645" y="658" name="Stock C 4"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="706" y="652" name="outflow C 4">
+					<pts>
+						<pt x="667.5" y="652"/>
+						<pt x="756.5" y="652"/>
+					</pts>
+				</flow>
+				<stock color="#008F44" font_color="#008F44" x="779" y="655" name="Stock C 5"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="839" y="654" name="outflow C 5">
+					<pts>
+						<pt x="801.5" y="654"/>
+						<pt x="888.5" y="654"/>
+					</pts>
+				</flow>
+				<stock color="#008F44" font_color="#008F44" x="911" y="653" name="Stock C 6"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="974" y="654" name="outflow C 6">
+					<pts>
+						<pt x="933.5" y="654"/>
+						<pt x="1026.5" y="654"/>
+					</pts>
+				</flow>
+				<stock color="#008F44" font_color="#008F44" x="1049" y="653" name="Stock C 7"/>
+				<flow color="#008F44" font_color="#008F44" label_angle="86.6781" x="1117.25" y="653" name="outflow C 7">
+					<pts>
+						<pt x="1071.5" y="653"/>
+						<pt x="1187" y="653"/>
+					</pts>
+				</flow>
+				<stock x="753" y="89" name="Conveyor"/>
+				<flow x="672.75" y="88" name="inflow D">
+					<pts>
+						<pt x="615" y="88"/>
+						<pt x="730.5" y="88"/>
+					</pts>
+				</flow>
+				<flow x="838.75" y="90" name="Outflow D">
+					<pts>
+						<pt x="775.5" y="90"/>
+						<pt x="926" y="90"/>
+					</pts>
+				</flow>
+				<group locked="true" color="#653A2A" font_color="#653A2A" x="27" y="37" width="505" height="181" name="First Order Dynamics">
+					<item uid="1"/>
+					<item uid="4"/>
+					<item uid="3"/>
+					<item uid="5"/>
+					<item uid="9"/>
+					<item uid="8"/>
+					<item uid="2"/>
+				</group>
+				<group locked="true" color="#653A2A" font_color="#653A2A" x="27" y="249" width="819" height="276" name="Third Order Dynamics">
+					<item uid="28"/>
+					<item uid="29"/>
+					<item uid="24"/>
+					<item uid="19"/>
+					<item uid="17"/>
+					<item uid="18"/>
+					<item uid="26"/>
+					<item uid="22"/>
+					<item uid="16"/>
+					<item uid="20"/>
+					<item uid="27"/>
+					<item uid="23"/>
+					<item uid="21"/>
+					<item uid="25"/>
+				</group>
+				<group locked="true" color="#653A2A" font_color="#653A2A" x="25" y="549" width="1241" height="304" name="Seventh Order Dynamics">
+					<item uid="42"/>
+					<item uid="43"/>
+					<item uid="33"/>
+					<item uid="41"/>
+					<item uid="32"/>
+					<item uid="39"/>
+					<item uid="37"/>
+					<item uid="36"/>
+					<item uid="30"/>
+					<item uid="55"/>
+					<item uid="45"/>
+					<item uid="44"/>
+					<item uid="31"/>
+					<item uid="49"/>
+					<item uid="56"/>
+					<item uid="57"/>
+					<item uid="54"/>
+					<item uid="50"/>
+					<item uid="40"/>
+					<item uid="34"/>
+					<item uid="47"/>
+					<item uid="46"/>
+					<item uid="48"/>
+					<item uid="38"/>
+					<item uid="35"/>
+					<item uid="51"/>
+				</group>
+				<group locked="true" color="#3D5565" font_color="#3D5565" x="536" y="37" width="458" height="181" name="Infinite Order Dynamics">
+					<item uid="52"/>
+					<item uid="53"/>
+					<item uid="58"/>
+				</group>
+				<group locked="true" x="1048" y="38" width="418" height="167" name="Ancillary calculations">
+					<item uid="6"/>
+					<item uid="7"/>
+					<item uid="10"/>
+					<item uid="12"/>
+					<item uid="13"/>
+					<item uid="11"/>
+					<item uid="14"/>
+					<item uid="15"/>
+				</group>
+				<alias font_style="italic" uid="4" x="314" y="159" width="18" height="18">
+					<of>overall_residence_time</of>
+				</alias>
+				<alias font_style="italic" uid="9" x="108" y="126" width="18" height="18">
+					<of>test_input_logic</of>
+				</alias>
+				<alias color="#7F00FF" font_style="italic" font_color="#7F00FF" uid="20" x="454" y="489" width="18" height="18">
+					<of>overall_residence_time</of>
+				</alias>
+				<alias color="#7F00FF" font_style="italic" font_color="#7F00FF" uid="23" x="57" y="406" width="18" height="18">
+					<of>test_input_logic</of>
+				</alias>
+				<alias color="#008F44" font_style="italic" font_color="#008F44" uid="34" x="481" y="805" width="18" height="18">
+					<of>overall_residence_time</of>
+				</alias>
+				<alias color="#008F44" font_style="italic" font_color="#008F44" uid="37" x="71" y="692" width="18" height="18">
+					<of>test_input_logic</of>
+				</alias>
+				<alias font_style="italic" uid="53" x="622" y="137" width="18" height="18">
+					<of>test_input_logic</of>
+				</alias>
+				<alias font_style="italic" uid="58" x="855" y="153" width="18" height="18">
+					<of>overall_residence_time</of>
+				</alias>
+				<stacked_container uid="59" x="1073" y="372">
+					<graph x="898" y="247" width="350" height="250" type="time_series" show_grid="false" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Graph" isee:fill_intensity="0.1" left_axis_multi_scale="false" left_axis_auto_scale="true" right_axis_multi_scale="false" right_axis_auto_scale="true">
+						<plot color="blue" pen_width="1" index="0" show_y_axis="true">
+							<entity name="One_Stock"/>
+						</plot>
+						<plot color="red" pen_style="dot_dashed" pen_width="1" index="1" show_y_axis="true">
+							<entity name="Three_Stock"/>
+						</plot>
+						<plot color="fuchsia" pen_style="dotted" pen_width="1" index="2" show_y_axis="true">
+							<entity name="Seven_Stock"/>
+						</plot>
+						<plot color="#008F44" pen_style="dashed" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Conveyor"/>
+						</plot>
+					</graph>
+				</stacked_container>
+			</view>
+			<view background="white" page_width="1024" page_height="528" home_view="true" type="interface">
+				<style/>
+			</view>
+			<isee:templates>
+				<view background="white" page_width="1024" page_height="528" type="template">
+					<style/>
+				</view>
+			</isee:templates>
+			<isee:stories/>
+		</views>
+	</model>
+</xmile>
+

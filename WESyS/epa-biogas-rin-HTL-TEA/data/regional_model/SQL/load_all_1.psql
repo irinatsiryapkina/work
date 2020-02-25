@@ -1,0 +1,16 @@
+BEGIN;
+
+\i 'create_users.sql'
+\i 'grant_connect_all.sql'
+
+\i 'create_groups.sql'
+\i 'grant_group_privileges.sql'
+\i 'grant_roles.sql'
+
+\i 'create_user_schemas.psql'
+\i 'create_system_schemas.psql'
+\i 'create_region_schemas.psql'
+\i 'create_data_schemas.psql'
+\i 'create_variable_schemas.psql'
+
+COMMIT;

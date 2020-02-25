@@ -1,0 +1,226 @@
+---
+title: "WESyS Q4 milestone"
+author: "Danny Inman and Annika Eberle"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Testing VBSA 
+- The objective of this study is to:
+- Test our VBSA code
+- Test rmarkdown and knitr
+
+```{r source_files, include=TRUE, echo=FALSE}
+rm(list=ls())
+R_LIBS = ("/home/R/library") # set path for R libraries 
+options(scipen=999) # turn scientific notation off
+options(stringsAsFactors = FALSE) # turn off representing strings as factors
+
+library(RColorBrewer)
+library(ggplot2)
+
+# Source R script config file and define variables from file 
+config_file = "~/GitHub/epa-biogas-rin/studies/FY18/sensitivity/src/ee/ee_vbsa_config.R"
+source(config_file)
+define.variables()
+
+# Set working directory for EE and source EE scripts 
+setwd(vbsa_working_directory)
+
+```
+
+## Methods
+- We used Sobol's Quasi-Random Sequences was used to design two studies (CA and ROTUS) with factors ~65 factors and 7500 replications each (~1 million runs per study)
+- We then ran WESyS with the Sobol designs and collected the output
+- We used the results from the model runs to calculate the first order, second order, and total effects indicies for total energy production from each module and energy production by technology type
+- This presentation focuses on the results for total effects  
+
+## Total Effects Indicies for CA test
+```{r ca_total, echo=FALSE, out.width = '100%'}
+region = 'ca'
+type = 'biogas'
+energy_type = 'biogas.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+region = 'ca'
+type = 'biogas'
+energy_type = 'CAFO.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'LF.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'WWTP.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CHP.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CHP.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CNG.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'Elec.tot'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'HTL.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for CA 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'PNG.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+
+## Total Effects Indicies for ROTUS 
+```{r, echo=FALSE, out.width = '100%'}
+region = 'rotus'
+type = 'biogas'
+energy_type = 'biogas.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+region = 'ca'
+type = 'biogas'
+energy_type = 'CAFO.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'LF.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'WWTP.total energy'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CHP.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CHP.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'CNG.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'Elec.tot'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'HTL.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Total Effects Indicies for ROTUS 
+```{r , echo=FALSE, out.width = '100%'}
+energy_type = 'PNG.total'
+folder = paste(root_data_path, 'vbsa', region, type, vbsa_study_extension, 'figures', sep='/')
+filename = paste(region, energy_type, energy_type, 'Sti.png', sep='.')
+filepath = paste(folder, filename, sep='/')
+knitr::include_graphics(filepath)
+```
+## Conclusions
+
+```{r conclusions, echo = FALSE}
+#grid.arrange (gg1, gg2, nrow = 1)
+```
+
+## Conclusions - cont...
+
+-Of the five factors tested,  was the most impactful
+
+::: notes
+testing the notes function here
+
+we can add notes to each slide through markdown
+:::
+

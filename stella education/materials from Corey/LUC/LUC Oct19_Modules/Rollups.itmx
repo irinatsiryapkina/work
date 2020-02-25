@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="3" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0" namespace="std, isee">
+            <uses_arrays>1</uses_arrays>
+        </smile>
+        <name>Rollups</name>
+        <uuid>be3763d4-a6da-42c9-bb3e-f353eac3131b</uuid>
+        <vendor>isee systems, inc.</vendor>
+        <product version="10.1.2" isee:saved_by_v1="false" lang="en">STELLA</product>
+    </header>
+    <sim_specs method="Euler" time_units="Years" isee:pause_after_rates="false" isee:instantaneous_flows="false">
+        <start>1985</start>
+        <stop>2023</stop>
+        <dt reciprocal="true">0.03125</dt>
+        <isee:analyze_mode>false</isee:analyze_mode>
+    </sim_specs>
+    <dimensions>
+        <dim name="LandClass">
+            <elem name="Grass" />
+            <elem name="Forest" />
+        </dim>
+        <dim name="AnimalProduct">
+            <elem name="CowSheepGoat" />
+            <elem name="Dairy" />
+            <elem name="Pig" />
+            <elem name="Poultry" />
+        </dim>
+        <dim name="Commodity">
+            <elem name="Maize" />
+            <elem name="Wheat" />
+            <elem name="Rice" />
+            <elem name="CerealsGrainNEC" />
+            <elem name="OilCrop" />
+            <elem name="Sugar" />
+        </dim>
+    </dimensions>
+    <model_units>
+        <units name="Gallons">
+            <eqn />
+            <alias>gal</alias>
+            <alias>gallon</alias>
+        </units>
+        <units name="Hectares">
+            <eqn />
+            <alias>ha</alias>
+            <alias>hectare</alias>
+        </units>
+        <units name="Years">
+            <eqn />
+            <alias>yr</alias>
+            <alias>year</alias>
+        </units>
+    </model_units>
+    <model name="Global_Calcs">
+        <aux name="TOTAL_desired_exports" access="output">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>USA.potential_exports[Commodity]  + ROW.potential_exports[Commodity]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="1156" y="208" color="#008F44" label_side="top" label_angle="143" />
+        </aux>
+        <aux name="TOTAL_desired_imports" access="output">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>USA.potential_imports[Commodity]  + ROW.potential_imports[Commodity]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="1145" y="104" color="#008F44" label_angle="266" />
+        </aux>
+        <aux name="TOTAL_actual_import\\_export" access="output">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>MIN(TOTAL_desired_exports[Commodity],TOTAL_desired_imports[Commodity]) </eqn>
+            <units>gigagrams/yr</units>
+            <display x="1286" y="164" color="#008F44" label_side="top" label_angle="130" />
+        </aux>
+        <aux name="TOTAL_global_food_shortfall" access="output">
+            <doc>0 --&gt; equilibrium&#x0D;&gt;0 --&gt; shortfall&#x0D;&lt;0 --&gt; surplus&#x0D;&#x0D;total desired imports - total desired exports</doc>
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>USA.local_surplus[Commodity] + ROW.local_surplus[Commodity]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="284" y="853" color="#008F44" label_side="top" label_angle="128" />
+        </aux>
+        <aux name="imports_1" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="104" y="337" color="blue" />
+        </aux>
+        <aux name="exports_1" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="106" y="387" color="blue" />
+        </aux>
+        <aux name="local_shortfall_1" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="105" y="436" color="blue" />
+        </aux>
+        <aux name="imports_2" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="236" y="341" color="blue" />
+        </aux>
+        <aux name="exports_2" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="238" y="391" color="blue" />
+        </aux>
+        <aux name="local_shortfall_2" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="237" y="440" color="blue" />
+        </aux>
+        <aux name="TOTAL_global_food_shortfall_surplus" access="output">
+            <doc>0 --&gt; equilibrium&#x0D;&gt;0 --&gt; shortfall&#x0D;&lt;0 --&gt; surplus&#x0D;&#x0D;total desired imports - total desired exports</doc>
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>USA.AP_local_shortfall_surplus[AnimalProduct] + ROW.AP_local_shortfall_surplus[AnimalProduct]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="256" y="730" color="#008F44" label_side="top" label_angle="128" />
+        </aux>
+        <aux name="TOTAL_desired_AP_exports" access="output">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>USA.potential_AP_exports[AnimalProduct] + ROW.potential_AP_exports[AnimalProduct]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="785" y="380" color="#008F44" label_side="top" label_angle="143" />
+        </aux>
+        <aux name="TOTAL_desired_AP_imports" access="output">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>USA.potential_AP_imports[AnimalProduct]  + ROW.potential_AP_imports[AnimalProduct]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="774" y="276" color="#008F44" label_angle="266" />
+        </aux>
+        <aux name="TOTAL_actual_AP_import\\_export" access="output">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn> MIN(TOTAL_desired_AP_exports[AnimalProduct],TOTAL_desired_AP_imports[AnimalProduct]) </eqn>
+            <units>gigagrams/yr</units>
+            <display x="915" y="336" color="#008F44" label_angle="257" />
+        </aux>
+        <aux name="target_imports" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="92" y="521" color="blue" />
+        </aux>
+        <aux name="target_exports" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="94" y="571" color="blue" />
+        </aux>
+        <aux name="local_shortfall_surplus" access="input">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="93" y="620" color="blue" />
+        </aux>
+        <aux name="AP_target_imports" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="224" y="525" color="blue" />
+        </aux>
+        <aux name="AP_target_exports" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="226" y="575" color="blue" />
+        </aux>
+        <aux name="AP_local_shortfall_surplus" access="input">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <units>gigagrams/yr</units>
+            <display x="225" y="624" color="blue" />
+        </aux>
+        <array name="AP_Flux_US_to_ROW_DATA" access="output">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <aux subscript="CowSheepGoat">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-1606" max="100" />
+                    <ypts>-427,-631,-721,-479,-429,-576,-620,-723,-790,-912,-859,-969,-923,-730,-807,-905,-789,-960,-1017,-869,-722,-816,-757,-654,-792,-746,-791,-800,-432,-594,-552,-556,-511,-327,-7,-90,-97,-242,-267,-183,-412,-392,-249,-1606,-1452,-993,-865</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Dairy">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-4283" max="5041" />
+                    <ypts>1805,3468,4480,5041,2847,-120,-116,-438,-523,-459,-84,-582,-3713,-3547,-703,-1789,-2152,-1570,-2284,-1430,-1355,-1837,-772,-786,-687,-269,-1061,-546,-1920,-4283,-3642,-3237,-2294,-2916,-2006,-3734,-2637,-3188,-2628,-3005,-2468,-2625,-2637,-1529,-411,531,-668</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Pig">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-481" max="756" />
+                    <ypts>-68,-87,-58,-60,-128,-151,-155,-149,-130,-188,-189,-194,-171,-179,-111,-59,-57,-105,-110,-148,-128,-191,-227,-357,-444,-450,-481,-424,-304,-308,-232,-125,-152,-106,27,132,180,194,88,144,206,175,170,348,565,696,756</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Poultry">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="3309" />
+                    <ypts>113,123,96,106,91,81,66,70,62,64,61,68,73,78,93,178,186,195,235,341,393,279,237,224,223,279,370,394,493,592,669,827,1070,1519,2039,2399,2578,2519,2499,2872,3110,2625,2726,2585,2800,2863,3309</ypts>
+                </gf>
+            </aux>
+            <eqn>time</eqn>
+            <units>gigagrams/yr</units>
+            <display x="499" y="683" color="#008F44" label_angle="257" />
+        </array>
+        <array name="AP_Flux_ROW_to_US_DATA">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <aux subscript="CowSheepGoat">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="1606" />
+                    <ypts>427,631,721,479,429,576,620,723,790,912,859,969,923,730,807,905,789,960,1017,869,722,816,757,654,792,746,791,800,432,594,552,556,511,327,7,90,97,242,267,183,412,392,249,1606,1452,993,865</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Dairy">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-5041" max="4283" />
+                    <ypts>-1805,-3468,-4480,-5041,-2847,120,116,438,523,459,84,582,3713,3547,703,1789,2152,1570,2284,1430,1355,1837,772,786,687,269,1061,546,1920,4283,3642,3237,2294,2916,2006,3734,2637,3188,2628,3005,2468,2625,2637,1529,411,-531,668</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Pig">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-756" max="481" />
+                    <ypts>68,87,58,60,128,151,155,149,130,188,189,194,171,179,111,59,57,105,110,148,128,191,227,357,444,450,481,424,304,308,232,125,152,106,-27,-132,-180,-194,-88,-144,-206,-175,-170,-348,-565,-696,-756</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Poultry">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-3309" max="100" />
+                    <ypts>-113,-123,-96,-106,-91,-81,-66,-70,-62,-64,-61,-68,-73,-78,-93,-178,-186,-195,-235,-341,-393,-279,-237,-224,-223,-279,-370,-394,-493,-592,-669,-827,-1070,-1519,-2039,-2399,-2578,-2519,-2499,-2872,-3110,-2625,-2726,-2585,-2800,-2863,-3309</ypts>
+                </gf>
+            </aux>
+            <eqn>time</eqn>
+            <units>gigagrams/yr</units>
+            <display x="502" y="731" color="#008F44" label_angle="257" />
+        </array>
+        <array name="CP_Flux_US_to_ROW_DATA" access="output">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <aux subscript="Maize">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="63359" />
+                    <ypts>7725,11127,11442,12508,15436,15846,13281,15264,14178,14573,13049,22546,33402,30080,33633,44498,40593,50289,59408,63359,55115,49155,47914,49280,44264,27064,41081,46702,56769,52386,44723,43166,40316,35816,60336,52487,42020,42268,51962,48154,48142,47921,43452,48755,45437,58351,57359</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Wheat">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="45378" />
+                    <ypts>19659,16904,20101,23111,19702,24686,18997,18086,13898,19214,17646,22739,38582,26041,31930,27649,25372,35746,34978,37023,45378,41967,41316,43478,26055,26183,32008,41595,37563,27932,31684,33581,35168,29143,32048,30038,23751,25225,26971,26347,23947,23330,26102,31873,28077,23836,32924</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Rice">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="3468" />
+                    <ypts>780,974,1112,1240,1396,1221,1675,1697,1719,1536,1252,1801,1468,1579,1955,1898,2175,2133,2105,2753,2807,2329,2186,2010,1743,2169,2252,1992,2682,2185,2020,1957,2329,2491,2836,2390,1959,2901,2342,2485,2221,2864,3348,2650,3468,2838,2544</ypts>
+                </gf>
+            </aux>
+            <aux subscript="CerealsGrainNEC">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="10251" />
+                    <ypts>3079,6002,4639,4097,6303,9151,6688,3946,2796,4963,4005,5103,9101,7295,6410,6867,7626,6049,6704,9764,10251,7347,6509,8434,7469,5325,7477,7831,8997,8113,6030,8382,5924,3782,4443,3830,4049,3242,4391,5274,4244,3836,3462,2653,3445,2691,3747</ypts>
+                </gf>
+            </aux>
+            <aux subscript="OilCrop">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="0" max="31359" />
+                    <ypts>2087,2906,3761,4745,5085,5692,6076,6769,7365,10916,10571,11409,12694,13977,12747,15514,16806,22100,22299,23281,23147,26805,23300,20899,17962,21713,21411,17815,15003,15328,17651,19896,19530,17965,22927,25744,26062,20689,23407,27213,29118,27886,31027,26377,27095,30027,31359</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Sugar">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-293" max="1067" />
+                    <ypts>11,12,24,25,35,54,31,54,30,28,32,37,41,64,36,33,32,60,62,143,163,62,-100,-155,-236,-293,-249,-200,-155,-7,77,20,47,158,298,400,301,406,286,370,345,299,350,229,442,731,1067</ypts>
+                </gf>
+            </aux>
+            <eqn>time</eqn>
+            <units>gigagrams/yr</units>
+            <display x="615" y="697" color="#008F44" label_side="top" label_angle="62" />
+        </array>
+        <array name="CP_Flux_ROW_to_US_DATA">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <aux subscript="Maize">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-63359" max="100" />
+                    <ypts>-7725,-11127,-11442,-12508,-15436,-15846,-13281,-15264,-14178,-14573,-13049,-22546,-33402,-30080,-33633,-44498,-40593,-50289,-59408,-63359,-55115,-49155,-47914,-49280,-44264,-27064,-41081,-46702,-56769,-52386,-44723,-43166,-40316,-35816,-60336,-52487,-42020,-42268,-51962,-48154,-48142,-47921,-43452,-48755,-45437,-58351,-57359</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Wheat">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-45378" max="100" />
+                    <ypts>-19659,-16904,-20101,-23111,-19702,-24686,-18997,-18086,-13898,-19214,-17646,-22739,-38582,-26041,-31930,-27649,-25372,-35746,-34978,-37023,-45378,-41967,-41316,-43478,-26055,-26183,-32008,-41595,-37563,-27932,-31684,-33581,-35168,-29143,-32048,-30038,-23751,-25225,-26971,-26347,-23947,-23330,-26102,-31873,-28077,-23836,-32924</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Rice">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-3468" max="100" />
+                    <ypts>-780,-974,-1112,-1240,-1396,-1221,-1675,-1697,-1719,-1536,-1252,-1801,-1468,-1579,-1955,-1898,-2175,-2133,-2105,-2753,-2807,-2329,-2186,-2010,-1743,-2169,-2252,-1992,-2682,-2185,-2020,-1957,-2329,-2491,-2836,-2390,-1959,-2901,-2342,-2485,-2221,-2864,-3348,-2650,-3468,-2838,-2544</ypts>
+                </gf>
+            </aux>
+            <aux subscript="CerealsGrainNEC">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-10251" max="100" />
+                    <ypts>-3079,-6002,-4639,-4097,-6303,-9151,-6688,-3946,-2796,-4963,-4005,-5103,-9101,-7295,-6410,-6867,-7626,-6049,-6704,-9764,-10251,-7347,-6509,-8434,-7469,-5325,-7477,-7831,-8997,-8113,-6030,-8382,-5924,-3782,-4443,-3830,-4049,-3242,-4391,-5274,-4244,-3836,-3462,-2653,-3445,-2691,-3747</ypts>
+                </gf>
+            </aux>
+            <aux subscript="OilCrop">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-31359" max="100" />
+                    <ypts>-2087,-2906,-3761,-4745,-5085,-5692,-6076,-6769,-7365,-10916,-10571,-11409,-12694,-13977,-12747,-15514,-16806,-22100,-22299,-23281,-23147,-26805,-23300,-20899,-17962,-21713,-21411,-17815,-15003,-15328,-17651,-19896,-19530,-17965,-22927,-25744,-26062,-20689,-23407,-27213,-29118,-27886,-31027,-26377,-27095,-30027,-31359</ypts>
+                </gf>
+            </aux>
+            <aux subscript="Sugar">
+                <gf>
+                    <xscale min="1961" max="2007" />
+                    <yscale min="-1067" max="293" />
+                    <ypts>-11,-12,-24,-25,-35,-54,-31,-54,-30,-28,-32,-37,-41,-64,-36,-33,-32,-60,-62,-143,-163,-62,100,155,236,293,249,200,155,7,-77,-20,-47,-158,-298,-400,-301,-406,-286,-370,-345,-299,-350,-229,-442,-731,-1067</ypts>
+                </gf>
+            </aux>
+            <eqn>time</eqn>
+            <units>gigagrams/yr</units>
+            <display x="623" y="752" color="#008F44" label_side="top" label_angle="62" />
+        </array>
+        <aux name="other_land_US_1984">
+            <eqn>190469000</eqn>
+            <units>ha</units>
+            <display x="1256" y="472" color="blue" />
+        </aux>
+        <aux name="other_land_ROW_1984">
+            <eqn>4117242000</eqn>
+            <units>ha</units>
+            <display x="1258" y="517" color="blue" />
+        </aux>
+        <aux name="abandoned_land_estimate">
+            <eqn>434000000</eqn>
+            <units>ha</units>
+            <display x="1412" y="492" color="blue" />
+        </aux>
+        <aux name="abandoned_US" access="output">
+            <eqn>abandoned_land_estimate * other_land_US_1984 / (other_land_ROW_1984 + other_land_US_1984)</eqn>
+            <units>ha</units>
+            <display x="1344" y="426" color="blue" />
+        </aux>
+        <aux name="global_AP_prod&apos;n_shortfall">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>TOTAL_desired_AP_imports[AnimalProduct] - TOTAL_desired_AP_exports[AnimalProduct]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="885" y="427" color="#008F44" label_angle="257" />
+        </aux>
+        <aux name="global_commodity_prod&apos;n_shortfall">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>TOTAL_desired_imports[Commodity] - TOTAL_desired_exports[Commodity]</eqn>
+            <units>gigagrams/yr</units>
+            <display x="1253" y="50" color="#008F44" label_side="top" label_angle="143" />
+        </aux>
+        <stock name="Avg_Commodity_Prod&apos;n_Shortfall" access="output">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>0</eqn>
+            <inflow>Noname_1</inflow>
+            <units>gigagrams/yr</units>
+            <display x="1507" y="43" color="blue" />
+        </stock>
+        <flow name="Noname_1">
+            <dimensions>
+                <dim name="Commodity" />
+            </dimensions>
+            <eqn>(global_commodity_prod&apos;n_shortfall[Commodity] - Avg_Commodity_Prod&apos;n_Shortfall[Commodity]) / time_to_perceive_cps</eqn>
+            <units>gigagrams/yr^2</units>
+            <display x="1440" y="45" color="blue">
+                <pts>
+                    <pt x="1395" y="45" />
+                    <pt x="1485" y="45" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="time_to_perceive_cps">
+            <eqn>1</eqn>
+            <units>yr</units>
+            <display x="1484" y="117" color="blue" />
+        </aux>
+        <stock name="Avg_AP_Prod&apos;n_Shortfall" access="output">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>0</eqn>
+            <inflow>Noname_2</inflow>
+            <units>gigagrams/yr</units>
+            <display x="974" y="508" color="blue" />
+        </stock>
+        <aux name="time_to_perceive_APps">
+            <eqn>1</eqn>
+            <units>yr</units>
+            <display x="900" y="561" color="blue" />
+        </aux>
+        <flow name="Noname_2">
+            <dimensions>
+                <dim name="AnimalProduct" />
+            </dimensions>
+            <eqn>(global_AP_prod&apos;n_shortfall[AnimalProduct] - Avg_AP_Prod&apos;n_Shortfall[AnimalProduct]) / time_to_perceive_APps</eqn>
+            <units>gigagrams/yr^2</units>
+            <display x="900" y="501" color="blue">
+                <pts>
+                    <pt x="848" y="501" />
+                    <pt x="952" y="501" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="abandoned_ROW" access="output">
+            <eqn>abandoned_land_estimate * other_land_ROW_1984 / (other_land_ROW_1984 + other_land_US_1984)</eqn>
+            <units>ha</units>
+            <display x="1345" y="543" color="blue" />
+        </aux>
+        <stock name="Noname_7" access="input">
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1666" y="340" color="blue" />
+        </stock>
+        <stock name="Noname_8" access="input">
+            <dimensions>
+                <dim name="LandClass" />
+            </dimensions>
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1750" y="476" color="blue" />
+        </stock>
+        <stock name="Noname_4" access="input">
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1648" y="108" color="blue" />
+        </stock>
+        <stock name="Noname_5" access="input">
+            <dimensions>
+                <dim name="LandClass" />
+            </dimensions>
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1696" y="175" color="blue" />
+        </stock>
+        <stock name="Noname_6" access="input">
+            <dimensions>
+                <dim name="LandClass" />
+            </dimensions>
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1771" y="230" color="blue" />
+        </stock>
+        <aux name="target_buildup_US">
+            <eqn>0</eqn>
+            <display x="1148" y="666" color="blue" />
+        </aux>
+        <aux name="target_buildup_ROW">
+            <eqn>0</eqn>
+            <display x="1298" y="673" color="blue" />
+        </aux>
+        <aux name="req&apos;d_consn_US">
+            <eqn>0</eqn>
+            <display x="1158" y="744" color="blue" />
+        </aux>
+        <aux name="reqd_consn_ROW">
+            <eqn>0</eqn>
+            <display x="1301" y="747" color="blue" />
+        </aux>
+        <aux name="Total_US\n_cropland">
+            <eqn>USA.Actual_Forage_Land+SUM(USA.Crop_Land)+SUM(USA.Pasture__Land)</eqn>
+            <display x="1950" y="112" color="blue" label_side="right" label_angle="20" />
+        </aux>
+        <stock name="Noname_9" access="input">
+            <dimensions>
+                <dim name="LandClass" />
+            </dimensions>
+            <eqn> { Place initial value here... }</eqn>
+            <non_negative />
+            <units>ha</units>
+            <display x="1717" y="406" color="blue" />
+        </stock>
+        <aux name="Total_ROW_\ncropland">
+            <eqn>ROW.Actual_Forage_Land+SUM(ROW.Crop_Land)+SUM(ROW.Pasture__Land)</eqn>
+            <display x="1958" y="339" color="blue" label_side="right" label_angle="330" />
+        </aux>
+        <aux name="Global_cropland">
+            <eqn>Total_ROW__cropland+Total_US__cropland</eqn>
+            <display x="1955" y="223" color="blue" label_side="left" label_angle="172" />
+        </aux>
+        <aux name="global_agric\nextensification">
+            <eqn>Global_cropland-DELAY(Global_cropland,1)</eqn>
+            <display x="2059" y="217" color="blue" />
+        </aux>
+        <stock name="Cumulative_Agric_\nExtensification">
+            <eqn>0</eqn>
+            <scale min="0" max="5000000000" />
+            <inflow>Expanding_ag_land</inflow>
+            <non_negative />
+            <display x="2262" y="326" color="blue">
+                <scale min="0" max="5000000000" />
+            </display>
+        </stock>
+        <flow name="Expanding_ag_land">
+            <eqn>global_agric_extensification</eqn>
+            <non_negative />
+            <display x="2140" y="322" color="blue">
+                <pts>
+                    <pt x="2040" y="322" />
+                    <pt x="2240" y="322" />
+                </pts>
+            </display>
+        </flow>
+        <stock name="Cumulative_Global\nDeforestation">
+            <eqn>13000000</eqn>
+            <scale min="0" max="50000000000" />
+            <inflow>deforesting</inflow>
+            <non_negative />
+            <display x="2262" y="427" color="blue">
+                <scale min="0" max="50000000000" />
+            </display>
+        </stock>
+        <flow name="deforesting">
+            <eqn>rate_of__deforestation</eqn>
+            <non_negative />
+            <display x="2138" y="422" color="blue">
+                <pts>
+                    <pt x="2036" y="422" />
+                    <pt x="2240" y="422" />
+                </pts>
+            </display>
+        </flow>
+        <aux name="rate_of_\ndeforestation">
+            <doc>Annual rate of deforestation, mean from 2000-2010 = 13 million ha per year&#x0D;FAO 2010 Global Forest Resources Assessment 2010</doc>
+            <eqn>13000000</eqn>
+            <display x="2065" y="484" color="blue" />
+        </aux>
+        <aux name="Noname_10" access="input">
+            <eqn> { Place right hand side of equation here... }</eqn>
+            <units>gal/yr</units>
+            <display x="1992" y="771" color="blue" />
+        </aux>
+        <stock name="Cumulative_RFS_production">
+            <eqn>0</eqn>
+            <inflow>Producing_cellulosic_biofuels_in_the_US</inflow>
+            <non_negative />
+            <display x="2247" y="694" color="blue" />
+        </stock>
+        <flow name="Producing_cellulosic_biofuels_in_the_US">
+            <eqn>USA.RFS_ScenarioCellulosic_GPY</eqn>
+            <non_negative />
+            <display x="2102" y="691" color="blue">
+                <pts>
+                    <pt x="1980" y="691" />
+                    <pt x="2225" y="691" />
+                </pts>
+            </display>
+        </flow>
+        <group name="Global_Carbon_Accounting_Sector">
+            <entity name="Noname_7" />
+            <entity name="Noname_4" />
+            <entity name="Noname_5" />
+            <entity name="Noname_6" />
+            <entity name="Total_US__cropland" />
+            <entity name="Total_ROW__cropland" />
+            <entity name="Global_cropland" />
+            <entity name="global_agric_extensification" />
+            <entity name="Expanding_ag_land" />
+            <entity name="Cumulative_Agric__Extensification" />
+            <entity name="Noname_8" />
+            <entity name="Noname_9" />
+            <entity name="deforesting" />
+            <entity name="rate_of__deforestation" />
+            <entity name="Producing_cellulosic_biofuels_in_the_US" />
+            <entity name="Cumulative_Global_Deforestation" />
+            <entity name="Cumulative_RFS_production" />
+            <entity name="Noname_10" />
+            <display x="1547" y="33" width="1511" height="1130" color="red">
+                <item uid="21" />
+                <item uid="22" />
+                <item uid="23" />
+                <item uid="24" />
+                <item uid="25" />
+                <item uid="26" />
+                <item uid="27" />
+                <item uid="28" />
+                <item uid="29" />
+                <item uid="30" />
+                <item uid="31" />
+                <item uid="32" />
+                <item uid="33" />
+                <item uid="34" />
+                <item uid="35" />
+                <item uid="36" />
+            </display>
+        </group>
+        <display show_pages="true" page_width="768" page_height="588" page_cols="4" page_rows="2" isee:converter_size="medium" report_balances="ending" scroll_x="1704">
+            <alias x="986" y="104" uid="37">
+                <of>imports_1</of>
+            </alias>
+            <connector x="995" y="104" uid="38">
+                <from>
+                    <alias uid="37" />
+                </from>
+                <to>TOTAL_desired_imports</to>
+            </connector>
+            <alias x="993" y="208" uid="39">
+                <of>exports_1</of>
+            </alias>
+            <connector x="1002" y="208" uid="40">
+                <from>
+                    <alias uid="39" />
+                </from>
+                <to>TOTAL_desired_exports</to>
+            </connector>
+            <alias x="166" y="853" uid="41">
+                <of>local_shortfall_1</of>
+            </alias>
+            <connector x="175" y="853" uid="42">
+                <from>
+                    <alias uid="41" />
+                </from>
+                <to>TOTAL_global_food_shortfall</to>
+            </connector>
+            <connector x="1153" y="108" uid="43">
+                <from>TOTAL_desired_imports</from>
+                <to>TOTAL_actual_import\_export</to>
+            </connector>
+            <connector x="1165" y="205" uid="44">
+                <from>TOTAL_desired_exports</from>
+                <to>TOTAL_actual_import\_export</to>
+            </connector>
+            <alias x="138" y="730" uid="45">
+                <of>local_shortfall_2</of>
+            </alias>
+            <connector x="147" y="730" uid="46">
+                <from>
+                    <alias uid="45" />
+                </from>
+                <to>TOTAL_global_food_shortfall_surplus</to>
+            </connector>
+            <alias x="576" y="270" uid="47">
+                <of>imports_2</of>
+            </alias>
+            <connector x="585" y="270" uid="48">
+                <from>
+                    <alias uid="47" />
+                </from>
+                <to>TOTAL_desired_AP_imports</to>
+            </connector>
+            <alias x="593" y="380" uid="49">
+                <of>exports_2</of>
+            </alias>
+            <connector x="602" y="380" uid="50">
+                <from>
+                    <alias uid="49" />
+                </from>
+                <to>TOTAL_desired_AP_exports</to>
+            </connector>
+            <connector x="782" y="280" uid="51">
+                <from>TOTAL_desired_AP_imports</from>
+                <to>TOTAL_actual_AP_import\_export</to>
+            </connector>
+            <connector x="794" y="377" uid="52">
+                <from>TOTAL_desired_AP_exports</from>
+                <to>TOTAL_actual_AP_import\_export</to>
+            </connector>
+            <alias x="585" y="312" uid="53">
+                <of>AP_target_imports</of>
+            </alias>
+            <alias x="587" y="427" uid="54">
+                <of>AP_target_exports</of>
+            </alias>
+            <connector x="594" y="310" uid="55">
+                <from>
+                    <alias uid="53" />
+                </from>
+                <to>TOTAL_desired_AP_imports</to>
+            </connector>
+            <connector x="596" y="425" uid="56">
+                <from>
+                    <alias uid="54" />
+                </from>
+                <to>TOTAL_desired_AP_exports</to>
+            </connector>
+            <alias x="994" y="254" uid="57">
+                <of>target_exports</of>
+            </alias>
+            <connector x="1003" y="252" uid="58">
+                <from>
+                    <alias uid="57" />
+                </from>
+                <to>TOTAL_desired_exports</to>
+            </connector>
+            <alias x="995" y="156" uid="59">
+                <of>target_imports</of>
+            </alias>
+            <connector x="1004" y="153" uid="60">
+                <from>
+                    <alias uid="59" />
+                </from>
+                <to>TOTAL_desired_imports</to>
+            </connector>
+            <alias x="156" y="926" uid="61">
+                <of>local_shortfall_surplus</of>
+            </alias>
+            <connector x="165" y="923" uid="62">
+                <from>
+                    <alias uid="61" />
+                </from>
+                <to>TOTAL_global_food_shortfall</to>
+            </connector>
+            <alias x="147" y="786" uid="63">
+                <of>AP_local_shortfall_surplus</of>
+            </alias>
+            <connector x="155" y="782" uid="64">
+                <from>
+                    <alias uid="63" />
+                </from>
+                <to>TOTAL_global_food_shortfall_surplus</to>
+            </connector>
+            <connector x="1264" y="471" uid="65">
+                <from>other_land_US_1984</from>
+                <to>abandoned_US</to>
+            </connector>
+            <connector x="1266" y="513" uid="66">
+                <from>other_land_ROW_1984</from>
+                <to>abandoned_US</to>
+            </connector>
+            <connector x="1263" y="478" uid="67">
+                <from>other_land_US_1984</from>
+                <to>abandoned_ROW</to>
+            </connector>
+            <connector x="1267" y="518" uid="68">
+                <from>other_land_ROW_1984</from>
+                <to>abandoned_ROW</to>
+            </connector>
+            <connector x="1407" y="484" uid="69">
+                <from>abandoned_land_estimate</from>
+                <to>abandoned_US</to>
+            </connector>
+            <connector x="1405" y="498" uid="70">
+                <from>abandoned_land_estimate</from>
+                <to>abandoned_ROW</to>
+            </connector>
+            <connector x="779" y="283" uid="71">
+                <from>TOTAL_desired_AP_imports</from>
+                <to>global_AP_prod&apos;n_shortfall</to>
+            </connector>
+            <connector x="793" y="384" uid="72">
+                <from>TOTAL_desired_AP_exports</from>
+                <to>global_AP_prod&apos;n_shortfall</to>
+            </connector>
+            <connector x="1161" y="200" uid="73">
+                <from>TOTAL_desired_exports</from>
+                <to>global_commodity_prod&apos;n_shortfall</to>
+            </connector>
+            <connector x="1153" y="100" uid="74">
+                <from>TOTAL_desired_imports</from>
+                <to>global_commodity_prod&apos;n_shortfall</to>
+            </connector>
+            <connector x="1264" y="53" uid="75">
+                <from>global_commodity_prod&apos;n_shortfall</from>
+                <to>Noname_1</to>
+            </connector>
+            <connector x="1499" y="60" uid="76">
+                <from>Avg_Commodity_Prod&apos;n_Shortfall</from>
+                <to>Noname_1</to>
+            </connector>
+            <connector x="1477" y="111" uid="77">
+                <from>time_to_perceive_cps</from>
+                <to>Noname_1</to>
+            </connector>
+            <connector x="896" y="553" uid="78">
+                <from>time_to_perceive_APps</from>
+                <to>Noname_2</to>
+            </connector>
+            <connector x="952" y="522" uid="79">
+                <from>Avg_AP_Prod&apos;n_Shortfall</from>
+                <to>Noname_2</to>
+            </connector>
+            <connector x="889" y="434" uid="80">
+                <from>global_AP_prod&apos;n_shortfall</from>
+                <to>Noname_2</to>
+            </connector>
+            <connector x="1669" y="97" uid="21">
+                <from>Noname_4</from>
+                <to>Total_US__cropland</to>
+            </connector>
+            <connector x="1716" y="162" uid="22">
+                <from>Noname_5</from>
+                <to>Total_US__cropland</to>
+            </connector>
+            <connector x="1793" y="218" uid="25">
+                <from>Noname_6</from>
+                <to>Total_US__cropland</to>
+            </connector>
+            <connector x="1688" y="330" uid="23">
+                <from>Noname_7</from>
+                <to>Total_ROW__cropland</to>
+            </connector>
+            <connector x="1739" y="391" uid="24">
+                <from>Noname_9</from>
+                <to>Total_ROW__cropland</to>
+            </connector>
+            <connector x="1772" y="461" uid="26">
+                <from>Noname_8</from>
+                <to>Total_ROW__cropland</to>
+            </connector>
+            <connector x="1950" y="121" uid="27">
+                <from>Total_US__cropland</from>
+                <to>Global_cropland</to>
+            </connector>
+            <connector x="1956" y="330" uid="28">
+                <from>Total_ROW__cropland</from>
+                <to>Global_cropland</to>
+            </connector>
+            <connector x="1965" y="220" uid="29">
+                <from>Global_cropland</from>
+                <to>global_agric_extensification</to>
+            </connector>
+            <connector x="2068" y="216" uid="30">
+                <from>global_agric_extensification</from>
+                <to>Expanding_ag_land</to>
+            </connector>
+            <connector x="2068" y="476" uid="33">
+                <from>rate_of__deforestation</from>
+                <to>deforesting</to>
+            </connector>
+            <connector x="1997" y="762" uid="34">
+                <from>Noname_10</from>
+                <to>Producing_cellulosic_biofuels_in_the_US</to>
+            </connector>
+            <stacked_container x="2549" y="867" height="282" width="492" uid="36">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="1" color="blue" precision="1" show_y_axis="true">
+                        <scale min="0" max="2.343e+009" />
+                        <entity name="Cumulative_Global_Deforestation" />
+                    </plot>
+                    <plot index="1" pen_width="1" color="red" precision="1" show_y_axis="true">
+                        <scale min="0" max="2.343e+009" />
+                        <entity name="Cumulative_Agric__Extensification" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="2506" y="920" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 1" type="graph" icon_of="36" />
+            <stacked_container height="282" width="492" uid="32">
+                <graph type="time_series" title="Untitled" background="#FFFFC9" show_grid="true" plot_numbers="true" isee:use_five_segments="false" date_time="2019-10-09T04:27:49Z" cleared="true" time_precision="2" from="1985" to="2023">
+                    <plot index="0" pen_width="1" color="blue" precision="1" show_y_axis="true">
+                        <entity name="global_agric_extensification" />
+                    </plot>
+                </graph>
+            </stacked_container>
+            <pad_icon x="2550" y="296" width="26" height="22" color="#008F44" label_side="bottom" label="Graph 2" type="graph" icon_of="32" />
+            <stacked_container x="2556" y="563" height="244" width="485" visible_index="1" uid="35">
+                <table font-size="12" background="#E0E0E0" comparative="true" column_width="347" orientation="vertical" interval="1" report_balances="ending" cleared="true" date_time="2011-08-16T21:25:09Z">
+                    <title>Untitled Table</title>
+                    <item type="time" color="black" precision="max" width="100" />
+                    <item color="black" precision="0.01" delimit_000s="true" index="0">
+                        <entity name="Cumulative_Agric__Extensification" />
+                    </item>
+                </table>
+                <table font-size="12" background="#E0E0E0" comparative="true" column_width="70" orientation="vertical" interval="1" report_balances="ending" cleared="true" date_time="2011-08-16T21:25:09Z">
+                    <title>Untitled Table</title>
+                    <item type="time" color="black" precision="max" width="100" />
+                    <item color="black" precision="0.01" delimit_000s="true" index="0">
+                        <entity name="Cumulative_RFS_production" />
+                    </item>
+                </table>
+            </stacked_container>
+            <pad_icon x="2503" y="706" width="26" height="22" color="#008F44" label_side="bottom" label="Table 1" type="table" icon_of="35" />
+            <stacked_container x="2178" y="62" height="180" width="542" uid="31">
+                <table font-size="9" background="#E0E0E0" column_width="92" orientation="horizontal" interval="1" report_balances="ending" cleared="true" date_time="2011-08-16T21:25:09Z">
+                    <title>Untitled Table</title>
+                    <item type="time" color="black" precision="max" width="127" />
+                    <item color="black" precision="0.01" delimit_000s="true" index="0">
+                        <entity name="Global_cropland" />
+                    </item>
+                    <item color="black" precision="0.01" delimit_000s="true" index="1">
+                        <entity name="global_agric_extensification" />
+                    </item>
+                </table>
+            </stacked_container>
+            <pad_icon x="2254" y="136" width="26" height="22" color="#008F44" label_side="bottom" label="Table 2" type="table" icon_of="31" />
+            <text_box x="7" y="117" uid="81" color="red" font-family="Arial" font-size="12" padding="5" border-style="solid" border-width="5px" width="368" height="33">RED:  Data Input (Constant, Ass&apos;n, Scenario, SSheet)</text_box>
+            <text_box x="7" y="153" uid="82" color="#008F44" font-family="Arial" font-size="12" padding="5" border-style="solid" border-width="5px" width="368" height="32">GREEN:  Output from this Sector to another Sector</text_box>
+            <text_box x="379" y="114" uid="83" color="blue" font-family="Arial" font-size="12" padding="5" border-style="solid" border-width="5px" width="369" height="33">BLUE:  Input to this Sector to another Sector</text_box>
+            <text_box x="379" y="154" uid="84" color="black" font-family="Arial" font-size="12" padding="5" border-style="solid" border-width="5px" width="368" height="32">BLACK:  Internal Calculation Within This Sector</text_box>
+            <button x="303" y="252" width="65" height="34" uid="85" appearance="opaque" background="black" color="white" style="square" label="Import Now" font-family="Arial" font-size="12" text-align="center">
+                <menu_action>import_now</menu_action>
+                <isee:import_now all="true" />
+            </button>
+            <style font-family="Arial" font-size="9" />
+        </display>
+        <interface page_width="788" page_height="528">
+            <simulation_delay>0</simulation_delay>
+            <style font-family="Arial" font-size="9" />
+        </interface>
+        <popup x="856" y="312" content="32" />
+        <style font-family="Arial" font-size="9" />
+    </model>
+</xmile>

@@ -1,0 +1,16 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+ 1) root 195000 5.759273e+15   33072.620  
+   2) Global Inputs.Initial Indices of Comm Maturity[HTL]< 0.8468811 183495 8.605288e+14    8853.998  
+     4) Global Inputs.Initial Indices of Comm Maturity[HTL]< 0.7954651 172354 7.811684e+13    1576.181 *
+     5) Global Inputs.Initial Indices of Comm Maturity[HTL]>=0.7954651 11141 6.320550e+14  121443.600 *
+   3) Global Inputs.Initial Indices of Comm Maturity[HTL]>=0.8468811 11505 3.074550e+15  419339.200  
+     6) Global Inputs.RIN Scenario Multiplier< 1.185913 6857 5.368017e+14  178486.500 *
+     7) Global Inputs.RIN Scenario Multiplier>=1.185913 4648 1.553153e+15  774659.100  
+      14) Global Inputs.PTC REC Scenario Multiplier>=0.3807373 3703 6.141313e+14  617602.100 *
+      15) Global Inputs.PTC REC Scenario Multiplier< 0.3807373 945 4.897567e+14 1390090.000  
+        30) Global Inputs.dwell time multiplier>=0.3233936 840 2.963477e+14 1251118.000 *
+        31) Global Inputs.dwell time multiplier< 0.3233936 105 4.740187e+13 2501863.000 *

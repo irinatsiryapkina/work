@@ -1,0 +1,18 @@
+n= 195000 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+ 1) root 195000 3.817216e+18 88722610  
+   2) Global Inputs.PTC REC Scenario Multiplier< 0.7178955 69979 8.879073e+17 84662870  
+     4) Global Inputs.PTC REC Scenario Multiplier< 0.2801514 27300 3.524988e+17 82180520 *
+     5) Global Inputs.PTC REC Scenario Multiplier>=0.2801514 42679 2.595786e+17 86250720  
+      10) Global Inputs.dwell time multiplier>=1.078384 16605 5.379434e+16 84352070 *
+      11) Global Inputs.dwell time multiplier< 1.078384 26074 1.078045e+17 87459860 *
+   3) Global Inputs.PTC REC Scenario Multiplier>=0.7178955 125021 1.130375e+18 90995000  
+     6) Global Inputs.dwell time multiplier>=0.9926611 55721 3.662916e+17 89201040  
+      12) Global Inputs.per tonne tipping fee>=55.56793 46200 2.007048e+17 88555940 *
+      13) Global Inputs.per tonne tipping fee< 55.56793 9521 5.306478e+16 92331360 *
+     7) Global Inputs.dwell time multiplier< 0.9926611 69300 4.405705e+17 92437430  
+      14) Global Inputs.PTC REC Scenario Multiplier< 1.28186 30432 1.424631e+17 90858220 *
+      15) Global Inputs.PTC REC Scenario Multiplier>=1.28186 38868 1.627905e+17 93673890 *

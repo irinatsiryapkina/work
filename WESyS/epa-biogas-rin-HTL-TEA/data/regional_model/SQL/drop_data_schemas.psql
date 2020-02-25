@@ -1,0 +1,10 @@
+DROP SCHEMA "bls";
+DROP SCHEMA "boc";
+DROP SCHEMA "ca_dof";
+DROP SCHEMA "eia";
+DROP SCHEMA "epa";
+DROP SCHEMA "nrel";
+DROP SCHEMA "opis";
+DROP SCHEMA "pnnl";
+DROP SCHEMA "state_of_ca";
+DROP SCHEMA "wbj";

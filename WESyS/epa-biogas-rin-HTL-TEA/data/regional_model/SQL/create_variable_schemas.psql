@@ -1,0 +1,9 @@
+\i 'create_schema_CA CAFO.sql'
+\i 'create_schema_CA LF.sql'
+\i 'create_schema_CA WWTP.sql'
+
+\i 'create_schema_Global Inputs.sql'
+
+\i 'create_schema_ROTUS CAFO.sql'
+\i 'create_schema_ROTUS LF.sql'
+\i 'create_schema_ROTUS WWTP.sql'

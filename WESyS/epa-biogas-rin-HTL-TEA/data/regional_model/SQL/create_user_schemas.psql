@@ -1,0 +1,6 @@
+\i 'create_schema_aeberle.sql'
+\i 'create_schema_amilbrandt.sql'
+\i 'create_schema_dhetting.sql'
+\i 'create_schema_dinman.sql'
+\i 'create_schema_dstright.sql'
+\i 'create_schema_enewes.sql'

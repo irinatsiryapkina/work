@@ -1,0 +1,116 @@
+---
+title: "WESyS Q4 milestone"
+author: "Danny Inman and Annika Eberle"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Testing VBSA 
+- The objective of this study is to:
+- Test our VBSA code
+- Test rmarkdown and knitr
+
+```{r source_files, include=TRUE, echo=FALSE}
+rm(list=ls())
+R_LIBS = ("/home/R/library") # set path for R libraries 
+options(scipen=999) # turn scientific notation off
+options(stringsAsFactors = FALSE) # turn off representing strings as factors
+
+library(RColorBrewer)
+library(ggplot2)
+
+# Source R script config file and define variables from file 
+config_file = "~/GitHub/epa-biogas-rin/studies/FY18/sensitivity/src/ee/ee_vbsa_config.R"
+source(config_file)
+define.variables()
+
+# Set working directory for EE and source EE scripts 
+setwd(vbsa_working_directory)
+source(paste(vbsa_working_directory, "load.R",  sep="/"))
+source(paste(vbsa_working_directory, "1.sobol.design.R", sep="/"))
+source(paste(vbsa_working_directory, "1.fast.design.R", sep="/"))
+source(paste(vbsa_working_directory, "2.get.data.R", sep="/"))
+source(paste(vbsa_working_directory, "3.define.sets.R", sep="/"))
+source(paste(vbsa_working_directory, "4.vbsa.R", sep="/"))
+
+num_boot <- 5000
+
+source(paste(vbsa_working_directory, "color_scale_vbsa.R", sep="/"))
+load("Y:/6A20/Public/WESyS Model Project/FY 18/FY18 Q4/colorscale.RDA")
+        
+```
+
+```{r create_sets, echo = TRUE}
+for (region in region_list){
+  
+  for (type in type_list) {
+    print(region)
+    print(type)
+    #
+    # These sections are commented because they've already been run for the two Q4 VBSA studies and the data should be stored in Box
+    # Uncomment if you need to create the design, pull the data from the database or define the sets 
+    #
+    # Design VBSA study 
+    #design.vbsa.study(region, type, vbsa_study_extension, config_file)
+    #design.fast.study(region, type, vbsa_study_extension, config_file)
+    
+    # Get WESyS simulation results from database
+    vbsa_output_filename = paste("vbsa", region, type, vbsa_study_extension, "wesys.results.timeseries.RDA", sep=".")
+    vbsa_output_filepath = paste(root_data_path, "vbsa", region, type, vbsa_study_extension, wesys_results_folder, vbsa_output_filename, sep="/")
+    #get.data(region, type, vbsa_study_extension, vbsa_run_config_num, config_file, vbsa_output_filepath)
+
+    # Select metrics of interest for VBSA study
+    define.sets(vbsa_output_filepath)
+  }
+}
+
+```
+
+## Methods
+- We used Sobol's Quasi-Random Sequences was used to design two studies (CA and ROTUS) with factors ~65 factors and 7500 replications each (~1 million runs per study)
+- We then ran WESyS with the Sobol designs and collected the output
+- We used the results from the model runs to calculate the first order, second order, and total effects indicies for total energy production from each module and energy production by technology type
+- This presentation focuses on the results for total effects  
+
+## Total Effects Indicies for CA 
+```{r total_effects_total_ca, echo = TRUE}
+  # Plot Total Effects
+  output = get.sensi.indices("ca", "biogas", config_file, num_boot, "biogas.total", colScale) 
+  df <- as.data.frame(output['total_effects'])
+  
+  gg <- ggplot (df, aes (x = df$total_effects.variable, y = total_effects.value, colour=df$total_effects.variable)) +
+    #theme (axis.text.x = element_text (angle = 75, hjust = 1)) +
+    geom_boxplot(notch = TRUE, show.legend = TRUE) + 
+    theme(axis.title.x = element_blank(),
+          axis.text.x = element_blank(),
+          axis.ticks.x = element_blank(),
+          legend.title=element_blank()) +
+    coord_cartesian(ylim=c(0,1)) + 
+    colScale +
+    labs (title = "CA - Total Energy Production", x = "Model Factor", y = expression ("St"["i"]))
+  
+    gg
+    
+```
+```
+
+## Conclusions
+
+```{r conclusions, echo = FALSE}
+#grid.arrange (gg1, gg2, nrow = 1)
+```
+
+## Conclusions - cont...
+
+-Of the five factors tested, `r df$variable[1]` was the most impactful
+
+::: notes
+testing the notes function here
+
+we can add notes to each slide through markdown
+:::
+
